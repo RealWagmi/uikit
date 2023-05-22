@@ -43,6 +43,8 @@ export const Icons: React.FC<React.PropsWithChildren> = () => {
             key={file}
             flexDirection="column"
             alignItems="center"
+            backgroundColor="#eeeeee"
+            title={file}
             width="128px"
             height="96px"
             style={{ border: "1px solid #eee" }}
@@ -51,7 +53,7 @@ export const Icons: React.FC<React.PropsWithChildren> = () => {
             m="4px"
           >
             <Flex alignItems="center" justifyContent="center" style={{ flex: 1 }} height="100%">
-              <Icon width="48px" />
+              <Icon  width="48px" />
               <Icon width="24px" color="secondary" ml="4px" />
             </Flex>
           </Flex>
