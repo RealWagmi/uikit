@@ -1,31 +1,36 @@
-import {ArrowLeftGray} from "../Svg";
-import {createContext, ElementType, useContext} from "react";
+import { ArrowLeftGray } from "../Svg";
+import { createContext, ElementType, useContext } from "react";
 export const MenuContext = createContext<{ linkComponent: ElementType }>({ linkComponent: "a" });
 
-import {ArrowWrapper, Divider, LinkText, Text, Wrapper} from './styles'
+import { ArrowWrapper, Divider, LinkText, Text, Wrapper } from "./styles";
+import { Flex } from "../Box";
+import { useTheme } from "styled-components";
 
 interface ILink {
-  lable: string
-  link: string
+  lable: string;
+  link: string;
 }
 
 interface IProps {
-  links: ILink[]
+  links: ILink[];
 }
 
 export default function Breadcrumbs({ links }: IProps) {
-  const {linkComponent} = useContext(MenuContext)
+  const { linkComponent } = useContext(MenuContext);
+  const theme = useTheme();
   return (
     <Wrapper>
-      <ArrowWrapper><ArrowLeftGray /></ArrowWrapper>
+      <ArrowWrapper>
+        <ArrowLeftGray stroke={theme.colors.gray} />
+      </ArrowWrapper>
       {links.map(({ lable, link }, index) => (
-        <div key={index} style={{ display: 'flex' }}>
+        <Flex key={index}>
           <LinkText as={linkComponent} href={link}>
             <Text>{lable}</Text>
           </LinkText>
           {index !== links.length - 1 && <Divider>/</Divider>}
-        </div>
+        </Flex>
       ))}
     </Wrapper>
-  )
+  );
 }

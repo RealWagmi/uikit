@@ -9,7 +9,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src/components"
+    "src/components",
+    "src/styled.d.ts"
   ],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "**/__tests__/*"],
 }
