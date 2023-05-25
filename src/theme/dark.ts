@@ -5,6 +5,7 @@ const darkTheme: DefaultTheme = {
     //text
     textGray: "#7b8187",
     textWhite: "#ffffff",
+    textDimGray: "#616971",
 
     //colors
     dimGray: "#616971",
@@ -13,6 +14,8 @@ const darkTheme: DefaultTheme = {
     policeBlue: "#404A67",
     darkJungleGreen: "#131A2A",
     violinBrown: "#5D4204",
+    white: "#ffffff",
+    lightFrenchBeige: "#C2A676",
   },
 };
 

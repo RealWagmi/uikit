@@ -3,6 +3,7 @@ export interface UIKitTheme {
     //text
     textGray: string;
     textWhite: string;
+    textDimGray: string;
 
     //colors
     dimGray: string;
@@ -11,6 +12,8 @@ export interface UIKitTheme {
     policeBlue: string;
     darkJungleGreen: string;
     violinBrown: string;
+    white: string;
+    lightFrenchBeige: string;
   };
 }
 
