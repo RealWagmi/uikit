@@ -21,7 +21,7 @@ export default function Breadcrumbs({ links }: IProps) {
   return (
     <Wrapper>
       <ArrowWrapper>
-        <ArrowLeftGray stroke={theme.colors.gray} />
+        <ArrowLeftGray stroke={theme.colors.textGray} />
       </ArrowWrapper>
       {links.map(({ lable, link }, index) => (
         <Flex key={index}>

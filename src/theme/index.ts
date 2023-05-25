@@ -1,7 +1,16 @@
 export interface UIKitTheme {
   colors: {
-    gray: string;
+    //text
+    textGray: string;
+    textWhite: string;
+
+    //colors
     dimGray: string;
+    indigo: string;
+    chineseBlack: string;
+    policeBlue: string;
+    darkJungleGreen: string;
+    violinBrown: string;
   };
 }
 

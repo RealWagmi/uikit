@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { rgba } from "polished";
+import { Box, Flex } from "../Box";
 
-export const Wrapper = styled.button`
-  display: flex;
+export const Wrapper = styled(Flex)`
   align-items: center;
   background: ${({ theme }) => rgba(theme.colors.dimGray, 0.08)};
   border: 0.5px solid ${({ theme }) => rgba(theme.colors.dimGray, 0.2)};
@@ -11,7 +11,7 @@ export const Wrapper = styled.button`
   width: fit-content;
 `;
 
-export const ArrowWrapper = styled.div`
+export const ArrowWrapper = styled(Box)`
   margin-right: 8px;
   height: 20px;
 `;
@@ -23,7 +23,7 @@ export const Text = styled.p`
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.25px;
-  color: ${({ theme }) => theme.colors.gray};
+  color: ${({ theme }) => theme.colors.textGray};
   margin: 0;
 `;
 
