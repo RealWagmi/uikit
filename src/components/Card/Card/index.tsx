@@ -1,4 +1,4 @@
-import { Box } from "../Box";
+import { Box } from "../../Box";
 import styled from 'styled-components'
 
 const Card = styled(Box)<{ width?: string; padding?: string; border?: string; $borderRadius?: string }>`

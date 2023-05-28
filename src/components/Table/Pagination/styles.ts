@@ -11,7 +11,7 @@ export const PaginationWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 7.5px;
-    color: ${({ theme }) => theme.colors.textDimGray};
+    color: ${({ theme }) => theme.colors.dimGray};
     user-select: none;
 
     .active {
