@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import Card from "../Card";
-import { rgba } from "polished";
 
 const YellowCard = styled(Card)`
-  background-color: ${({ theme }) => rgba(theme.colors.princetonOrange, 0.05)};
-  color: ${({ theme }) => theme.colors.violinBrown};
+  background-color: ${({ theme }) => theme.yellowCard.background};
+  color: ${({ theme }) => theme.yellowCard.color};
   font-weight: 500;
 `;
 
