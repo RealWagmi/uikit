@@ -6,7 +6,7 @@ export const TableWrapper = styled.main`
   padding: 31px 20px 23px;
   border-radius: 16px;
   background: ${({ theme }) => rgba(theme.colors.dimGray, 0.2)};
-  border: 1px solid rgba(109, 119, 135, 0.2);
+  border: 1px solid ${({ theme }) => rgba(theme.colors.auroMetalSaurus, 0.2)};
 
   display: grid;
   gap: 40px;
@@ -126,33 +126,6 @@ export const TableAsset = styled.span`
   align-items: center;
   gap: 15px;
   padding-left: 15px;
-`;
-
-export const PoolNameWrapper = styled.div`
-  display: flex;
-  align-items: center;
-
-  small {
-    margin-left: 5px;
-    min-width: 70px;
-    height: 20px;
-    color: ${({ theme }) => theme.colors.lightFrenchBeige};
-    background: ${({ theme }) => rgba(theme.colors.lightFrenchBeige, 0.2)};
-    font-size: 12px;
-    border-radius: 6px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media screen and (max-width: 900px) {
-    flex-direction: column;
-    small {
-      margin-top: 5px;
-      margin-left: 0;
-    }
-  }
 `;
 
 export const LoaderWrapper = styled.div`

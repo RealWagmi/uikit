@@ -1,20 +1,10 @@
-export interface UIKitTheme {
-  colors: {
-    //text
-    textGray: string;
-    textWhite: string;
-    textDimGray: string;
+import {LoadingSpinnerTheme} from "../components/LoadingSpinner/types";
+import { ThemeColors } from "./types";
 
-    //colors
-    dimGray: string;
-    indigo: string;
-    chineseBlack: string;
-    policeBlue: string;
-    darkJungleGreen: string;
-    violinBrown: string;
-    white: string;
-    lightFrenchBeige: string;
-  };
+export interface UIKitTheme {
+  colors: ThemeColors;
+
+  spinner: LoadingSpinnerTheme
 }
 
 export { default as dark } from "./dark";
