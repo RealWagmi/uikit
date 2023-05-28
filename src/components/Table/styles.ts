@@ -1,12 +1,11 @@
 import styled from "styled-components";
-import { rgba } from "polished";
 
 export const TableWrapper = styled.main`
   width: 100%;
   padding: 31px 20px 23px;
   border-radius: 16px;
-  background: ${({ theme }) => rgba(theme.colors.dimGray, 0.2)};
-  border: 1px solid ${({ theme }) => rgba(theme.colors.auroMetalSaurus, 0.2)};
+  background: ${({ theme }) => theme.table.background};
+  border: 1px solid ${({ theme }) => theme.table.border};
 
   display: grid;
   gap: 40px;
@@ -17,7 +16,7 @@ export const TableTitle = styled.div`
   text-transform: capitalize;
   font-size: 24px;
   font-weight: 400;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.table.titleColor};
   padding-left: 35px;
 `;
 
@@ -60,11 +59,11 @@ export const TableContainer = styled.div`
     }
 
     &::-webkit-scrollbar-track {
-      background: ${({ theme }) => theme.colors.dimGray};
+      background: ${({ theme }) => theme.table.scrollbarTrack};
     }
 
     &::-webkit-scrollbar-thumb {
-      background: ${({ theme }) => theme.colors.lightFrenchBeige};
+      background: ${({ theme }) => theme.table.scrollbarThumb};
       border-radius: 6px;
     }
   }
@@ -81,7 +80,7 @@ export const TableHeadItem = styled.span<{ sortable?: boolean }>`
   transition: background 0.25s ease;
 
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.gray};
+  color: ${({ theme }) => theme.table.secondColor};
 
   padding: 5px 0;
   border-radius: 8px;
@@ -93,7 +92,7 @@ export const TableHeadItem = styled.span<{ sortable?: boolean }>`
 
   &:hover {
     cursor: ${({ sortable }) => (sortable ? "pointer" : "default")};
-    background: ${({ sortable, theme }) => (sortable ? rgba(theme.colors.dimGray, 0.1) : "none")};
+    background: ${({ sortable, theme }) => (sortable ? theme.table.activeBackground : "none")};
   }
 `;
 
@@ -109,7 +108,7 @@ export const TableRow = styled(ResponsiveGrid)`
 
   &:hover {
     cursor: pointer;
-    background: ${({ theme }) => rgba(theme.colors.dimGray, 0.1)};
+    background: ${({ theme }) => theme.table.activeBackground};
   }
 `;
 
@@ -146,6 +145,6 @@ export const EmptyDataText = styled.p`
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.15px;
-  color: #7b8187;
+  color: ${({theme}) => theme.table.secondColor};
   margin-top: 15px;
 `;

@@ -8,6 +8,7 @@ import { dark as LightCard } from "../components/Card/LightCard/theme";
 import { dark as OutlineCard } from "../components/Card/OutlineCard/theme";
 import { dark as YellowCard } from "../components/Card/YellowCard/theme";
 import { dark as Breadcrumbs } from "../components/Breadcrumbs/theme";
+import { dark as Table } from "../components/Table/theme";
 
 const darkTheme: DefaultTheme = {
   colors: darkColors,
@@ -20,6 +21,7 @@ const darkTheme: DefaultTheme = {
   outlineCard: OutlineCard,
   yellowCard: YellowCard,
   breadcrumbs: Breadcrumbs,
+  table: Table
 };
 
 export default darkTheme;

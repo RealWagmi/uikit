@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { rgba } from "polished";
 
 export const PaginationWrapper = styled.div`
   display: flex;
@@ -11,11 +10,11 @@ export const PaginationWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 7.5px;
-    color: ${({ theme }) => theme.colors.dimGray};
+    color: ${({ theme }) => theme.table.color};
     user-select: none;
 
     .active {
-      color: ${({ theme }) => theme.colors.lightFrenchBeige};
+      color: ${({ theme }) => theme.table.activeColor};
     }
   }
 
@@ -40,7 +39,7 @@ export const PaginationWrapper = styled.div`
     }
 
     &:hover {
-      background: ${({ theme }) => rgba(theme.colors.dimGray, 0.1)};
+      background: ${({ theme }) => theme.table.activeBackground};
     }
 
     &:active {
