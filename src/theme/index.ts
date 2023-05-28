@@ -6,6 +6,7 @@ import { GrayCardTheme } from "../components/Card/GrayCard/types";
 import { LightCardTheme } from "../components/Card/LightCard/types";
 import { OutlineCardTheme } from "../components/Card/OutlineCard/types";
 import { YellowCardTheme } from "../components/Card/YellowCard/types";
+import { BreadcrumbsTheme } from "../components/Breadcrumbs/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
@@ -17,6 +18,7 @@ export interface UIKitTheme {
   lightCard: LightCardTheme;
   outlineCard: OutlineCardTheme;
   yellowCard: YellowCardTheme;
+  breadcrumbs: BreadcrumbsTheme;
 }
 
 export { default as dark } from "./dark";

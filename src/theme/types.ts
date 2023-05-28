@@ -1,5 +1,5 @@
 export type ThemeColors =  {
-  textGray: string;
+  gray: string;
   dimGray: string;
   indigo: string;
   chineseBlack: string;

@@ -81,7 +81,7 @@ export const TableHeadItem = styled.span<{ sortable?: boolean }>`
   transition: background 0.25s ease;
 
   font-size: 12px;
-  color: ${({ theme }) => theme.colors.textGray};
+  color: ${({ theme }) => theme.colors.gray};
 
   padding: 5px 0;
   border-radius: 8px;

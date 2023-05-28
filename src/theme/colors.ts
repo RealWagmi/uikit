@@ -1,7 +1,7 @@
 import { ThemeColors } from "./types";
 
 export const darkColors: ThemeColors = {
-  textGray: "#7b8187",
+  gray: "#7b8187",
   dimGray: "#616971",
   indigo: "#153d6f",
   chineseBlack: "#0E1218",
