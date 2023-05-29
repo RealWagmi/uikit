@@ -1,18 +1,16 @@
 import styled from "styled-components";
+import { Flex, Grid } from "../Box";
 
-export const TableWrapper = styled.main`
+export const TableWrapper = styled(Grid)`
   width: 100%;
   padding: 31px 20px 23px;
   border-radius: 16px;
   background: ${({ theme }) => theme.table.background};
   border: 1px solid ${({ theme }) => theme.table.border};
-
-  display: grid;
   gap: 40px;
 `;
 
-export const TableTitle = styled.div`
-  display: flex;
+export const TableTitle = styled(Flex)`
   text-transform: capitalize;
   font-size: 24px;
   font-weight: 400;
@@ -20,8 +18,7 @@ export const TableTitle = styled.div`
   padding-left: 35px;
 `;
 
-const ResponsiveGrid = styled.div`
-  display: grid;
+const ResponsiveGrid = styled(Grid)`
   grid-gap: 1em;
   align-items: center;
 
@@ -47,8 +44,7 @@ const ResponsiveGrid = styled.div`
 `;
 
 // Table
-export const TableContainer = styled.div`
-  display: grid;
+export const TableContainer = styled(Grid)`
   gap: 20px;
 
   @media (max-width: 900px) {
@@ -71,8 +67,7 @@ export const TableContainer = styled.div`
 
 export const TableHead = styled(ResponsiveGrid)``;
 
-export const TableHeadItem = styled.span<{ sortable?: boolean }>`
-  display: flex;
+export const TableHeadItem = styled(Flex)<{ sortable?: boolean }>`
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
@@ -96,8 +91,7 @@ export const TableHeadItem = styled.span<{ sortable?: boolean }>`
   }
 `;
 
-export const TableBody = styled.div`
-  display: grid;
+export const TableBody = styled(Grid)`
   gap: 10px;
 `;
 
@@ -120,15 +114,7 @@ export const TableItem = styled.div`
   }
 `;
 
-export const TableAsset = styled.span`
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  padding-left: 15px;
-`;
-
-export const LoaderWrapper = styled.div`
-  display: flex;
+export const LoaderWrapper = styled(Flex)`
   align-items: center;
   justify-content: center;
   height: 400px;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import { Flex } from "../../Box";
 
-export const PaginationWrapper = styled.div`
-  display: flex;
+export const PaginationWrapper = styled(Flex)`
   justify-content: center;
   align-items: center;
   gap: 15px;
