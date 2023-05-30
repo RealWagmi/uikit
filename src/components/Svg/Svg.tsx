@@ -12,6 +12,13 @@ const rotate = keyframes`
   }
 `;
 
+const SpinnerCss = css`
+  animation: 2s ${rotate} linear infinite;
+`
+export const SpinnerSVG = styled.svg`
+  ${SpinnerCss}
+`
+
 const spinStyle = css`
   animation: ${rotate} 2s linear infinite;
 `;
