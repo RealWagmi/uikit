@@ -6,3 +6,9 @@ export const dark: BreadcrumbsTheme = {
   border: darkColors.dimGray,
   color: darkColors.gray,
 };
+
+export const light: BreadcrumbsTheme = {
+  background: darkColors.dimGray,
+  border: darkColors.dimGray,
+  color: darkColors.gray,
+};

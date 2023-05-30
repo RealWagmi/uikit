@@ -11,7 +11,6 @@ import { TableTheme } from "../components/Table/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
-
   spinner: LoadingSpinnerTheme;
   blueCard: BlueCardTheme;
   darkGrayCard: DarkGrayCardTheme;
@@ -24,3 +23,4 @@ export interface UIKitTheme {
 }
 
 export { default as dark } from "./dark";
+export { default as light } from "./light";

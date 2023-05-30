@@ -1,6 +1,7 @@
 import { ThemeColors } from "./types";
 
-export const darkColors: ThemeColors = {
+
+const baseColors: ThemeColors = {
   gray: "#7b8187",
   dimGray: "#616971",
   indigo: "#153d6f",
@@ -12,4 +13,11 @@ export const darkColors: ThemeColors = {
   lightFrenchBeige: "#C2A676",
   princetonOrange: "#F3841E",
   auroMetalSaurus: "#6D7787",
+}
+export const darkColors: ThemeColors = {
+ ...baseColors
+};
+
+export const lightColors: ThemeColors = {
+ ...baseColors
 };
