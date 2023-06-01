@@ -26,5 +26,8 @@ export const colors: ThemeColors = {
   lapisLazuli: "#376BAD",
   piggyPink: "#F6DDE8",
   frenchSkyBlue: "#869EFF",
-  carnationPink: "#FBA4C0"
+  carnationPink: "#FBA4C0",
+  spanishYellow: "#EEB317",
+  philippineGold: "#B17900",
+  vulcan: "#0D111C"
 }

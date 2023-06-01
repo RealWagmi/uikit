@@ -24,4 +24,7 @@ export type ThemeColors =  {
   piggyPink: string;
   frenchSkyBlue: string;
   carnationPink: string;
+  spanishYellow: string;
+  philippineGold: string;
+  vulcan: string;
 }

@@ -1,6 +1,6 @@
 import { Button as RebassButton, ButtonProps as ButtonPropsOriginal } from 'rebass/styled-components'
 import styled from 'styled-components'
-import { Box } from "../Box";
+import { Box } from "../../Box";
 
 const Row = styled(Box)<{
   width?: string
@@ -52,10 +52,10 @@ export const BaseButton = styled(RebassButton)<BaseButtonProps>`
   width: ${({ width }) => width ?? '100%'};
   font-weight: 700;
   text-align: center;
-  border-radius: ${({ theme }) => theme.btnBorderRadius};
+  border-radius: 16px;
   outline: none;
 
-  color: ${({ theme }) => theme.textPrimary};
+  color: ${({ theme }) => theme.baseButton.color};
   text-decoration: none;
   display: flex;
   justify-content: center;

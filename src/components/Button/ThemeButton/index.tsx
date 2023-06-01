@@ -11,20 +11,20 @@ interface ThemeButtonProps extends React.ComponentPropsWithoutRef<"button">, Bas
 function pickThemeButtonBackgroundColor({ theme, emphasis }: { theme: DefaultTheme; emphasis: ButtonEmphasis }) {
   switch (emphasis) {
     case ButtonEmphasis.high:
-      return theme.accentAction;
+      return theme.themeButton.highBackground;
     case ButtonEmphasis.promotional:
-      return theme.accentActionSoft;
+      return theme.themeButton.promotionalBackground;
     case ButtonEmphasis.highSoft:
-      return theme.accentActionSoft;
+      return theme.themeButton.highSoftBackground;
     case ButtonEmphasis.low:
       return "transparent";
     case ButtonEmphasis.warning:
-      return theme.accentWarningSoft;
+      return theme.themeButton.warningBackground;
     case ButtonEmphasis.destructive:
-      return theme.accentCritical;
+      return theme.themeButton.destructiveBackground;
     case ButtonEmphasis.medium:
     default:
-      return theme.backgroundInteractive;
+      return theme.themeButton.defaultBackground;
   }
 }
 function pickThemeButtonFontSize({ size }: { size: ButtonSize }) {
@@ -67,18 +67,18 @@ function pickThemeButtonTextColor({ theme, emphasis }: { theme: DefaultTheme; em
   switch (emphasis) {
     case ButtonEmphasis.high:
     case ButtonEmphasis.promotional:
-      return theme.accentAction;
+      return theme.themeButton.promotional;
     case ButtonEmphasis.highSoft:
-      return theme.accentAction;
+      return theme.themeButton.highSoft;
     case ButtonEmphasis.low:
-      return theme.textSecondary;
+      return theme.themeButton.low;
     case ButtonEmphasis.warning:
-      return theme.accentWarning;
+      return theme.themeButton.warning;
     case ButtonEmphasis.destructive:
-      return theme.accentTextDarkPrimary;
+      return theme.themeButton.destructive;
     case ButtonEmphasis.medium:
     default:
-      return theme.textPrimary;
+      return theme.themeButton.default;
   }
 }
 
@@ -103,17 +103,17 @@ const BaseThemeButton = styled.button<BaseThemeButtonProps>`
 
   :active {
     ${ButtonOverlay} {
-      background-color: ${({ theme }) => theme.stateOverlayPressed};
+      background-color: ${({ theme }) => theme.themeButton.activeColor};
     }
   }
   :focus {
     ${ButtonOverlay} {
-      background-color: ${({ theme }) => theme.stateOverlayPressed};
+      background-color: ${({ theme }) => theme.themeButton.activeColor};
     }
   }
   :hover {
     ${ButtonOverlay} {
-      background-color: ${({ theme }) => theme.stateOverlayHover};
+      background-color: ${({ theme }) => theme.themeButton.hoverColor};
     }
   }
   :disabled {

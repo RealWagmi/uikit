@@ -11,6 +11,7 @@ import { dark as LightCard } from "../components/Card/LightCard/theme";
 import { dark as OutlineCard } from "../components/Card/OutlineCard/theme";
 import { dark as YellowCard } from "../components/Card/YellowCard/theme";
 //Buttons
+import { dark as BaseButton } from "../components/Button/BaseButton/theme";
 import { dark as ButtonConfirmed } from "../components/Button/ButtonConfirmed/theme";
 import { dark as ButtonError } from "../components/Button/ButtonError/theme";
 import { dark as ButtonPrimary } from "../components/Button/ButtonPrimary/theme";
@@ -20,6 +21,7 @@ import { dark as ButtonLight } from "../components/Button/ButtonLight/theme";
 import { dark as ButtonOutlined } from "../components/Button/ButtonOutlined/theme";
 import { dark as ButtonRadioChecked } from "../components/Button/ButtonRadioChecked/theme";
 import { dark as ButtonSecondary } from "../components/Button/ButtonSecondary/theme";
+import { dark as ThemeButton } from "../components/Button/ThemeButton/theme";
 
 const darkTheme: DefaultTheme = {
   colors,
@@ -35,6 +37,7 @@ const darkTheme: DefaultTheme = {
   outlineCard: OutlineCard,
   yellowCard: YellowCard,
   //Button
+  baseButton: BaseButton,
   buttonConfirmed: ButtonConfirmed,
   buttonError: ButtonError,
   buttonPrimary: ButtonPrimary,
@@ -44,6 +47,7 @@ const darkTheme: DefaultTheme = {
   buttonOutlined: ButtonOutlined,
   buttonRadioChecked: ButtonRadioChecked,
   buttonSecondary: ButtonSecondary,
+  themeButton: ThemeButton,
 };
 
 export default darkTheme;

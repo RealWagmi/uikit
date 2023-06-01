@@ -20,6 +20,8 @@ import { light as ButtonLight } from "../components/Button/ButtonLight/theme";
 import { light as ButtonOutlined } from "../components/Button/ButtonOutlined/theme";
 import { light as ButtonRadioChecked } from "../components/Button/ButtonRadioChecked/theme";
 import { light as ButtonSecondary } from "../components/Button/ButtonSecondary/theme";
+import { light as BaseButton } from "../components/Button/BaseButton/theme";
+import { light as ThemeButton } from "../components/Button/ThemeButton/theme";
 
 const lightTheme: DefaultTheme = {
   colors: colors,
@@ -34,6 +36,7 @@ const lightTheme: DefaultTheme = {
   outlineCard: OutlineCard,
   yellowCard: YellowCard,
   //Buttons
+  baseButton: BaseButton,
   buttonConfirmed: ButtonConfirmed,
   buttonError: ButtonError,
   buttonPrimary: ButtonPrimary,
@@ -43,6 +46,7 @@ const lightTheme: DefaultTheme = {
   buttonOutlined: ButtonOutlined,
   buttonRadioChecked: ButtonRadioChecked,
   buttonSecondary: ButtonSecondary,
+  themeButton: ThemeButton,
 };
 
 export default lightTheme;

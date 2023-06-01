@@ -17,6 +17,8 @@ import { ButtonLightTheme } from "../components/Button/ButtonLight/types";
 import { ButtonOutlinedTheme } from "../components/Button/ButtonOutlined/types";
 import { ButtonRadioCheckedTheme } from "../components/Button/ButtonRadioChecked/types";
 import { ButtonSecondaryTheme } from "../components/Button/ButtonSecondary/types";
+import { BaseButtonTheme } from "../components/Button/BaseButton/types";
+import { ThemeButtonTheme } from "../components/Button/ThemeButton/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
@@ -31,6 +33,7 @@ export interface UIKitTheme {
   outlineCard: OutlineCardTheme;
   yellowCard: YellowCardTheme;
   //Buttons
+  baseButton: BaseButtonTheme,
   buttonConfirmed: ButtonConfirmedTheme
   buttonError: ButtonErrorTheme,
   buttonPrimary: ButtonPrimaryTheme,
@@ -40,6 +43,7 @@ export interface UIKitTheme {
   buttonOutlined: ButtonOutlinedTheme,
   buttonRadioChecked: ButtonRadioCheckedTheme,
   buttonSecondary: ButtonSecondaryTheme,
+  themeButton: ThemeButtonTheme
 }
 
 export { default as dark } from "./dark";
