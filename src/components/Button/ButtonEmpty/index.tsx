@@ -3,7 +3,7 @@ import { BaseButton } from "../BaseButton";
 
 const ButtonEmpty = styled(BaseButton)`
   background-color: transparent;
-  color: ${({ theme }) => theme.accentAction};
+  color: ${({ theme }) => theme.buttonEmpty.color};
   display: flex;
   justify-content: center;
   align-items: center;
