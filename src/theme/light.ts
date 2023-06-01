@@ -11,8 +11,9 @@ import { light as LightCard } from "../components/Card/LightCard/theme";
 import { light as OutlineCard } from "../components/Card/OutlineCard/theme";
 import { light as YellowCard } from "../components/Card/YellowCard/theme";
 //Buttons
-import {light as ButtonConfirmed} from '../components/Button/ButtonConfirmed/theme'
-import {light as ButtonError} from '../components/Button/ButtonError/theme'
+import { light as ButtonConfirmed } from "../components/Button/ButtonConfirmed/theme";
+import { light as ButtonError } from "../components/Button/ButtonError/theme";
+import { light as ButtonPrimary } from "../components/Button/ButtonPrimary/theme";
 
 const lightTheme: DefaultTheme = {
   colors: colors,
@@ -28,7 +29,8 @@ const lightTheme: DefaultTheme = {
   yellowCard: YellowCard,
   //Buttons
   buttonConfirmed: ButtonConfirmed,
-  buttonError: ButtonError
+  buttonError: ButtonError,
+  buttonPrimary: ButtonPrimary,
 };
 
 export default lightTheme;

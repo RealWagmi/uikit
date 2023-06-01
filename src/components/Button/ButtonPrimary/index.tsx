@@ -1,23 +1,22 @@
 import styled from "styled-components";
-import { darken } from "polished";
 import { BaseButton } from "../BaseButton";
 
 const ButtonPrimary = styled(BaseButton)`
-  background: ${({ theme }) => theme.accentAction};
+  background: ${({ theme }) => theme.buttonPrimary.color};
   font-size: 16px;
   font-weight: 600;
   padding: 16px;
-  color: ${({ theme }) => theme.accentTextLightPrimary};
+  color: ${({ theme }) => theme.buttonPrimary.textColor};
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.accentAction)};
-    background: ${({ theme }) => darken(0.05, theme.accentAction)};
+    box-shadow: 0 0 0 1pt ${({ theme }) => theme.buttonPrimary.focusColor};
+    background: ${({ theme }) => theme.buttonPrimary.focusColor};
   }
   &:hover {
-    background: ${({ theme }) => darken(0.05, theme.accentAction)};
+    background: ${({ theme }) => theme.buttonPrimary.focusColor};
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.accentAction)};
-    background: ${({ theme }) => darken(0.1, theme.accentAction)};
+    box-shadow: 0 0 0 1pt ${({ theme }) => theme.buttonPrimary.activeColor};
+    background: ${({ theme }) => theme.buttonPrimary.activeColor};
   }
   &:disabled {
     cursor: auto;

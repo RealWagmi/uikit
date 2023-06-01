@@ -11,6 +11,7 @@ export const colors: ThemeColors = {
   lavender: '#E8ECFB',
   coralReef: '#FD766B',
   deepCarminePink: '#FA2B39',
+  ghostWhite: '#F5F6FC',
   darkJungleGreen: "#131A2A",
   violinBrown: "#5D4204",
   white: "#ffffff",

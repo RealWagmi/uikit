@@ -10,6 +10,7 @@ import { BreadcrumbsTheme } from "../components/Breadcrumbs/types";
 import { TableTheme } from "../components/Table/types";
 import { ButtonConfirmedTheme } from "../components/Button/ButtonConfirmed/types";
 import { ButtonErrorTheme } from "../components/Button/ButtonError/types";
+import { ButtonPrimaryTheme } from "../components/Button/ButtonPrimary/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
@@ -25,7 +26,8 @@ export interface UIKitTheme {
   yellowCard: YellowCardTheme;
   //Buttons
   buttonConfirmed: ButtonConfirmedTheme
-  buttonError: ButtonErrorTheme
+  buttonError: ButtonErrorTheme,
+  buttonPrimary: ButtonPrimaryTheme,
 }
 
 export { default as dark } from "./dark";
