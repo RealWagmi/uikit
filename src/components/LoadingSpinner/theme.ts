@@ -1,10 +1,10 @@
 import { LoadingSpinnerTheme } from "./types";
-import { darkColors } from "../../theme/colors";
+import { colors } from "../../theme/colors";
 
 export const dark: LoadingSpinnerTheme = {
-  color: darkColors.lightFrenchBeige,
+  color: colors.lightFrenchBeige,
 };
 
 export const light: LoadingSpinnerTheme = {
-  color: darkColors.lightFrenchBeige,
+  color: colors.lightFrenchBeige,
 };

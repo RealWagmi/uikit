@@ -1,10 +1,10 @@
 import { GrayCardTheme } from "./types";
-import { darkColors } from "../../../theme/colors";
+import { colors } from "../../../theme/colors";
 
 export const dark: GrayCardTheme = {
-  background: darkColors.policeBlue,
+  background: colors.policeBlue,
 };
 
 export const light: GrayCardTheme = {
-  background: darkColors.policeBlue,
+  background: colors.policeBlue,
 };

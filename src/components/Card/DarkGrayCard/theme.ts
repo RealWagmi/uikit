@@ -1,10 +1,10 @@
 import { DarkGrayCardTheme } from "./types";
-import { darkColors } from "../../../theme/colors";
+import { colors } from "../../../theme/colors";
 
 export const dark: DarkGrayCardTheme = {
-  background: darkColors.chineseBlack,
+  background: colors.chineseBlack,
 };
 
 export const light: DarkGrayCardTheme = {
-  background: darkColors.chineseBlack,
+  background: colors.chineseBlack,
 };
