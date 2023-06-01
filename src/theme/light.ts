@@ -16,6 +16,7 @@ import { light as ButtonError } from "../components/Button/ButtonError/theme";
 import { light as ButtonPrimary } from "../components/Button/ButtonPrimary/theme";
 import { light as ButtonGray } from "../components/Button/ButtonGray/theme";
 import { light as ButtonEmpty } from "../components/Button/ButtonEmpty/theme";
+import { light as ButtonLight } from "../components/Button/ButtonLight/theme";
 
 const lightTheme: DefaultTheme = {
   colors: colors,
@@ -34,7 +35,8 @@ const lightTheme: DefaultTheme = {
   buttonError: ButtonError,
   buttonPrimary: ButtonPrimary,
   buttonGray: ButtonGray,
-  buttonEmpty: ButtonEmpty
+  buttonEmpty: ButtonEmpty,
+  buttonLight: ButtonLight
 };
 
 export default lightTheme;

@@ -13,6 +13,7 @@ import { ButtonErrorTheme } from "../components/Button/ButtonError/types";
 import { ButtonPrimaryTheme } from "../components/Button/ButtonPrimary/types";
 import { ButtonGrayTheme } from "../components/Button/ButtonGray/types";
 import { ButtonEmptyTheme } from "../components/Button/ButtonEmpty/types";
+import { ButtonLightTheme } from "../components/Button/ButtonLight/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
@@ -31,7 +32,8 @@ export interface UIKitTheme {
   buttonError: ButtonErrorTheme,
   buttonPrimary: ButtonPrimaryTheme,
   buttonGray: ButtonGrayTheme,
-  buttonEmpty: ButtonEmptyTheme
+  buttonEmpty: ButtonEmptyTheme,
+  buttonLight: ButtonLightTheme
 }
 
 export { default as dark } from "./dark";

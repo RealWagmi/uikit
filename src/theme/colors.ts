@@ -18,4 +18,7 @@ export const colors: ThemeColors = {
   lightFrenchBeige: "#C2A676",
   princetonOrange: "#F3841E",
   auroMetalSaurus: "#6D7787",
+  richBlack: "#030D1B",
+  deepPink: "#FB118E",
+  ceil: "#98A1C0"
 }

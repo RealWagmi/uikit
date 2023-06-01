@@ -15,4 +15,7 @@ export type ThemeColors =  {
   lightFrenchBeige: string;
   princetonOrange: string;
   auroMetalSaurus: string;
+  richBlack: string;
+  deepPink: string;
+  ceil: string;
 }
