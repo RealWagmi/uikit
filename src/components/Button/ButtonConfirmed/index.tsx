@@ -4,14 +4,13 @@ import { ButtonProps } from "rebass";
 import ButtonPrimary from "../ButtonPrimary";
 
 const ButtonConfirmedStyle = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.deprecated_bg3};
-  color: ${({ theme }) => theme.textPrimary};
-  /* border: 1px solid ${({ theme }) => theme.accentSuccess}; */
+  background-color: ${({ theme }) => theme.buttonConfirmed.background};
+  color: ${({ theme }) => theme.buttonConfirmed.color};
 
   &:disabled {
     opacity: 50%;
-    background-color: ${({ theme }) => theme.backgroundInteractive};
-    color: ${({ theme }) => theme.textSecondary};
+    background-color: ${({ theme }) => theme.buttonConfirmed.backgroundDisabled};
+    color: ${({ theme }) => theme.buttonConfirmed.colorDisabled};
     cursor: auto;
   }
 `;

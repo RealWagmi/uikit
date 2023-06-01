@@ -1,11 +1,11 @@
 import { LightCardTheme } from "./types";
-import { darkColors } from "../../../theme/colors";
+import { colors } from "../../../theme/colors";
 
 export const dark: LightCardTheme = {
-  background: darkColors.darkJungleGreen,
-  border: darkColors.chineseBlack,
+  background: colors.darkJungleGreen,
+  border: colors.chineseBlack,
 };
 export const light: LightCardTheme = {
-  background: darkColors.darkJungleGreen,
-  border: darkColors.chineseBlack,
+  background: colors.darkJungleGreen,
+  border: colors.chineseBlack,
 };

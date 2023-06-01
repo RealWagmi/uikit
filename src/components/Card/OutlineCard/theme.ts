@@ -1,10 +1,10 @@
 import { OutlineCardTheme } from "./types";
-import { darkColors } from "../../../theme/colors";
+import { colors } from "../../../theme/colors";
 
 export const dark: OutlineCardTheme = {
-  border: darkColors.policeBlue,
+  border: colors.policeBlue,
 };
 
 export const light: OutlineCardTheme = {
-  border: darkColors.policeBlue,
+  border: colors.policeBlue,
 };

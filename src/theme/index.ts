@@ -8,18 +8,22 @@ import { OutlineCardTheme } from "../components/Card/OutlineCard/types";
 import { YellowCardTheme } from "../components/Card/YellowCard/types";
 import { BreadcrumbsTheme } from "../components/Breadcrumbs/types";
 import { TableTheme } from "../components/Table/types";
+import { ButtonConfirmedTheme } from "../components/Button/ButtonConfirmed/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
   spinner: LoadingSpinnerTheme;
+  breadcrumbs: BreadcrumbsTheme;
+  table: TableTheme;
+  //Cards
   blueCard: BlueCardTheme;
   darkGrayCard: DarkGrayCardTheme;
   grayCard: GrayCardTheme;
   lightCard: LightCardTheme;
   outlineCard: OutlineCardTheme;
   yellowCard: YellowCardTheme;
-  breadcrumbs: BreadcrumbsTheme;
-  table: TableTheme;
+  //Buttons
+  buttonConfirmed: ButtonConfirmedTheme
 }
 
 export { default as dark } from "./dark";

@@ -1,14 +1,14 @@
 import { BreadcrumbsTheme } from "./types";
-import { darkColors } from "../../theme/colors";
+import { colors } from "../../theme/colors";
 
 export const dark: BreadcrumbsTheme = {
-  background: darkColors.dimGray,
-  border: darkColors.dimGray,
-  color: darkColors.gray,
+  background: colors.dimGray,
+  border: colors.dimGray,
+  color: colors.gray,
 };
 
 export const light: BreadcrumbsTheme = {
-  background: darkColors.dimGray,
-  border: darkColors.dimGray,
-  color: darkColors.gray,
+  background: colors.dimGray,
+  border: colors.dimGray,
+  color: colors.gray,
 };
