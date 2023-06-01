@@ -1,30 +1,29 @@
 import { ButtonProps } from "rebass";
 import styled from "styled-components";
-import { darken } from "polished";
 import { BaseButton } from "../BaseButton";
 import ButtonPrimary from "../ButtonPrimary";
 
 const ButtonErrorStyle = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.accentFailure};
-  border: 1px solid ${({ theme }) => theme.accentFailure};
+  background-color: ${({ theme }) => theme.buttonError.color};
+  border: 1px solid ${({ theme }) => theme.buttonError.color};
 
   &:focus {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.accentFailure)};
-    background-color: ${({ theme }) => darken(0.05, theme.accentFailure)};
+    box-shadow: 0 0 0 1pt ${({ theme }) => theme.buttonError.focusColor};
+    background-color: ${({ theme }) => theme.buttonError.focusColor};
   }
   &:hover {
-    background-color: ${({ theme }) => darken(0.05, theme.accentFailure)};
+    background-color: ${({ theme }) => theme.buttonError.focusColor};
   }
   &:active {
-    box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.1, theme.accentFailure)};
-    background-color: ${({ theme }) => darken(0.1, theme.accentFailure)};
+    box-shadow: 0 0 0 1pt ${({ theme }) => theme.buttonError.activeColor};
+    background-color: ${({ theme }) => theme.buttonError.activeColor};
   }
   &:disabled {
     opacity: 50%;
     cursor: auto;
     box-shadow: none;
-    background-color: ${({ theme }) => theme.accentFailure};
-    border: 1px solid ${({ theme }) => theme.accentFailure};
+    background-color: ${({ theme }) => theme.buttonError.color};
+    border: 1px solid ${({ theme }) => theme.buttonError.color};
   }
 `;
 

@@ -6,6 +6,8 @@ export type ThemeColors =  {
   policeBlue: string;
   lightSteelBlue: string;
   lavender: string;
+  coralReef: string;
+  deepCarminePink: string;
   darkJungleGreen: string;
   violinBrown: string;
   white: string;

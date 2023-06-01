@@ -12,6 +12,7 @@ import { dark as OutlineCard } from "../components/Card/OutlineCard/theme";
 import { dark as YellowCard } from "../components/Card/YellowCard/theme";
 //Buttons
 import {dark as ButtonConfirmed} from '../components/Button/ButtonConfirmed/theme'
+import {dark as ButtonError} from '../components/Button/ButtonError/theme'
 
 const darkTheme: DefaultTheme = {
   colors,
@@ -27,7 +28,8 @@ const darkTheme: DefaultTheme = {
   outlineCard: OutlineCard,
   yellowCard: YellowCard,
   //Button
-  buttonConfirmed: ButtonConfirmed
+  buttonConfirmed: ButtonConfirmed,
+  buttonError: ButtonError
 };
 
 export default darkTheme;

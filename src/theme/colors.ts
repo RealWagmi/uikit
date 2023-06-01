@@ -9,6 +9,8 @@ export const colors: ThemeColors = {
   policeBlue: "#404A67",
   lightSteelBlue: "#B8C0DC",
   lavender: '#E8ECFB',
+  coralReef: '#FD766B',
+  deepCarminePink: '#FA2B39',
   darkJungleGreen: "#131A2A",
   violinBrown: "#5D4204",
   white: "#ffffff",
