@@ -6,14 +6,14 @@ import { Check } from "react-feather";
 
 export const ActiveOutlined = styled(ButtonOutlined)`
   border: 1px solid;
-  border-color: ${({ theme }) => theme.accentAction};
+  border-color: ${({ theme }) => theme.buttonRadioChecked.color};
 `;
 
 const Circle = styled.div`
   height: 17px;
   width: 17px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.accentAction};
+  background-color: ${({ theme }) => theme.buttonRadioChecked.color};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,7 +47,7 @@ export default function ButtonRadioChecked({ active = false, children, ...rest }
           {children}
           <CheckboxWrapper>
             <Circle>
-              <ResponsiveCheck size={13} stroke={theme.white} />
+              <ResponsiveCheck size={13} stroke={theme.buttonRadioChecked.checkColor} />
             </Circle>
           </CheckboxWrapper>
         </RowBetween>

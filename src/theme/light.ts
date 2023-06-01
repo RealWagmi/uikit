@@ -18,6 +18,7 @@ import { light as ButtonGray } from "../components/Button/ButtonGray/theme";
 import { light as ButtonEmpty } from "../components/Button/ButtonEmpty/theme";
 import { light as ButtonLight } from "../components/Button/ButtonLight/theme";
 import { light as ButtonOutlined } from "../components/Button/ButtonOutlined/theme";
+import { light as ButtonRadioChecked } from "../components/Button/ButtonRadioChecked/theme";
 
 const lightTheme: DefaultTheme = {
   colors: colors,
@@ -38,7 +39,8 @@ const lightTheme: DefaultTheme = {
   buttonGray: ButtonGray,
   buttonEmpty: ButtonEmpty,
   buttonLight: ButtonLight,
-  buttonOutlined: ButtonOutlined
+  buttonOutlined: ButtonOutlined,
+  buttonRadioChecked: ButtonRadioChecked,
 };
 
 export default lightTheme;
