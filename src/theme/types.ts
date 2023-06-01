@@ -18,4 +18,6 @@ export type ThemeColors =  {
   richBlack: string;
   deepPink: string;
   ceil: string;
+  soap: string;
+  darkElectricBlue: string;
 }

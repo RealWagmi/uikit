@@ -20,5 +20,7 @@ export const colors: ThemeColors = {
   auroMetalSaurus: "#6D7787",
   richBlack: "#030D1B",
   deepPink: "#FB118E",
-  ceil: "#98A1C0"
+  ceil: "#98A1C0",
+  soap: "#D2D9EE",
+  darkElectricBlue: "#5D6785"
 }

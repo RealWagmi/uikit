@@ -17,6 +17,7 @@ import { dark as ButtonPrimary } from "../components/Button/ButtonPrimary/theme"
 import { dark as ButtonGray } from "../components/Button/ButtonGray/theme";
 import { dark as ButtonEmpty } from "../components/Button/ButtonEmpty/theme";
 import { dark as ButtonLight } from "../components/Button/ButtonLight/theme";
+import { dark as ButtonOutlined } from "../components/Button/ButtonOutlined/theme";
 
 const darkTheme: DefaultTheme = {
   colors,
@@ -37,7 +38,8 @@ const darkTheme: DefaultTheme = {
   buttonPrimary: ButtonPrimary,
   buttonGray: ButtonGray,
   buttonEmpty: ButtonEmpty,
-  buttonLight: ButtonLight
+  buttonLight: ButtonLight,
+  buttonOutlined: ButtonOutlined
 };
 
 export default darkTheme;
