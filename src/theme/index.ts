@@ -11,6 +11,7 @@ import { TableTheme } from "../components/Table/types";
 import { ButtonConfirmedTheme } from "../components/Button/ButtonConfirmed/types";
 import { ButtonErrorTheme } from "../components/Button/ButtonError/types";
 import { ButtonPrimaryTheme } from "../components/Button/ButtonPrimary/types";
+import { ButtonGrayTheme } from "../components/Button/ButtonGray/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
@@ -28,6 +29,7 @@ export interface UIKitTheme {
   buttonConfirmed: ButtonConfirmedTheme
   buttonError: ButtonErrorTheme,
   buttonPrimary: ButtonPrimaryTheme,
+  buttonGray: ButtonGrayTheme,
 }
 
 export { default as dark } from "./dark";

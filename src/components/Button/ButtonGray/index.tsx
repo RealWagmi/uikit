@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import { BaseButton } from "../BaseButton";
-import { darken } from "polished";
 
 const ButtonGray = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.btnBgColorSecond};
+  background-color: ${({ theme }) => theme.buttonGray.background};
   color: #c2a676;
   border: 2px solid #dcb97e;
   font-size: 16px;
@@ -11,7 +10,7 @@ const ButtonGray = styled(BaseButton)`
   border-radius: 16px;
 
   &:active {
-    background-color: ${({ theme, disabled }) => !disabled && darken(0.1, theme.backgroundInteractive)};
+    background-color: ${({ theme, disabled }) => !disabled && theme.buttonGray.backgroundActive};
   }
 `;
 
