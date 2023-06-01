@@ -22,5 +22,9 @@ export const colors: ThemeColors = {
   deepPink: "#FB118E",
   ceil: "#98A1C0",
   soap: "#D2D9EE",
-  darkElectricBlue: "#5D6785"
+  darkElectricBlue: "#5D6785",
+  lapisLazuli: "#376BAD",
+  piggyPink: "#F6DDE8",
+  frenchSkyBlue: "#869EFF",
+  carnationPink: "#FBA4C0"
 }

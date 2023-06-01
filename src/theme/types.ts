@@ -20,4 +20,8 @@ export type ThemeColors =  {
   ceil: string;
   soap: string;
   darkElectricBlue: string;
+  lapisLazuli: string;
+  piggyPink: string;
+  frenchSkyBlue: string;
+  carnationPink: string;
 }

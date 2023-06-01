@@ -16,6 +16,7 @@ import { ButtonEmptyTheme } from "../components/Button/ButtonEmpty/types";
 import { ButtonLightTheme } from "../components/Button/ButtonLight/types";
 import { ButtonOutlinedTheme } from "../components/Button/ButtonOutlined/types";
 import { ButtonRadioCheckedTheme } from "../components/Button/ButtonRadioChecked/types";
+import { ButtonSecondaryTheme } from "../components/Button/ButtonSecondary/types";
 
 export interface UIKitTheme {
   colors: ThemeColors;
@@ -38,6 +39,7 @@ export interface UIKitTheme {
   buttonLight: ButtonLightTheme
   buttonOutlined: ButtonOutlinedTheme,
   buttonRadioChecked: ButtonRadioCheckedTheme,
+  buttonSecondary: ButtonSecondaryTheme,
 }
 
 export { default as dark } from "./dark";
