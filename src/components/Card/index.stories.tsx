@@ -1,11 +1,5 @@
 import React from "react";
-import CardComponent from "./Card";
-import BlueCardComponent from "./BlueCard";
-import DarkGrayCardComponent from "./DarkGrayCard";
-import GrayCardComponent from "./GrayCard";
-import LightCardComponent from "./LightCard";
-import OutlineCardComponent from "./OutlineCard";
-import YellowCardComponent from "./YellowCard";
+import CardComponent from "./index";
 
 export default {
   title: "Components/Primitives",
@@ -14,57 +8,29 @@ export default {
 };
 
 export const Card: React.FC<React.PropsWithChildren> = () => {
-  return (
-      <CardComponent >
-        Some Content
-      </CardComponent>
-  );
+  return <CardComponent>Some Content</CardComponent>;
 };
 
 export const BlueCard: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <BlueCardComponent>
-      Blue Card
-    </BlueCardComponent>
-  );
+  return <CardComponent variant={"blue"}>Blue Card</CardComponent>;
 };
 
 export const DarkGrayCard: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <DarkGrayCardComponent>
-      DarkGray Card
-    </DarkGrayCardComponent>
-  );
+  return <CardComponent variant={"dark-gray"}>DarkGray Card</CardComponent>;
 };
 
 export const GrayCard: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <GrayCardComponent>
-      Gray Card
-    </GrayCardComponent>
-  );
+  return <CardComponent variant={"gray"}>Gray Card</CardComponent>;
 };
 
 export const LightCard: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <LightCardComponent>
-      Light Card
-    </LightCardComponent>
-  );
+  return <CardComponent variant={"light"}>Light Card</CardComponent>;
 };
 
 export const OutlineCard: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <OutlineCardComponent>
-      Outline Card
-    </OutlineCardComponent>
-  );
+  return <CardComponent variant={"outline"}>Outline Card</CardComponent>;
 };
 
 export const YellowCard: React.FC<React.PropsWithChildren> = () => {
-  return (
-    <YellowCardComponent>
-      Yellow Card
-    </YellowCardComponent>
-  );
+  return <CardComponent variant={"yellow"}>Yellow Card</CardComponent>;
 };

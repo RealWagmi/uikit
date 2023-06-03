@@ -1,11 +1,6 @@
 import { LoadingSpinnerTheme } from "../components/LoadingSpinner/types";
 import { ThemeColors } from "./types";
-import { BlueCardTheme } from "../components/Card/BlueCard/types";
-import { DarkGrayCardTheme } from "../components/Card/DarkGrayCard/types";
-import { GrayCardTheme } from "../components/Card/GrayCard/types";
-import { LightCardTheme } from "../components/Card/LightCard/types";
-import { OutlineCardTheme } from "../components/Card/OutlineCard/types";
-import { YellowCardTheme } from "../components/Card/YellowCard/types";
+import { CardTheme } from "../components/Card/types";
 import { BreadcrumbsTheme } from "../components/Breadcrumbs/types";
 import { TableTheme } from "../components/Table/types";
 import { ButtonConfirmedTheme } from "../components/Button/ButtonConfirmed/types";
@@ -26,23 +21,18 @@ export interface UIKitTheme {
   breadcrumbs: BreadcrumbsTheme;
   table: TableTheme;
   //Cards
-  blueCard: BlueCardTheme;
-  darkGrayCard: DarkGrayCardTheme;
-  grayCard: GrayCardTheme;
-  lightCard: LightCardTheme;
-  outlineCard: OutlineCardTheme;
-  yellowCard: YellowCardTheme;
+  card: CardTheme;
   //Buttons
-  baseButton: BaseButtonTheme,
-  buttonConfirmed: ButtonConfirmedTheme
-  buttonError: ButtonErrorTheme,
-  buttonPrimary: ButtonPrimaryTheme,
-  buttonGray: ButtonGrayTheme,
-  buttonEmpty: ButtonEmptyTheme,
-  buttonLight: ButtonLightTheme
-  buttonOutlined: ButtonOutlinedTheme,
-  buttonRadioChecked: ButtonRadioCheckedTheme,
-  buttonSecondary: ButtonSecondaryTheme,
+  baseButton: BaseButtonTheme;
+  buttonConfirmed: ButtonConfirmedTheme;
+  buttonError: ButtonErrorTheme;
+  buttonPrimary: ButtonPrimaryTheme;
+  buttonGray: ButtonGrayTheme;
+  buttonEmpty: ButtonEmptyTheme;
+  buttonLight: ButtonLightTheme;
+  buttonOutlined: ButtonOutlinedTheme;
+  buttonRadioChecked: ButtonRadioCheckedTheme;
+  buttonSecondary: ButtonSecondaryTheme;
   themeButton: ThemeButtonTheme
 }
 
