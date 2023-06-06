@@ -3,7 +3,7 @@ import BreadcrumbsComponent from "./index";
 import {BrowserRouter} from "react-router-dom";
 
 export default {
-  title: "Components/Primitives",
+  title: "Components/Breadcrumbs",
   component: BreadcrumbsComponent,
   argTypes: {},
 };

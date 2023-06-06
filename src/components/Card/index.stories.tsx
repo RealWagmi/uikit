@@ -2,7 +2,7 @@ import React from "react";
 import CardComponent from "./index";
 
 export default {
-  title: "Components/Primitives",
+  title: "Components/Cards",
   component: CardComponent,
   argTypes: {},
 };

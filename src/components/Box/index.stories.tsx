@@ -4,7 +4,7 @@ import FlexComponent from "./Flex";
 import GridComponent from "./Grid";
 
 export default {
-  title: "Components/Primitives",
+  title: "Components/Base",
   component: BoxComponent,
   argTypes: {},
 };

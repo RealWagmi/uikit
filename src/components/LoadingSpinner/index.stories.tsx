@@ -2,7 +2,7 @@ import React from "react";
 import LoadingSpinnerComponent from "./index";
 
 export default {
-  title: "Components/Primitives",
+  title: "Components/Loaders",
   component: LoadingSpinnerComponent,
   argTypes: {},
 };
