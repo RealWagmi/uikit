@@ -1,6 +1,6 @@
 {
-  "name": "@wagmi/uikit",
-  "version": "1.0.0",
+  "name": "@real-wagmi/uikit",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "author": "",
+  "author": "Wagmi",
   "license": "ISC",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.12",
