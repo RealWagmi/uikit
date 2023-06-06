@@ -12,7 +12,7 @@
     "build-storybook": "storybook build"
   },
   "author": "Wagmi",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.12",
     "@storybook/addon-interactions": "^7.0.12",
@@ -54,10 +54,15 @@
     "rebass": "^4.0.7",
     "react-feather": "^2.0.8"
   },
+  "repository": "https://github.com/RealWagmi/uikit.git",
   "files": [
     "dist/"
   ],
   "publishConfig": {
     "access": "public"
-  }
+  },
+  "keywords": [
+    "wagmi",
+    "uikit"
+  ]
 }
