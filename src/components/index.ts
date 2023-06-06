@@ -5,3 +5,4 @@ export * from "./Card";
 export * from "./Table";
 export * from "./LoadingSpinner";
 export * from "./Button";
+export * from "./Charts";
