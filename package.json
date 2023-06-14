@@ -66,10 +66,5 @@
   "keywords": [
     "wagmi",
     "uikit"
-  ],
-  "engines": {
-    "npm": "please-use-yarn",
-    "node": "16",
-    "yarn": ">=1.22"
-  }
+  ]
 }
