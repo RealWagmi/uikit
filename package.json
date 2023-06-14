@@ -43,7 +43,8 @@
     "vitest": "^0.27.2"
   },
   "dependencies": {
-    "@real-wagmi/sdk": "^0.0.2",
+    "@real-wagmi/sdk": "^1.0.6",
+    "@real-wagmi/v3-sdk": "^1.0.2",
     "@types/node": "^13.13.5",
     "@types/styled-system": "^5.1.15",
     "framer-motion": "10.11.2",
@@ -65,5 +66,10 @@
   "keywords": [
     "wagmi",
     "uikit"
-  ]
+  ],
+  "engines": {
+    "npm": "please-use-yarn",
+    "node": "16",
+    "yarn": ">=1.22"
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { TerminalChart } from './Terminal';
-import { SupportedChainId } from '@real-wagmi/sdk';
+import { SupportedChainId } from "../../constants";
 
 export default {
   title: "Components/Charts",

@@ -1,4 +1,4 @@
-import { SupportedChainId } from '@real-wagmi/sdk';
+import { SupportedChainId } from "../../../constants";
 import { useMemo } from 'react';
 import { URLS } from './constants';
 import { ChartWrapper } from './styles';
