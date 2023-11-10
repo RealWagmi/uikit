@@ -11,7 +11,7 @@ export default {
 
 export const Box: React.FC<React.PropsWithChildren> = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#ffffff" }}>
       <BoxComponent as="p">
         Contains background, border, layout, position, and space from{" "}
         <a href="https://styled-system.com/api" target="_blank">
@@ -24,7 +24,7 @@ export const Box: React.FC<React.PropsWithChildren> = () => {
 
 export const Flex: React.FC<React.PropsWithChildren> = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#ffffff" }}>
       <span>Based on the Box component. You can apply any flexbox properties on the Flex component.</span>
       <a href="https://styled-system.com/api#flexbox" target="_blank">
         List of applicable props

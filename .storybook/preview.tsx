@@ -7,18 +7,28 @@ import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
+    backgrounds: {
+      default: "dark",
+      values: [
+        {
+          name: "dark",
+          value: "#0E1218",
+        },
+      ],
+    },
+    themes: {
+      default: "dark",
+      list: [
+        { name: "dark", color: "#00aced" },
+        { name: "light", color: "#3b5998" },
+      ],
     },
   },
   decorators: [
     withThemeFromJSXProvider({
       themes: {
-        light,
         dark,
+        light,
       },
       defaultTheme: "dark",
       Provider: ThemeProvider,
