@@ -1,7 +1,8 @@
-import type { Preview } from "@storybook/react";
+import type { DecoratorFn, Preview } from "@storybook/react";
 
 import { ThemeProvider } from "styled-components";
-import { dark } from "../src/theme";
+import { dark, light } from "../src/theme";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 
 const preview: Preview = {
   parameters: {
@@ -14,11 +15,14 @@ const preview: Preview = {
     },
   },
   decorators: [
-    (Story) => (
-      <ThemeProvider theme={dark}>
-        <Story />
-      </ThemeProvider>
-    ),
+    withThemeFromJSXProvider({
+      themes: {
+        light,
+        dark,
+      },
+      defaultTheme: "dark",
+      Provider: ThemeProvider,
+    }) as DecoratorFn,
   ],
 };
 

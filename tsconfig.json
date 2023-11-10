@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2020",
     "module": "commonjs",
     "declaration": true,
     "esModuleInterop": true,
     "outDir": "./dist",
     "strict": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
   },
   "include": [
     "src/components",
     "src/styled.d.ts"
   ],
-  "exclude": ["node_modules", "**/__tests__/*"],
+  "exclude": ["node_modules", "**/__tests__/*", "dist"],
 }

@@ -1,19 +1,19 @@
 import { ArrowLeft } from "../../Svg";
 
-import { PaginationWrapper } from './styles'
+import { PaginationWrapper } from "./styles";
 
 interface IProps {
-  current: number
-  total: number
-  handlePrev: () => void
-  handleNext: () => void
+  current: number;
+  total: number;
+  handlePrev: () => void;
+  handleNext: () => void;
 }
 
 export default function Pagination({ current, total, handlePrev, handleNext }: IProps) {
   return (
     <PaginationWrapper>
-      <div className={`icon left ${current === 1 && 'disabled'}`} onClick={handlePrev}>
-        <ArrowLeft/>
+      <div className={`icon left ${current === 1 && "disabled"}`} onClick={handlePrev}>
+        <ArrowLeft />
       </div>
       <div className="action">
         <span>Page</span>
@@ -21,9 +21,9 @@ export default function Pagination({ current, total, handlePrev, handleNext }: I
         <span>of</span>
         <span>{total}</span>
       </div>
-      <div className={`icon right ${current === total && 'disabled'}`} onClick={handleNext}>
-        <ArrowLeft/>
+      <div className={`icon right ${current === total && "disabled"}`} onClick={handleNext}>
+        <ArrowLeft />
       </div>
     </PaginationWrapper>
-  )
+  );
 }
