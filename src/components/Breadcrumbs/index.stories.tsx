@@ -1,6 +1,6 @@
 import React from "react";
 import BreadcrumbsComponent from "./index";
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 export default {
   title: "Components/Breadcrumbs",
@@ -8,11 +8,10 @@ export default {
   argTypes: {},
 };
 
-export const Breadcrumbs: React.FC<React.PropsWithChildren> = () => {
+export const Breadcrumbs = () => {
   return (
     <BrowserRouter>
-        <BreadcrumbsComponent links={[{ lable: 'Some route', link: '#' }, { lable: 'Another route', link: '#' }]} />
+      <BreadcrumbsComponent label={"Some route"} to={"#"} />
     </BrowserRouter>
   );
 };
-
