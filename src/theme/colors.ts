@@ -2,6 +2,7 @@ import { ThemeColors } from "./types";
 
 export const colors: ThemeColors = {
   white: "#ffffff",
-  textDarkGray: "#7B8187",
-  primaryDefault: "#5D93B2",
+  strokeGray: "#616971",
+  darkGray: "#7b8187",
+  primaryDefault: "#5d93b2",
 };

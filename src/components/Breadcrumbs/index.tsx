@@ -19,19 +19,16 @@ const BreadcrumbsWrap = styled(Flex)`
   border-radius: 12px;
   min-width: 89px;
   text-decoration: none;
-  color: #7b8187;
-  border: 0.5px solid ${rgba("#616971", 0.2)};
-  background: ${rgba("#616971", 0.08)};
-  font-family: Lexend Deca, sans-serif;
-  font-size: 14px;
+  border: 0.5px solid ${({ theme }) => rgba(theme.colors.strokeGray, 0.2)};
+  background: ${({ theme }) => rgba(theme.colors.strokeGray, 0.08)};
 `;
 
 export default function Breadcrumbs({ label, to }: IProps) {
   const { linkComponent } = useContext(MenuContext);
   return (
     <BreadcrumbsWrap as={linkComponent} href={to}>
-      <ArrowLeftIcon width={16} height={16} mr={1} color="textDarkGray" />
-      <ThemedText variant="body-2" color="textDarkGray">
+      <ArrowLeftIcon width={16} height={16} mr={1} color="darkGray" />
+      <ThemedText variant="body-2" color="darkGray">
         {label}
       </ThemedText>
     </BreadcrumbsWrap>
