@@ -18,7 +18,6 @@ const TextWrap = styled(Text)<ThemedTextProps>`
     prop: "variant",
     variants: typographyVariants,
   })}
-  font-family: Lexend Deca, sans-serif;
 `;
 
 export default function ThemedText(props: ThemedTextProps) {

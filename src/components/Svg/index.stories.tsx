@@ -38,8 +38,8 @@ export const Icons: React.FC<React.PropsWithChildren> = () => {
             m="4px"
           >
             <Flex alignItems="center" justifyContent="center" style={{ flex: 1 }} height="100%">
-              <Icon width={48} stroke="#7B8187" />
-              <Icon stroke="#7B8187" ml="4px" />
+              <Icon width={48} color="darkGray" />
+              <Icon color="darkGray" ml="4px" />
             </Flex>
           </Flex>
         );
