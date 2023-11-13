@@ -29,5 +29,4 @@ export interface AppBtnProps extends LayoutProps, SpaceProps {
   children?: ReactNode;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
-  onClick?: () => void;
 }

@@ -60,9 +60,21 @@ AppBtnWrap.defaultProps = {
   width: "100%",
 };
 
-export default function AppBtn({ loading, ...props }: AppBtnProps & { loading?: boolean }) {
+export default function AppBtn({
+  loading,
+  onClick,
+  ...props
+}: AppBtnProps & { loading?: boolean; onClick?: () => void }) {
   return (
-    <AppBtnWrap {...props} as={props.to ? "a" : "button"} href={props.to}>
+    <AppBtnWrap
+      {...props}
+      as={props.to ? "a" : "button"}
+      href={props.to}
+      onClick={(e: any) => {
+        if (loading || props.disabled) e.preventDefault();
+        else if (onClick) onClick();
+      }}
+    >
       <AppBtnContainer isLoading={loading}>
         {props.startIcon}
         <AppBtnContent>{props.children}</AppBtnContent>
