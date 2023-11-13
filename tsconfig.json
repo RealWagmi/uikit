@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es2020",
-    "module": "commonjs",
-    "declaration": true,
-    "esModuleInterop": true,
     "outDir": "./dist",
+    "lib": ["dom", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ES2020",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
     "jsx": "react-jsx",
-    "resolveJsonModule": true
+    "target": "es2020"
   },
-  "include": [
-    "src/components",
-    "src/styled.d.ts"
-  ],
-  "exclude": ["node_modules", "**/__tests__/*", "dist"],
+  "types": ["vitest/globals"],
+  "include": ["src"],
+  "exclude": ["node_modules", "src/**/*.stories.tsx"]
 }
