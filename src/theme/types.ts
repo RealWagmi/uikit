@@ -3,8 +3,11 @@ export type ThemeColors = {
   white: string;
   light: string;
   shadowLight: string;
+  strokeGray: string;
   darkGray: string;
   primaryDefault: string;
-  strokeGray: string;
-  [key: string]: string;
+  primaryHovered: string;
+  blueGray: string;
+  blueGrayLight: string;
+  gray: string;
 };

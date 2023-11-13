@@ -5,3 +5,4 @@ export * from "./Loaders";
 export * from "./Charts";
 export * from "./Text";
 export * from "./AppBtn";
+export * from "./Toggle";
