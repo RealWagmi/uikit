@@ -2,6 +2,7 @@ import React from "react";
 import TooltipComponent from "./index";
 import { InfoIcon, QuestionIcon } from "../Svg";
 import { Flex } from "../Box";
+import ThemedText from "../ThemedText";
 
 export default {
   title: "Components/Tooltip",
@@ -42,7 +43,7 @@ export const Tooltip = () => {
             </>
           }
         >
-          <InfoIcon color="strokeGray" />
+          <ThemedText>Some Label</ThemedText>
         </TooltipComponent>
       </Flex>
       <Flex justifyContent="space-between">
