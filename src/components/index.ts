@@ -6,3 +6,4 @@ export * from "./Charts";
 export * from "./Text";
 export * from "./AppBtn";
 export * from "./Toggle";
+export * from "./AppCheckbox";

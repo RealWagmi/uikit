@@ -21,7 +21,7 @@ const AppToggleWrap = styled.button<IProps>`
   padding: 2px;
   border: none;
   outline: none;
-  transition: border 0.2s, background 0.2s;
+  transition: background 0.2s;
 
   &:hover:not(&:disabled) {
     background: ${({ theme, active }) => (active ? theme.colors.primaryHovered : theme.colors.blueGrayLight)};
