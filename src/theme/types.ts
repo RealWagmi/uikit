@@ -1,30 +1,10 @@
-export type ThemeColors =  {
-  gray: string;
-  dimGray: string;
-  indigo: string;
-  chineseBlack: string;
-  policeBlue: string;
-  lightSteelBlue: string;
-  lavender: string;
-  coralReef: string;
-  deepCarminePink: string;
-  ghostWhite: string;
-  darkJungleGreen: string;
-  violinBrown: string;
+export type ThemeColors = {
+  black: string;
   white: string;
-  lightFrenchBeige: string;
-  princetonOrange: string;
-  auroMetalSaurus: string;
-  richBlack: string;
-  deepPink: string;
-  ceil: string;
-  soap: string;
-  darkElectricBlue: string;
-  lapisLazuli: string;
-  piggyPink: string;
-  frenchSkyBlue: string;
-  carnationPink: string;
-  spanishYellow: string;
-  philippineGold: string;
-  vulcan: string;
-}
+  light: string;
+  shadowLight: string;
+  darkGray: string;
+  primaryDefault: string;
+  strokeGray: string;
+  [key: string]: string;
+};

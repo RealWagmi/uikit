@@ -1,33 +1,36 @@
 import { ThemeColors } from "./types";
-
+import { AppBtnColor } from "../components/AppBtn/types";
 
 export const colors: ThemeColors = {
-  gray: "#7b8187",
-  dimGray: "#616971",
-  indigo: "#153d6f",
-  chineseBlack: "#0E1218",
-  policeBlue: "#404A67",
-  lightSteelBlue: "#B8C0DC",
-  lavender: '#E8ECFB',
-  coralReef: '#FD766B',
-  deepCarminePink: '#FA2B39',
-  ghostWhite: '#F5F6FC',
-  darkJungleGreen: "#131A2A",
-  violinBrown: "#5D4204",
+  black: "#000000",
   white: "#ffffff",
-  lightFrenchBeige: "#C2A676",
-  princetonOrange: "#F3841E",
-  auroMetalSaurus: "#6D7787",
-  richBlack: "#030D1B",
-  deepPink: "#FB118E",
-  ceil: "#98A1C0",
-  soap: "#D2D9EE",
-  darkElectricBlue: "#5D6785",
-  lapisLazuli: "#376BAD",
-  piggyPink: "#F6DDE8",
-  frenchSkyBlue: "#869EFF",
-  carnationPink: "#FBA4C0",
-  spanishYellow: "#EEB317",
-  philippineGold: "#B17900",
-  vulcan: "#0D111C"
-}
+  light: "#f7f8f2",
+  shadowLight: "#a9b6bf",
+  strokeGray: "#616971",
+  darkGray: "#7b8187",
+  primaryDefault: "#5d93b2",
+};
+
+type ButtonColorsConfig = {
+  grad0: string;
+  grad1: string;
+  hoverGrad0?: string;
+  hoverGrad1?: string;
+  text: string;
+};
+
+export type ButtonsColors = { [key in AppBtnColor]: ButtonColorsConfig };
+export const buttons: ButtonsColors = {
+  primary: {
+    grad0: "#7DA0C1",
+    grad1: "#34627D",
+    hoverGrad0: "#91B9DE",
+    hoverGrad1: "#40708B",
+    text: "#5D93B2",
+  },
+  error: {
+    grad0: "#966060",
+    grad1: "#7d3434",
+    text: "#966060",
+  },
+};

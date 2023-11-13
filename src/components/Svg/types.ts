@@ -1,18 +1,9 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { ElementType, SVGAttributes } from "react";
-import { DefaultTheme } from "styled-components";
+import { SVGAttributes } from "react";
 import { SpaceProps } from "styled-system";
+import { ThemeColors } from "../../theme/types";
 
-export interface SvgProps extends SVGAttributes<HTMLOrSVGElement>, SpaceProps {
-  theme?: DefaultTheme;
-  spin?: boolean;
-}
-
-export type IconComponentType = {
-  icon: ElementType<any>;
-  fillIcon?: ElementType<any>;
-  isActive?: boolean;
-  height?: string;
-  width?: string;
-  activeColor?: string;
-} & SvgProps;
+export type SvgProps = SVGAttributes<HTMLOrSVGElement> &
+  SpaceProps & {
+    color?: keyof ThemeColors;
+    size?: string;
+  };

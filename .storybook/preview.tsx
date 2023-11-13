@@ -1,24 +1,27 @@
-import type { Preview } from "@storybook/react";
+import type { DecoratorFn, Preview } from "@storybook/react";
 
 import { ThemeProvider } from "styled-components";
-import { dark } from "../src/theme";
+import { dark, light } from "../src/theme";
+import { withThemeFromJSXProvider } from "@storybook/addon-themes";
+
+const CustomProvider = (props) => {
+  window.document.body.style.background = props.theme.background;
+  return <ThemeProvider theme={props.theme}>{props.children}</ThemeProvider>;
+};
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/,
-      },
-    },
   },
   decorators: [
-    (Story) => (
-      <ThemeProvider theme={dark}>
-        <Story />
-      </ThemeProvider>
-    ),
+    withThemeFromJSXProvider({
+      themes: {
+        dark,
+        light,
+      },
+      defaultTheme: "dark",
+      Provider: CustomProvider,
+    }) as DecoratorFn,
   ],
 };
 

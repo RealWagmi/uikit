@@ -1,37 +1,18 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 import { space } from "styled-system";
-import getThemeValue from "../../util/getThemeValue";
 import { SvgProps } from "./types";
 
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const SpinnerCss = css`
-  animation: 2s ${rotate} linear infinite;
-`
-export const SpinnerSVG = styled.svg`
-  ${SpinnerCss}
-`
-
-const spinStyle = css`
-  animation: ${rotate} 2s linear infinite;
-`;
+const genSvgColorValue = (theme: DefaultTheme, value?: string, color?: string) => {
+  const res = value || theme.colors[color as string] || color;
+  return res === "none" ? `${res} !important` : res;
+};
 
 const Svg = styled.svg<SvgProps>`
-  align-self: center; // Safari fix
-  fill: ${({ theme, color }) =>
-    getThemeValue(theme, `colors.${color}`, color)}; // should use color and currentColor in svg path
-  color: ${({ theme, color }) => getThemeValue(theme, `colors.${color}`, color)};
-  flex-shrink: 0;
-  ${({ spin }) => spin && spinStyle};
   ${space};
+  fill: ${({ fill, color, theme }) => genSvgColorValue(theme, fill, color)};
+  stroke: ${({ stroke, color, theme }) => genSvgColorValue(theme, stroke, color)};
 
+  width: ${({ size }) => size};
   // Safari fix
   @supports (-webkit-text-size-adjust: none) and (not (-ms-accelerator: true)) and (not (-moz-appearance: none)) {
     filter: none !important;
@@ -39,10 +20,9 @@ const Svg = styled.svg<SvgProps>`
 `;
 
 Svg.defaultProps = {
-  color: "text",
-  width: "20px",
   xmlns: "http://www.w3.org/2000/svg",
-  spin: false,
+  size: "24px",
+  color: "#000000",
 };
 
 export default Svg;
