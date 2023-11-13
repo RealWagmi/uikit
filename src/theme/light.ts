@@ -5,6 +5,7 @@ import { colors } from "./colors";
 
 const lightTheme: DefaultTheme = {
   colors: colors,
+  background: "#ffffff",
 };
 
 export default lightTheme;
