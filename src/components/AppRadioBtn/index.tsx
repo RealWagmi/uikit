@@ -3,9 +3,9 @@ import { layout, LayoutProps, space, SpaceProps } from "styled-system";
 import { ReactNode, useMemo } from "react";
 
 interface IProps extends LayoutProps, SpaceProps {
-  value?: any;
-  name?: any;
-  onChange?: (value: any) => void;
+  value?: string | number;
+  name?: string | number;
+  onChange?: (value: string | number) => void;
   disabled?: boolean;
   children?: ReactNode;
 }
@@ -81,7 +81,7 @@ export default function AppRadioBtn({ value, name, onChange, children, ...props 
       <AppRadioBtnWrap
         {...props}
         onClick={() => {
-          if (onChange) {
+          if (onChange && name) {
             onChange(name);
           }
         }}
