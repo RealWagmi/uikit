@@ -3,7 +3,7 @@ import { Flex } from "../Box";
 import styled from "styled-components";
 import { rgba } from "polished";
 import { ArrowLeftIcon } from "../Svg";
-import ThemedText from "../ThemedText";
+import Text from "../Text";
 export const MenuContext = createContext<{ linkComponent: ElementType }>({ linkComponent: "a" });
 
 interface IProps {
@@ -28,9 +28,9 @@ export default function Breadcrumbs({ label, to }: IProps) {
   return (
     <BreadcrumbsWrap as={linkComponent} href={to}>
       <ArrowLeftIcon size={"16px"} mr={1} color="darkGray" />
-      <ThemedText variant="body-2" color="darkGray">
+      <Text variant="body-2" color="darkGray">
         {label}
-      </ThemedText>
+      </Text>
     </BreadcrumbsWrap>
   );
 }

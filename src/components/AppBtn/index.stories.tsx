@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AppBtnComponent from "./index";
 import { BrowserRouter } from "react-router-dom";
 import { Box, Grid } from "../Box";
-import ThemedText from "../ThemedText";
+import Text from "../Text";
 import { InfoIcon, QuestionIcon } from "../Svg";
 import Tooltip from "../Tooltip";
 
@@ -25,13 +25,13 @@ export const Buttons = () => {
 
   return (
     <BrowserRouter>
-      <ThemedText variant={"h5"} m="10px 0 20px">
+      <Text variant={"h5"} m="10px 0 20px">
         Default
-      </ThemedText>
+      </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
-        <ThemedText>Primary</ThemedText>
-        <ThemedText>Outlined</ThemedText>
-        <ThemedText>Text</ThemedText>
+        <Text>Primary</Text>
+        <Text>Outlined</Text>
+        <Text>Text</Text>
         <Box>
           <AppBtnComponent>Button</AppBtnComponent>
         </Box>
@@ -55,13 +55,13 @@ export const Buttons = () => {
           </AppBtnComponent>
         </Box>
       </Grid>
-      <ThemedText variant={"h5"} m="40px 0 20px">
+      <Text variant={"h5"} m="40px 0 20px">
         Small
-      </ThemedText>
+      </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
-        <ThemedText>Primary</ThemedText>
-        <ThemedText>Outlined</ThemedText>
-        <ThemedText>Text</ThemedText>
+        <Text>Primary</Text>
+        <Text>Outlined</Text>
+        <Text>Text</Text>
         <Box>
           <AppBtnComponent scale={"small"}>Button</AppBtnComponent>
         </Box>
@@ -91,9 +91,9 @@ export const Buttons = () => {
           </AppBtnComponent>
         </Box>
       </Grid>
-      <ThemedText variant={"h5"} m="40px 0 20px">
+      <Text variant={"h5"} m="40px 0 20px">
         Error Button
-      </ThemedText>
+      </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
         <Box>
           <AppBtnComponent color={"error"}>Button</AppBtnComponent>
@@ -109,17 +109,17 @@ export const Buttons = () => {
           </AppBtnComponent>
         </Box>
       </Grid>
-      <ThemedText variant={"h5"} m="40px 0 20px">
+      <Text variant={"h5"} m="40px 0 20px">
         Link Button
-      </ThemedText>
+      </Text>
       <Box>
         <AppBtnComponent to={"https://docs.popsicle.finance/"} target={"_blank"} width={"50%"}>
           Button
         </AppBtnComponent>
       </Box>
-      <ThemedText variant={"h5"} m="40px 0 20px">
+      <Text variant={"h5"} m="40px 0 20px">
         With Start/End components
-      </ThemedText>
+      </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
         <AppBtnComponent startIcon={<InfoIcon size={"16px"} />}>Button</AppBtnComponent>
         <AppBtnComponent endIcon={<QuestionIcon size={"16px"} />} variant={"outlined"}>
@@ -157,9 +157,9 @@ export const Buttons = () => {
         </AppBtnComponent>
       </Grid>
 
-      <ThemedText variant={"h5"} m="40px 0 20px">
+      <Text variant={"h5"} m="40px 0 20px">
         With Loader
-      </ThemedText>
+      </Text>
 
       <AppBtnComponent
         width={"50%"}
