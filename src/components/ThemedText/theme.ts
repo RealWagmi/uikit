@@ -1,6 +1,5 @@
 import { typographies } from "./types";
-import { TextProps as TextPropsOriginal } from "rebass";
-export const typographyVariants: { [key: string]: TextPropsOriginal } = {
+export const typographyVariants = {
   [typographies.H_1]: {
     fontSize: 97,
     fontWeight: 600,

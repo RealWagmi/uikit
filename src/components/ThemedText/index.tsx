@@ -20,6 +20,9 @@ const TextWrap = styled(Text)<ThemedTextProps>`
   })}
 `;
 
+TextWrap.defaultProps = {
+  variant: "body-2",
+};
 export default function ThemedText(props: ThemedTextProps) {
   return <TextWrap {...props}>{props.children}</TextWrap>;
 }

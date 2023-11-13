@@ -1,7 +1,9 @@
 import { ThemeColors } from "./types";
+import { ButtonsColors } from "./colors";
 
 export interface UIKitTheme {
   colors: ThemeColors;
+  buttons: ButtonsColors;
   background: string;
 }
 

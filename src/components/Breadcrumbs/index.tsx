@@ -27,7 +27,7 @@ export default function Breadcrumbs({ label, to }: IProps) {
   const { linkComponent } = useContext(MenuContext);
   return (
     <BreadcrumbsWrap as={linkComponent} href={to}>
-      <ArrowLeftIcon width={16} height={16} mr={1} color="darkGray" />
+      <ArrowLeftIcon size={"16px"} mr={1} color="darkGray" />
       <ThemedText variant="body-2" color="darkGray">
         {label}
       </ThemedText>

@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const rotateAnimation = keyframes`
   from {
@@ -9,16 +9,13 @@ const rotateAnimation = keyframes`
   }
 `;
 
-const RotationStyle = css`
-  animation: 2s ${rotateAnimation} linear infinite;
-`;
-
 export const StyledSVG = styled.svg<{ size: string }>`
   height: ${({ size }) => size};
   width: ${({ size }) => size};
   stroke: ${({ theme }) => theme.colors.primaryDefault};
 `;
 
-export const StyledRotatingSVG = styled(StyledSVG)`
-  ${RotationStyle}
+export const StyledRotatingSVG = styled(StyledSVG)<{ duration?: string }>`
+  fill: none !important;
+  animation: ${({ duration }) => duration || "2s"} ${rotateAnimation} linear infinite;
 `;
