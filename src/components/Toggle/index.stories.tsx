@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import ToggleComponent from "./index";
 import { Box } from "../Box";
 import Text from "../Text";

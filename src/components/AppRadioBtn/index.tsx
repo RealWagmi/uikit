@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { layout, LayoutProps, space, SpaceProps } from "styled-system";
 import { ReactNode, useMemo } from "react";
 
+type AppRadioBtnName = string | number;
 interface IProps extends LayoutProps, SpaceProps {
-  value?: string | number;
-  name?: string | number;
-  onChange?: (value: string | number) => void;
+  value?: AppRadioBtnName;
+  name?: AppRadioBtnName;
+  onChange?: (value: any) => void;
   disabled?: boolean;
   children?: ReactNode;
 }

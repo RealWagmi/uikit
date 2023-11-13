@@ -1,6 +1,5 @@
 import Flex from "../Box/Flex";
 import Svg from "./Svg";
-import React from "react";
 
 export default {
   title: "Components/Svg Icons",
@@ -18,7 +17,7 @@ const components: { [key: string]: any } = Object.keys(modules).reduce((accum, p
   };
 }, {});
 
-export const Icons: React.FC<React.PropsWithChildren> = () => {
+export const Icons = () => {
   return (
     <Flex justifyContent="start" alignItems="center" flexWrap="wrap">
       {Object.keys(components).map((file) => {

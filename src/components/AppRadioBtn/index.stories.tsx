@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import AppRadioBtnComponent from "./index";
 import { Box, Grid } from "../Box";
 import { QuestionIcon } from "../Svg";
