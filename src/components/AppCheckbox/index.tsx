@@ -38,7 +38,7 @@ const AppCheckboxWrap = styled.button<
     transition: background 0.2s, width 0.05s, height 0.05s;
   }
 
-  &:hover:not(&:disabled) {
+  &:hover:not(:disabled) {
     outline: 1px solid ${({ theme }) => theme.colors.primaryHovered};
 
     &:after {

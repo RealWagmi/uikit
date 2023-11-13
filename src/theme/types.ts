@@ -3,6 +3,7 @@ export type ThemeColors = {
   white: string;
   light: string;
   shadowLight: string;
+  shadowDark: string;
   strokeGray: string;
   darkGray: string;
   primaryDefault: string;
