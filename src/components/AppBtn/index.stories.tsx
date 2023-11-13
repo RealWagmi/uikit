@@ -104,7 +104,7 @@ export const Buttons = () => {
           </AppBtnComponent>
         </Box>
         <Box>
-          <AppBtnComponent color={"error"} disabled={true}>
+          <AppBtnComponent color={"error"} variant={"text"}>
             Button
           </AppBtnComponent>
         </Box>
