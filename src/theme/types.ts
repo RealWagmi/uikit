@@ -10,4 +10,6 @@ export type ThemeColors = {
   blueGray: string;
   blueGrayLight: string;
   gray: string;
+  textGray: string;
+  neutralLight: string;
 };

@@ -5,10 +5,13 @@ interface IProps extends LayoutProps, SpaceProps {
   value?: boolean;
   onChange?: (value: boolean) => void;
   disabled?: boolean;
-  active?: boolean;
 }
 
-const AppToggleWrap = styled.button<IProps>`
+const AppToggleWrap = styled.button<
+  IProps & {
+    active?: boolean;
+  }
+>`
   ${layout}
   ${space}
   

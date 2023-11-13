@@ -5,10 +5,13 @@ interface IProps extends LayoutProps, SpaceProps {
   value?: boolean;
   onChange?: (value: boolean) => void;
   disabled?: boolean;
-  active?: boolean;
 }
 
-const AppCheckboxWrap = styled.button<IProps>`
+const AppCheckboxWrap = styled.button<
+  IProps & {
+    active?: boolean;
+  }
+>`
   ${layout}
   ${space}
   

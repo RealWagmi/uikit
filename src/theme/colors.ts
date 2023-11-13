@@ -13,6 +13,8 @@ export const colors: ThemeColors = {
   blueGray: "#8fa7b4",
   blueGrayLight: "#94bbd2",
   gray: "#6a757b",
+  textGray: "#afb6c9",
+  neutralLight: "#d9d9d9",
 };
 
 type ButtonColorsConfig = {
