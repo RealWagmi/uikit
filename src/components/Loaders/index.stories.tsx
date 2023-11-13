@@ -1,5 +1,6 @@
 import React from "react";
-import LoadingSpinnerComponent from "./index";
+import LoadingSpinnerComponent from "./LoadingSpinner";
+import LoadingBubbleComponent from "./LoadingBubble";
 
 export default {
   title: "Components/Loaders",
@@ -9,4 +10,8 @@ export default {
 
 export const LoadingSpinner: React.FC<React.PropsWithChildren> = () => {
   return <LoadingSpinnerComponent />;
+};
+
+export const LoadingBubble: React.FC<React.PropsWithChildren> = () => {
+  return <LoadingBubbleComponent />;
 };

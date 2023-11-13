@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { variant } from "styled-system";
 import { variantVariants, scaleVariants } from "./theme";
 import { AppBtnProps } from "./types";
-import LoadingSpinner from "../LoadingSpinner";
+import LoadingSpinner from "../Loaders/LoadingSpinner";
 
 const AppBtnWrap = styled.button<AppBtnProps>`
   ${({ theme, color }) =>
