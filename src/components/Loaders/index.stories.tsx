@@ -13,5 +13,5 @@ export const LoadingSpinner: React.FC<React.PropsWithChildren> = () => {
 };
 
 export const LoadingBubble: React.FC<React.PropsWithChildren> = () => {
-  return <LoadingBubbleComponent />;
+  return <LoadingBubbleComponent height={"140px"} />;
 };

@@ -28,9 +28,9 @@ const LoadingBubble = styled.div<IProps>`
   animation-fill-mode: both;
   background: linear-gradient(
     to left,
-    ${({ theme }) => theme.colors.primaryDefault} 25%,
-    ${({ theme }) => lighten(0.075, theme.colors.primaryDefault)} 50%,
-    ${({ theme }) => theme.colors.primaryDefault} 75%
+    ${({ theme }) => theme.background} 25%,
+    ${({ theme }) => lighten(0.075, theme.background)} 50%,
+    ${({ theme }) => theme.background} 75%
   );
   will-change: background-position;
   background-size: 400%;
