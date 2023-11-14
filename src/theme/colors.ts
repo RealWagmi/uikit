@@ -6,9 +6,16 @@ export const colors: ThemeColors = {
   white: "#ffffff",
   light: "#f7f8f2",
   shadowLight: "#a9b6bf",
+  shadowDark: "#2d3643",
   strokeGray: "#616971",
   darkGray: "#7b8187",
   primaryDefault: "#5d93b2",
+  primaryHovered: "#6da6c6",
+  blueGray: "#8fa7b4",
+  blueGrayLight: "#94bbd2",
+  gray: "#6a757b",
+  textGray: "#afb6c9",
+  neutralLight: "#d9d9d9",
 };
 
 type ButtonColorsConfig = {
@@ -22,11 +29,11 @@ type ButtonColorsConfig = {
 export type ButtonsColors = { [key in AppBtnColor]: ButtonColorsConfig };
 export const buttons: ButtonsColors = {
   primary: {
-    grad0: "#7DA0C1",
-    grad1: "#34627D",
-    hoverGrad0: "#91B9DE",
-    hoverGrad1: "#40708B",
-    text: "#5D93B2",
+    grad0: "#7da0c1",
+    grad1: "#34627d",
+    hoverGrad0: "#91B9de",
+    hoverGrad1: "#40708b",
+    text: "#5d93b2",
   },
   error: {
     grad0: "#966060",

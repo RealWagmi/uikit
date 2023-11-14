@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import AppBtnComponent from "./index";
 import { BrowserRouter } from "react-router-dom";
 import { Box, Grid } from "../Box";

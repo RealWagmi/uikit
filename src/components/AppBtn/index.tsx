@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { variant } from "styled-system";
+import { layout, space, variant } from "styled-system";
 import { variantVariants, scaleVariants } from "./theme";
 import { AppBtnProps } from "./types";
 import LoadingSpinner from "../Loaders/LoadingSpinner";
 
 const AppBtnWrap = styled.button<AppBtnProps>`
+  ${layout}
+  ${space}
+  
   ${({ theme, color }) =>
     variant({
       prop: "variant",
@@ -23,7 +26,6 @@ const AppBtnWrap = styled.button<AppBtnProps>`
   border: none;
   cursor: pointer;
   text-decoration: none;
-  width: ${({ width }) => width || "100%"};
 
   &:disabled {
     cursor: default;
@@ -55,11 +57,24 @@ AppBtnWrap.defaultProps = {
   scale: "default",
   color: "primary",
   as: "button",
+  width: "100%",
 };
 
-export default function AppBtn({ loading, ...props }: AppBtnProps & { loading?: boolean }) {
+export default function AppBtn({
+  loading,
+  onClick,
+  ...props
+}: AppBtnProps & { loading?: boolean; onClick?: () => void }) {
   return (
-    <AppBtnWrap {...props} as={props.to ? "a" : "button"} href={props.to}>
+    <AppBtnWrap
+      {...props}
+      as={props.to ? "a" : "button"}
+      href={props.to}
+      onClick={(e: any) => {
+        if (loading || props.disabled) e.preventDefault();
+        else if (onClick) onClick();
+      }}
+    >
       <AppBtnContainer isLoading={loading}>
         {props.startIcon}
         <AppBtnContent>{props.children}</AppBtnContent>

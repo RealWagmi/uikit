@@ -11,7 +11,7 @@ export const variantVariants = (theme: DefaultTheme, color: AppBtnColor = "prima
       outline: "none",
       color: theme.colors.light,
       boxShadow: `0 5px 13px -4px ${rgba(theme.colors.shadowLight, 0.08)}`,
-      "&:hover:not(&:disabled), &:focus": {
+      "&:hover:not(:disabled), &:focus": {
         background: `linear-gradient(90deg, ${hoverGrad0} 3.46%, ${hoverGrad1} 100%)`,
       },
       "& svg": {
@@ -27,7 +27,7 @@ export const variantVariants = (theme: DefaultTheme, color: AppBtnColor = "prima
       outline: `2px ${colors.text} solid`,
       outlineOffset: "-2px",
       color: colors.text,
-      "&:hover:not(&:disabled), &:focus": {
+      "&:hover:not(:disabled), &:focus": {
         background: rgba(theme.colors.strokeGray, 0.2),
         outlineColor: colors.text,
       },
@@ -40,14 +40,14 @@ export const variantVariants = (theme: DefaultTheme, color: AppBtnColor = "prima
       background: rgba(theme.colors.strokeGray, 0.08),
       outline: "none",
       color: colors.text,
-      "&:hover:not(&:disabled), &:focus": {
+      "&:hover:not(:disabled), &:focus": {
         background: rgba(theme.colors.strokeGray, 0.2),
       },
       "& svg": {
         fill: theme.colors.light,
         stroke: theme.colors.light,
       },
-      "&:not(&:disabled) svg": {
+      "&:not(:disabled) svg": {
         fill: colors.text,
         stroke: colors.text,
       },
