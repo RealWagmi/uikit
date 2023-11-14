@@ -6,6 +6,7 @@ export type ThemeColors = {
   shadowDark: string;
   strokeGray: string;
   darkGray: string;
+  lightTextGray: string;
   primaryDefault: string;
   primaryHovered: string;
   blueGray: string;
