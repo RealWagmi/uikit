@@ -8,6 +8,7 @@ export const colors: ThemeColors = {
   shadowLight: "#a9b6bf",
   shadowDark: "#2d3643",
   strokeGray: "#616971",
+  darkBg: "#1d2128",
   darkGray: "#7b8187",
   lightTextGray: "#3c454e",
   primaryDefault: "#5d93b2",

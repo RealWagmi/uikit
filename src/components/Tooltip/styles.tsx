@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { transparentize } from "polished";
 
 export const Arrow = styled.div`
   width: 8px;
@@ -12,7 +11,7 @@ export const Arrow = styled.div`
     box-sizing: border-box;
     content: "";
     transform: rotate(45deg);
-    background: ${({ theme }) => theme.colors.strokeGray};
+    background: ${({ theme }) => theme.colors.darkBg};
   }
 
   &.arrow-top {
@@ -39,14 +38,14 @@ export const TooltipContainer = styled.div<{ show: boolean }>`
   transition: visibility 150ms linear, opacity 150ms linear;
   max-width: 256px;
   cursor: default;
-  padding: 0.6rem 1rem;
-  color: ${({ theme }) => theme.colors.white};
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
+  padding: 6px 8px;
+  color: ${({ theme }) => theme.colors.darkGray};
+
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+
   word-break: break-word;
-  background: ${({ theme }) => theme.colors.strokeGray};
-  border: 1px solid ${({ theme }) => theme.colors.darkGray};
-  border-radius: 12px;
-  box-shadow: 0 4px 8px 0 ${({ theme }) => transparentize(0.9, theme.colors.white)};
+  background: ${({ theme }) => theme.colors.darkBg};
+  border-radius: 8px;
 `;
