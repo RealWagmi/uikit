@@ -4,6 +4,7 @@ const ResetCSS = createGlobalStyle`
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.lightTextGray};

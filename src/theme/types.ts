@@ -15,4 +15,6 @@ export type ThemeColors = {
   gray: string;
   textGray: string;
   neutralLight: string;
+  shuttleGray: string;
+  ebonyGray: string;
 };
