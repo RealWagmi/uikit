@@ -1,14 +1,9 @@
 import styled from "styled-components";
-import { layout, LayoutProps, space, SpaceProps } from "styled-system";
+import { ICheckboxProps } from './types';
+import { layout, space } from "styled-system";
 
-interface IProps extends LayoutProps, SpaceProps {
-  value?: boolean;
-  onChange?: (value: boolean) => void;
-  disabled?: boolean;
-}
-
-const AppCheckboxWrap = styled.button<
-  IProps & {
+export const CheckboxWrapper = styled.button<
+  ICheckboxProps & {
     active?: boolean;
   }
 >`
@@ -58,16 +53,3 @@ const AppCheckboxWrap = styled.button<
 
   transition: outline-color 0.2s;
 `;
-
-export default function AppCheckbox({ value, onChange, ...props }: IProps) {
-  return (
-    <AppCheckboxWrap
-      {...props}
-      onClick={() => {
-        if (onChange) onChange(!value);
-      }}
-      type="button"
-      active={!!value}
-    ></AppCheckboxWrap>
-  );
-}

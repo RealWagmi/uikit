@@ -17,12 +17,12 @@ export const scales = {
   SMALL: "small",
 } as const;
 
-export type AppBtnColor = (typeof colors)[keyof typeof colors];
-export interface AppBtnProps extends LayoutProps, SpaceProps {
+export type ButtonColor = (typeof colors)[keyof typeof colors];
+export interface ButtonProps extends LayoutProps, SpaceProps {
   as?: "a" | "button" | ElementType;
   variant?: (typeof variants)[keyof typeof variants];
   scale?: (typeof scales)[keyof typeof scales];
-  color?: AppBtnColor;
+  color?: ButtonColor;
   disabled?: boolean;
   to?: string;
   target?: HTMLAttributeAnchorTarget;

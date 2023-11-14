@@ -1,6 +1,7 @@
 import TabsComponent from "./index";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Box } from "../Box";
+import { TabValue } from "./types";
 
 export default {
   title: "Components/Tabs",
@@ -9,7 +10,7 @@ export default {
 };
 
 export const Tabs = () => {
-  const [tab, setTab] = useState(1);
+  const [tab, setTab] = useState<TabValue>(1);
   return (
     <Box>
       <TabsComponent
@@ -19,7 +20,7 @@ export const Tabs = () => {
           { value: 3, title: "Last" },
         ]}
         value={tab}
-        onChange={setTab}
+        onChange={(value) => setTab(() => value!)}
       />
     </Box>
   );

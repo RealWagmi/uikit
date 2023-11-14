@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import AppBtnComponent from "./index";
+import React, { useEffect, useState } from "react";
+import Button from "./index";
 import { BrowserRouter } from "react-router-dom";
 import { Box, Grid } from "../Box";
 import Text from "../Text";
@@ -8,7 +8,7 @@ import Tooltip from "../Tooltip";
 
 export default {
   title: "Components/Buttons",
-  component: AppBtnComponent,
+  component: Button,
   argTypes: {},
 };
 
@@ -33,26 +33,26 @@ export const Buttons = () => {
         <Text>Outlined</Text>
         <Text>Text</Text>
         <Box>
-          <AppBtnComponent>Button</AppBtnComponent>
+          <Button>Button</Button>
         </Box>
         <Box>
-          <AppBtnComponent variant={"outlined"}>Button</AppBtnComponent>
+          <Button variant={"outlined"}>Button</Button>
         </Box>
         <Box>
-          <AppBtnComponent variant={"text"}>Button</AppBtnComponent>
+          <Button variant={"text"}>Button</Button>
         </Box>
         <Box>
-          <AppBtnComponent disabled={true}>Button</AppBtnComponent>
+          <Button disabled={true}>Button</Button>
         </Box>
         <Box>
-          <AppBtnComponent variant={"outlined"} disabled={true}>
+          <Button variant={"outlined"} disabled={true}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
         <Box>
-          <AppBtnComponent variant={"text"} disabled={true}>
+          <Button variant={"text"} disabled={true}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
@@ -63,32 +63,32 @@ export const Buttons = () => {
         <Text>Outlined</Text>
         <Text>Text</Text>
         <Box>
-          <AppBtnComponent scale={"small"}>Button</AppBtnComponent>
+          <Button scale={"small"}>Button</Button>
         </Box>
         <Box>
-          <AppBtnComponent scale={"small"} variant={"outlined"}>
+          <Button scale={"small"} variant={"outlined"}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
         <Box>
-          <AppBtnComponent scale={"small"} variant={"text"}>
+          <Button scale={"small"} variant={"text"}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
         <Box>
-          <AppBtnComponent scale={"small"} disabled={true}>
+          <Button scale={"small"} disabled={true}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
         <Box>
-          <AppBtnComponent scale={"small"} variant={"outlined"} disabled={true}>
+          <Button scale={"small"} variant={"outlined"} disabled={true}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
         <Box>
-          <AppBtnComponent scale={"small"} variant={"text"} disabled={true}>
+          <Button scale={"small"} variant={"text"} disabled={true}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
@@ -96,36 +96,36 @@ export const Buttons = () => {
       </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
         <Box>
-          <AppBtnComponent color={"error"}>Button</AppBtnComponent>
+          <Button color={"error"}>Button</Button>
         </Box>
         <Box>
-          <AppBtnComponent color={"error"} variant={"outlined"}>
+          <Button color={"error"} variant={"outlined"}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
         <Box>
-          <AppBtnComponent color={"error"} variant={"text"}>
+          <Button color={"error"} variant={"text"}>
             Button
-          </AppBtnComponent>
+          </Button>
         </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
         Link Button
       </Text>
       <Box>
-        <AppBtnComponent to={"https://docs.popsicle.finance/"} target={"_blank"} width={"50%"}>
+        <Button to={"https://docs.popsicle.finance/"} target={"_blank"} width={"50%"}>
           Button
-        </AppBtnComponent>
+        </Button>
       </Box>
       <Text variant={"h5"} m="40px 0 20px">
         With Start/End components
       </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
-        <AppBtnComponent startIcon={<InfoIcon size={"16px"} />}>Button</AppBtnComponent>
-        <AppBtnComponent endIcon={<QuestionIcon size={"16px"} />} variant={"outlined"}>
+        <Button startIcon={<InfoIcon size={"16px"} />}>Button</Button>
+        <Button endIcon={<QuestionIcon size={"16px"} />} variant={"outlined"}>
           Button
-        </AppBtnComponent>
-        <AppBtnComponent
+        </Button>
+        <Button
           color={"error"}
           disabled={true}
           variant={"text"}
@@ -154,14 +154,14 @@ export const Buttons = () => {
           }
         >
           With Tooltips
-        </AppBtnComponent>
+        </Button>
       </Grid>
 
       <Text variant={"h5"} m="40px 0 20px">
         With Loader
       </Text>
 
-      <AppBtnComponent
+      <Button
         width={"50%"}
         onClick={() => {
           setLoading(true);
@@ -170,7 +170,7 @@ export const Buttons = () => {
         variant={"outlined"}
       >
         Click here
-      </AppBtnComponent>
+      </Button>
     </BrowserRouter>
   );
 };

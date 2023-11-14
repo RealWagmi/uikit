@@ -1,7 +1,7 @@
-import { AppBtnColor, scales, variants } from "./types";
+import { ButtonColor, scales, variants } from "./types";
 import { DefaultTheme } from "styled-components";
 import { rgba } from "polished";
-export const variantVariants = (theme: DefaultTheme, color: AppBtnColor = "primary") => {
+export const variantVariants = (theme: DefaultTheme, color: ButtonColor = "primary") => {
   const colors = theme.buttons[color];
   const hoverGrad0 = colors.hoverGrad0 || colors.grad0;
   const hoverGrad1 = colors.hoverGrad1 || colors.grad1;

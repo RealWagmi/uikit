@@ -1,5 +1,5 @@
 import { ThemeColors } from "./types";
-import { AppBtnColor } from "../components/AppBtn/types";
+import { ButtonColor } from "../components/Button/types";
 
 export const colors: ThemeColors = {
   black: "#000000",
@@ -26,7 +26,7 @@ type ButtonColorsConfig = {
   text: string;
 };
 
-export type ButtonsColors = { [key in AppBtnColor]: ButtonColorsConfig };
+export type ButtonsColors = { [key in ButtonColor]: ButtonColorsConfig };
 export const buttons: ButtonsColors = {
   primary: {
     grad0: "#7da0c1",

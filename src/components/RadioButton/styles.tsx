@@ -1,17 +1,8 @@
 import styled from "styled-components";
-import { layout, LayoutProps, space, SpaceProps } from "styled-system";
-import { ReactNode, useMemo } from "react";
+import { IRadioButtonProps } from './types';
+import { layout, space } from "styled-system";
 
-type AppRadioBtnName = string | number;
-interface IProps extends LayoutProps, SpaceProps {
-  value?: AppRadioBtnName;
-  name?: AppRadioBtnName;
-  onChange?: (value: any) => void;
-  disabled?: boolean;
-  children?: ReactNode;
-}
-
-const AppRadioBtnLabel = styled.label<{ disabled?: boolean }>`
+export const RadioButtonLabel = styled.label<{ disabled?: boolean }>`
   display: flex;
   align-items: center;
   cursor: ${({ disabled }) => (disabled ? "default" : "pointer")};
@@ -22,8 +13,8 @@ const AppRadioBtnLabel = styled.label<{ disabled?: boolean }>`
   line-height: 18px;
 `;
 
-const AppRadioBtnWrap = styled.button<
-  IProps & {
+export const RadioButtonWrapper = styled.button<
+IRadioButtonProps & {
     active?: boolean;
   }
 >`
@@ -73,24 +64,3 @@ const AppRadioBtnWrap = styled.button<
 
   transition: outline-color 0.2s;
 `;
-
-export default function AppRadioBtn({ value, name, onChange, children, ...props }: IProps) {
-  const isActive = useMemo(() => value === name, [value, name]);
-
-  return (
-    <AppRadioBtnLabel disabled={props.disabled}>
-      <AppRadioBtnWrap
-        {...props}
-        onClick={() => {
-          if (onChange && name) {
-            onChange(name);
-          }
-        }}
-        type="button"
-        active={isActive}
-        mr={"8px"}
-      ></AppRadioBtnWrap>
-      {children || name}
-    </AppRadioBtnLabel>
-  );
-}
