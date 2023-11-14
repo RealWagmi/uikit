@@ -6,6 +6,7 @@ import Text from "../Text";
 import Dropdown from "../Dropdown";
 import Checkbox from "../Checkbox";
 import Tooltip from "../Tooltip";
+import { InfoIcon } from "../Svg";
 
 export default {
   title: "Components/Table",
@@ -22,22 +23,22 @@ export const Table = () => {
   const [empty, setEmpty] = useState(false);
 
   const items = [
-    { id: 0, price: 12, name: "H Name", someField: "Some Field Value", sortField: "123" },
-    { id: 1, price: 54, name: "D Name", someField: "Some Field Value", sortField: "Some String" },
-    { id: 2, price: 1, name: "I Name", someField: "Some Field Value", sortField: "Some String" },
+    { id: 0, price: 12, name: "H Name", someField: "Some Field 1", sortField: "123" },
+    { id: 1, price: 54, name: "D Name", someField: "Some Field 2", sortField: "Some String" },
+    { id: 2, price: 1, name: "I Name", someField: "Some Field 3", sortField: "Some String" },
     {
       id: 3,
       price: 31,
       name: "G Name",
-      someField: "Some Field Value",
+      someField: "Some Field 4",
       sortField: "123",
     },
-    { id: 4, price: 82, name: "J Name", someField: "Some Field Value", sortField: "Some String" },
-    { id: 5, price: 51, name: "F Name", someField: "Some Field Value", sortField: "123" },
-    { id: 6, price: 66, name: "C Name", someField: "Some Field Value", sortField: "Some String" },
-    { id: 7, price: 89, name: "A Name", someField: "Some Field Value", sortField: "Some String" },
-    { id: 8, price: 5, name: "E Name", someField: "Some Field Value", sortField: "123" },
-    { id: 9, price: 57, name: "B Name", someField: "Some Field Value", sortField: "Some String" },
+    { id: 4, price: 82, name: "J Name", someField: "Some Field 5", sortField: "Some String" },
+    { id: 5, price: 51, name: "F Name", someField: "Some Field 6", sortField: "123" },
+    { id: 6, price: 66, name: "C Name", someField: "Some Field 7", sortField: "Some String" },
+    { id: 7, price: 89, name: "A Name", someField: "Some Field 8", sortField: "Some String" },
+    { id: 8, price: 5, name: "E Name", someField: "Some Field 9", sortField: "123" },
+    { id: 9, price: 57, name: "B Name", someField: "Some Field 10", sortField: "Some String" },
   ];
 
   type ItemType = (typeof items)[number];
@@ -89,6 +90,14 @@ export const Table = () => {
           {
             key: "someField",
             title: "Some Field",
+            renderFunc: ({ someField }) => (
+              <Flex alignItems={"center"}>
+                <Box mr={"4px"}>{someField}</Box>
+                <Tooltip content={`Custom icon in "${someField}" item`}>
+                  <InfoIcon color={"primaryDefault"} size={"16px"} />
+                </Tooltip>
+              </Flex>
+            ),
           },
 
           {
