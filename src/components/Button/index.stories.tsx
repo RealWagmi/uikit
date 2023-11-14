@@ -108,6 +108,19 @@ export const Buttons = () => {
             Button
           </Button>
         </Box>
+        <Box>
+          <Button disabled color={"error"}>Button</Button>
+        </Box>
+        <Box>
+          <Button disabled color={"error"} variant={"outlined"}>
+            Button
+          </Button>
+        </Box>
+        <Box>
+          <Button disabled color={"error"} variant={"text"}>
+            Button
+          </Button>
+        </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
         Link Button
