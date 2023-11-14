@@ -45,7 +45,7 @@ export const Table = () => {
 
   return (
     <Box>
-      <Grid gridTemplateColumns={"repeat(2, auto)"} gridGap={"16px"} alignItems="center" mb={"24px"}>
+      <Grid gridGap={"16px"} alignItems="center" mb={"24px"}>
         <Flex alignItems="center">
           <Text mr={"8px"}>Per page:</Text>
           <Dropdown
@@ -59,7 +59,7 @@ export const Table = () => {
           />
         </Flex>
         <label style={{ cursor: "pointer", display: "flex" }}>
-          <Text mr={"8px"}>Min height (347px)</Text>
+          <Text mr={"8px"}>Min height (369px)</Text>
           <Checkbox value={withMinHeight} onChange={setWithMinHeight} />
         </label>
         <label style={{ cursor: "pointer", display: "flex" }}>
@@ -134,7 +134,7 @@ export const Table = () => {
             </Text>
           ) : undefined
         }
-        minHeight={withMinHeight ? "347px" : undefined}
+        minHeight={withMinHeight ? "369px" : undefined}
         loading={loading}
       />
     </Box>

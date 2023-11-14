@@ -22,7 +22,7 @@ export const TableWrap = styled(Grid)`
 
 export const TableContentWrap = styled(Box)`
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: auto;
   width: 100%;
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
     overflow-x: hidden;
@@ -80,11 +80,20 @@ export const TablePagWrap = styled(Grid)`
   grid-template-columns: 1fr max-content 1fr;
   align-items: center;
   grid-column-gap: 10px;
-  margin-top: 24px;
   color: ${({ theme }) => theme.colors.white};
-  font-size: 16px;
   font-weight: 400;
   user-select: none;
+  margin-top: 8px;
+  font-size: 12px;
+
+  @media (min-width: ${SCREEN_WIDTH.XS}px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: ${SCREEN_WIDTH.SM}px) {
+    font-size: 16px;
+    margin-top: 44px;
+  }
 `;
 
 export const TablePagBtn = styled.button`
