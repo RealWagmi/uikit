@@ -80,7 +80,7 @@ export default function Table<T = any>({
         {items.length && !loading ? (
           <TableContent cols={headers}>
             {headers.map((header, i) => {
-              const isSortable = !!(header.sortable || header.sortFunc);
+              const isSortable = !!((header.sortable && header.key) || header.sortFunc);
               return (
                 <TableHeader key={i}>
                   {header.key && header.title && (
