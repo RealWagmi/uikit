@@ -1,10 +1,9 @@
-import { Box, Grid } from "../Box";
+import { Grid } from "../Box";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useOnClickOutside } from "../../hooks";
 import { ArrowDownIcon } from "../Svg";
-import { DropdownWrapper, DropdownActivatorWrapper, DropdownItemWrapper } from "./styles";
+import { DropdownContainer, DropdownActivatorWrapper, DropdownItemWrapper, DropdownWrap } from "./styles";
 import { IDropdownProps } from "./types";
-import { Z_INDEX } from "../../constants";
 
 export default function Dropdown({ items, value, onChange }: IDropdownProps) {
   const activeItem = useMemo(() => items.find((v) => v.value === value), [items, value]);
@@ -28,8 +27,8 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
   const height = useMemo(() => (opened ? maxHeight : minHeight), [opened, maxHeight]);
 
   return (
-    <Box height={`${minHeight}px`} overflow={"visible"} position={"relative"} zIndex={Z_INDEX.DROPDOWN}>
-      <DropdownWrapper
+    <DropdownWrap height={`${minHeight}px`}>
+      <DropdownContainer
         ref={listRef}
         maxHeight={height}
         onFocus={() => {
@@ -76,7 +75,7 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
             </DropdownItemWrapper>
           ))}
         </Grid>
-      </DropdownWrapper>
-    </Box>
+      </DropdownContainer>
+    </DropdownWrap>
   );
 }
