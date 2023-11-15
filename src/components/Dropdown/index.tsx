@@ -61,7 +61,7 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
           <ArrowDownIcon size={"16px"} />
         </DropdownActivatorWrapper>
 
-        <Grid maxHeight={200} overflowY={"auto"} gridGap={"4px"} pt={"6px"}>
+        <Grid maxHeight={200} overflowY={"auto"} gridGap={"4px"} pt={"6px"} data-testid={"dropdown-items"}>
           {items.map((item) => (
             <DropdownItemWrapper
               key={item.value}
@@ -70,6 +70,7 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
                 setOpened(false);
               }}
               active={item.value === value}
+              tabIndex={item.value === value ? -1 : undefined}
             >
               {item.title || item.value}
             </DropdownItemWrapper>
