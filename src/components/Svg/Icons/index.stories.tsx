@@ -1,14 +1,14 @@
-import Flex from "../Box/Flex";
-import Svg from "./Svg";
+import Flex from "../../Box/Flex";
+import Svg from "../Svg";
 
 export default {
-  title: "Components/Svg Icons",
+  title: "Components/Svg/Icons",
   component: Svg,
   argTypes: {},
 };
 
 // @ts-ignore
-const modules = import.meta.glob("./Icons/*.tsx", { eager: true });
+const modules = import.meta.glob("./components/*.tsx", { eager: true });
 const components: { [key: string]: any } = Object.keys(modules).reduce((accum, path) => {
   const file = path.substring(2).replace(".tsx", "");
   return {

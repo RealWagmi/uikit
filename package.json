@@ -56,11 +56,11 @@
     "vitest": "^0.27.2"
   },
   "dependencies": {
+    "@ethersproject/address": "5.7.0",
     "@popperjs/core": "^2.11.8",
     "@reach/portal": "^0.18.0",
     "@real-wagmi/sdk": "^1.1.6",
     "@storybook/addon-themes": "^7.5.3",
-    "@types/node": "^13.13.5",
     "@types/styled-system": "^5.1.15",
     "framer-motion": "10.11.2",
     "react": "^18.2.0",

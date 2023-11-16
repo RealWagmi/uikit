@@ -1,5 +1,5 @@
 import { createContext, ElementType, useContext } from "react";
-import { ArrowLeftIcon } from "../Svg";
+import { ArrowLeftIcon } from "../Svg/Icons";
 import Text from "../Text";
 import { BreadcrumbsWrapper } from "./styles";
 import { IBreadcrumbsProps } from './types';
