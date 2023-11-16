@@ -2,15 +2,31 @@ import React from "react";
 import { renderWithProvider } from "../../testHelpers";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { expect, it } from "vitest";
+import { fireEvent, waitFor } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import { createMemoryHistory } from "history";
 
-it("should render breadcrumbs with correct label and href", () => {
+it("should render breadcrumbs and redirect with click", async () => {
+  const history = createMemoryHistory();
+
   const label = "Some Label";
-  const to = "https://docs.popsicle.finance/";
+  const to = "/some-route";
 
-  const { getByText } = renderWithProvider(<Breadcrumbs label={label} to={to} />);
+  history.push(to);
+
+  const { getByText } = renderWithProvider(
+    <MemoryRouter initialEntries={[to]}>
+      <Breadcrumbs label={label} to={to} />
+    </MemoryRouter>
+  );
 
   const breadcrumbsElement = getByText(label);
 
   expect(breadcrumbsElement).toBeInTheDocument();
-  expect(breadcrumbsElement.closest("a")?.href).toEqual(to);
+
+  fireEvent.click(breadcrumbsElement);
+
+  await waitFor(() => {
+    expect(history.location.pathname).toBe(to);
+  });
 });
