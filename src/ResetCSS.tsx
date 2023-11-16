@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { rgba } from "polished";
 
 const ResetCSS = createGlobalStyle`
   /* Scrollbar */
@@ -7,13 +8,12 @@ const ResetCSS = createGlobalStyle`
     height: 6px;
   }
   ::-webkit-scrollbar-thumb {
-    background: ${({ theme }) => theme.colors.lightTextGray};
-    outline: 1px solid ${({ theme }) => theme.colors.darkGray};
-    outline-offset: -1px;
-    border-radius: 8px;
+    background: ${({ theme }) => theme.colors.primaryDefault};
+    border-radius: 3px;
   }
   ::-webkit-scrollbar-track {
-
+    background: ${({ theme }) => rgba(theme.colors.lightTextGray, 0.12)};
+    border-radius: 3px;
   }
 
 `;
