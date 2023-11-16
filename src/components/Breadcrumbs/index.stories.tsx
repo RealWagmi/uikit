@@ -11,7 +11,7 @@ export default {
 export const Breadcrumbs = () => {
   return (
     <BrowserRouter>
-      <BreadcrumbsComponent label={"Some route"} to={"#"} />
+      <BreadcrumbsComponent label={"Some route"} to={"/"} />
     </BrowserRouter>
   );
 };
