@@ -6,7 +6,6 @@ export const UIKitProvider: React.FC<React.PropsWithChildren<{ theme: DefaultThe
   theme,
   children,
 }) => {
-  window.document.body.style.background = theme.background;
   return (
     <ThemeProvider theme={theme}>
       <ResetCSS />
