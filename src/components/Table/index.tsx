@@ -48,7 +48,7 @@ export default function Table<T = any>({
 
   const theme = useTheme();
 
-  const [sortData, setSortData] = useState<SortData<T>>();
+  const [sortData, setSortData] = useState<SortData<T> | null>();
 
   const sortedItems = useMemo(() => {
     const newItems = [...items];
@@ -70,26 +70,26 @@ export default function Table<T = any>({
   }, [sortedItems, perPage]);
 
   useEffect(() => {
-    changePage(1);
-  }, [sortData, perPage]);
+    if (sortData !== undefined) changePage(1);
+  }, [sortData]);
 
   return (
     <TableWrap minHeight={minHeight}>
       <Box width={"100%"}>{header}</Box>
       <TableContentWrap>
         {items.length && !loading ? (
-          <TableContent cols={headers}>
+          <TableContent cols={headers} data-testid={`table-content`}>
             {headers.map((header, i) => {
               const isSortable = !!((header.sortable && header.key) || header.sortFunc);
               return (
-                <TableHeader key={i}>
+                <TableHeader key={i} data-testid={`table-header-${i}`}>
                   {header.key && header.title && (
                     <TableHeaderTitleBtn
                       disabled={!isSortable}
                       onClick={() => {
                         const sortBy = header.key;
                         if (sortBy) {
-                          if (sortData?.sortBy === sortBy && sortData.reverseOrder) setSortData(undefined);
+                          if (sortData?.sortBy === sortBy && sortData.reverseOrder) setSortData(null);
                           else {
                             const reverseOrder = sortData?.sortBy !== sortBy ? false : !sortData?.reverseOrder;
                             setSortData({ sortBy, reverseOrder });
@@ -98,7 +98,7 @@ export default function Table<T = any>({
                       }}
                       active={sortData?.sortBy === header.key}
                     >
-                      {isSortable && <SortBtn data={sortData} active={sortData?.sortBy === header.key} />}
+                      {isSortable && <SortBtn data={sortData || undefined} active={sortData?.sortBy === header.key} />}
                       <span>{header.title}</span>
                     </TableHeaderTitleBtn>
                   )}
@@ -134,6 +134,7 @@ export default function Table<T = any>({
       {maxPage > 1 && (
         <TablePagWrap>
           <TablePagBtn
+            data-testid={`table-btn-previous`}
             disabled={!(page > 1)}
             onClick={() => {
               changePage(page - 1);
@@ -150,6 +151,7 @@ export default function Table<T = any>({
             <Box>{maxPage}</Box>
           </Flex>
           <TablePagBtn
+            data-testid={`table-btn-next`}
             disabled={!(page < maxPage)}
             onClick={() => {
               changePage(page + 1);

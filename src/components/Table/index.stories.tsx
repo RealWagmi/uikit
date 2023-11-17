@@ -50,7 +50,10 @@ export const Table = () => {
           <Text mr={"8px"}>Per page:</Text>
           <Dropdown
             value={perPage}
-            onChange={setPerPage}
+            onChange={(value: number) => {
+              setPage(1);
+              setPerPage(value);
+            }}
             items={[
               { value: 3, title: "3 Items" },
               { value: 5, title: "5 Items" },
