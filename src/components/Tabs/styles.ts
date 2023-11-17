@@ -12,7 +12,7 @@ export const TabsWrap = styled(Flex)`
   padding: 5px 10px;
 `;
 
-export const TabWrap = styled.button<{ active?: boolean }>`
+export const TabWrap = styled.button`
   padding: 10px;
   border: none;
   border-radius: 32px;
@@ -23,15 +23,20 @@ export const TabWrap = styled.button<{ active?: boolean }>`
   cursor: pointer;
   outline: none;
 
-  background: ${({ theme, active }) => (active ? rgba(theme.colors.textGray, 0.08) : "transparent")};
-  color: ${({ theme, active }) => (active ? theme.colors.primaryDefault : theme.colors.darkGray)};
+  background: transparent;
+  color: ${({ theme }) => theme.colors.darkGray};
+
+  &:disabled {
+    color: ${({ theme }) => theme.colors.primaryDefault};
+  }
 
   &:not(:last-child) {
     margin-right: 16px;
   }
 
   &:hover,
-  &:focus {
+  &:focus,
+  &:disabled {
     background: ${({ theme }) => rgba(theme.colors.textGray, 0.08)};
   }
 
