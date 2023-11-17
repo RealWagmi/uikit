@@ -1,5 +1,5 @@
 export * from "./Box";
-export * from "./Svg/Icons";
+export * from "./Svg";
 export * from "./Breadcrumbs";
 export * from "./Loaders";
 export * from "./Charts";

@@ -1,4 +1,4 @@
-import { FC, ReactElement, PropsWithChildren } from "react";
+import { FC, ReactElement, PropsWithChildren, memo } from "react";
 import Svg from "../../Svg";
 import { SvgProps } from "../../types";
 
@@ -17,5 +17,5 @@ const Token: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => (
   </Svg>
 );
 
-export default Token;
+export default memo(Token);
 

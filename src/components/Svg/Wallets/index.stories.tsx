@@ -1,9 +1,9 @@
 import Flex from "../../Box/Flex";
-import Svg from "./../Svg";
+import Svg from "../Svg";
 import { FC, ReactElement } from "react";
 
 export default {
-  title: "Components/Svg/Tokens",
+  title: "Components/Svg/Wallets",
   component: Svg,
   argTypes: {},
 };
@@ -18,11 +18,11 @@ const components: { [key: string]: any } = Object.keys(modules).reduce((accum, p
   };
 }, {});
 
-export const Tokens: FC = (): ReactElement => {
+export const Wallets: FC = (): ReactElement => {
   return (
     <Flex justifyContent="start" alignItems="center" flexWrap="wrap">
-      {Object.keys(components).map((file): ReactElement => {
-        const Token = components[file].default;
+      {Object.keys(components).map((file) => {
+        const Wallet = components[file].default;
         return (
           <Flex
             key={file}
@@ -36,7 +36,7 @@ export const Tokens: FC = (): ReactElement => {
             py="8px"
             m="4px"
           >
-            <Token size={"56px"} />
+            <Wallet size={"56px"} />
           </Flex>
         );
       })}
