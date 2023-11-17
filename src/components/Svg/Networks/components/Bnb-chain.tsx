@@ -24,4 +24,6 @@ const Item: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => (
   </Svg>
 );
 
+Item.displayName = 'BNB Chain';
+
 export default memo(Item);

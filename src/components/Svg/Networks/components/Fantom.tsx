@@ -21,4 +21,6 @@ const Item: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => (
   </Svg>
 );
 
+Item.displayName = 'Fantom';
+
 export default memo(Item);

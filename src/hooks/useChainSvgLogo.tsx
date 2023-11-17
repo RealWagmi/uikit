@@ -5,7 +5,7 @@ import { SvgProps } from "../components/Svg/types";
 
 type UseNetworksSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgProps>>;
 
-export default function useNetworksSvgLogo(chainId: ChainId = ChainId.ZKSYNC): UseNetworksSvgLogoReturnType {
+export default function useChainSvgLogo(chainId: ChainId = ChainId.ZKSYNC): UseNetworksSvgLogoReturnType {
   let layout: UseNetworksSvgLogoReturnType;
   switch (chainId) {
     case ChainId.FANTOM: layout = Fantom; break;
