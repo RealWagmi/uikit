@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import { Flex } from "../Box";
 import { rgba } from "polished";
+import { layout, space } from "styled-system";
 
 export const TabsWrap = styled(Flex)`
+  ${layout}
+  ${space}
+  
   display: inline-flex;
   box-shadow: 0 2px 16px -4px ${({ theme }) => rgba(theme.colors.shadowDark, 0.04)};
   outline: 1px solid ${({ theme }) => rgba(theme.colors.strokeGray, 0.2)};
