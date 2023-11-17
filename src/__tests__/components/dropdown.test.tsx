@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
 import Dropdown from "../../components/Dropdown";
-import { vitest, expect, it } from "vitest";
+import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
 
 describe("Dropdown", () => {

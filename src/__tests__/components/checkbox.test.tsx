@@ -1,10 +1,10 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import { vitest, expect, it } from "vitest";
+import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
 import Checkbox from "../../components/Checkbox";
 
-describe("Button", () => {
+describe("Checkbox", () => {
   it("should render the checkbox in the correct state", () => {
     const onChange = vitest.fn();
     const { getByTestId } = renderWithProvider(<Checkbox data-testid={"checkbox"} onChange={onChange} />);

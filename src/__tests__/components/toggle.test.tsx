@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import { vitest, expect, it } from "vitest";
+import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
 import Toggle from "../../components/Toggle";
 
