@@ -1,10 +1,10 @@
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import * as PopperJS from "@popperjs/core";
 import { Box, Flex } from "../Box";
 import { Portal } from "@reach/portal";
-import { ITooltipProps } from './types';
-import { Arrow, TooltipContainer } from './styles'
+import { ITooltipProps } from "./types";
+import { Arrow, TooltipContainer } from "./styles";
 
 export default function ({ content, children }: ITooltipProps) {
   const activatorElement = useRef<HTMLDivElement>(null);

@@ -1,9 +1,9 @@
-import { Box, Grid } from "../Box";
+import { Grid } from "../Box";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useOnClickOutside } from "../../hooks";
 import { ArrowDownIcon } from "../Svg";
-import { DropdownWrapper, DropdownActivatorWrapper, DropdownItemWrapper } from './styles';
-import { IDropdownProps } from './types';
+import { DropdownContainer, DropdownActivatorWrapper, DropdownItemWrapper, DropdownWrap } from "./styles";
+import { IDropdownProps } from "./types";
 
 export default function Dropdown({ items, value, onChange }: IDropdownProps) {
   const activeItem = useMemo(() => items.find((v) => v.value === value), [items, value]);
@@ -27,8 +27,8 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
   const height = useMemo(() => (opened ? maxHeight : minHeight), [opened, maxHeight]);
 
   return (
-    <Box height={`${minHeight}px`} overflow={"visible"} position={"relative"} zIndex={100}>
-      <DropdownWrapper
+    <DropdownWrap height={`${minHeight}px`}>
+      <DropdownContainer
         ref={listRef}
         maxHeight={height}
         onFocus={() => {
@@ -61,7 +61,7 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
           <ArrowDownIcon size={"16px"} />
         </DropdownActivatorWrapper>
 
-        <Grid maxHeight={200} overflowY={"auto"} gridGap={"4px"} pt={"6px"}>
+        <Grid maxHeight={200} overflowY={"auto"} gridGap={"4px"} pt={"6px"} data-testid={"dropdown-items"}>
           {items.map((item) => (
             <DropdownItemWrapper
               key={item.value}
@@ -70,12 +70,13 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
                 setOpened(false);
               }}
               active={item.value === value}
+              tabIndex={item.value === value ? -1 : undefined}
             >
               {item.title || item.value}
             </DropdownItemWrapper>
           ))}
         </Grid>
-      </DropdownWrapper>
-    </Box>
+      </DropdownContainer>
+    </DropdownWrap>
   );
 }

@@ -1,9 +1,18 @@
 import styled from "styled-components";
-import { Grid } from "../Box";
+import { Box, Grid } from "../Box";
 import { rgba } from "polished";
+import { Z_INDEX } from "../../constants";
 
-export const DropdownWrapper = styled(Grid)<{ maxHeight: number; opened?: boolean }>`
+export const DropdownWrap = styled(Box)<{ height: string }>`
   width: max-content;
+  position: relative;
+  overflow: visible;
+  z-index: ${Z_INDEX.DROPDOWN};
+  height: ${({ height }) => height};
+`;
+
+export const DropdownContainer = styled(Grid)<{ maxHeight: number; opened?: boolean }>`
+  width: 100%;
   max-height: ${({ maxHeight }) => maxHeight}px;
   padding: 0 0 4px;
   overflow: hidden;

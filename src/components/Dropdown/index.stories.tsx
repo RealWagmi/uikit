@@ -1,6 +1,6 @@
 import DropdownComponent from "./index";
 import { useState } from "react";
-import { Box, Grid } from "../Box";
+import { Box, Flex, Grid } from "../Box";
 import Text from "../Text";
 
 export default {
@@ -13,6 +13,14 @@ export const Dropdown = () => {
   const [value, setValue] = useState(1);
   const [value2, setValue2] = useState(1);
   const [value3, setValue3] = useState(1);
+
+  const CustomItem = (color: string, value: string) => (
+    <Flex alignItems={"center"}>
+      <Box width={"10px"} height={"10px"} borderRadius={"5px"} background={color} mr={"4px"}></Box>
+      <span>{value}</span>
+    </Flex>
+  );
+
   return (
     <Grid gridTemplateColumns={"repeat(3, 1fr)"} mt={"10px"}>
       <Box>
@@ -32,14 +40,18 @@ export const Dropdown = () => {
       </Box>
       <Box>
         <Text variant={"h5"} mb="20px">
-          With long title
+          With custom items
         </Text>
         <DropdownComponent
           items={[
-            { value: 1, title: "Short" },
-            { value: 2, title: "Short" },
-            { value: 3, title: "Looooooooooooooooong" },
-            { value: 4, title: "Short" },
+            {
+              value: 1,
+              title: CustomItem("#EF4625", "1%"),
+            },
+            { value: 2, title: CustomItem("#63F6FF", "0.3%") },
+            { value: 3, title: CustomItem("#F7EF2B", "0.15%") },
+            { value: 4, title: CustomItem("#AAC772", "0.05%") },
+            { value: 5, title: CustomItem("#5F72D6", "0%") },
           ]}
           value={value2}
           onChange={setValue2}

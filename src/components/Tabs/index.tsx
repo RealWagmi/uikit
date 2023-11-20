@@ -1,13 +1,13 @@
-import { TabsWrap, TabWrap } from './styles';
-import { ITabsProps } from './types';
+import { TabsWrap, TabWrap } from "./styles";
+import { ITabsProps } from "./types";
 
-export default function Tabs({ tabs, value, onChange }: ITabsProps) {
+export default function Tabs({ tabs, value, onChange, ...props }: ITabsProps) {
   return (
-    <TabsWrap>
+    <TabsWrap {...props}>
       {tabs.map((tab, i) => (
         <TabWrap
           key={`${tab.value}-${i}`}
-          active={tab.value === value}
+          disabled={tab.value === value}
           onClick={() => {
             if (onChange) onChange(tab.value);
           }}

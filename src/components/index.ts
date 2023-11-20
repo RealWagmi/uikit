@@ -10,3 +10,4 @@ export * from "./Checkbox";
 export * from "./RadioButton";
 export * from "./Tabs";
 export * from "./Dropdown";
+export * from "./Table";
