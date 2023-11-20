@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import RadioButton from "./index";
 import { Box, Grid } from "../Box";
-import { QuestionIcon } from "../Svg";
+import { QuestionIcon } from "../Svg/Icons";
 import Tooltip from "../Tooltip";
 
 export default {

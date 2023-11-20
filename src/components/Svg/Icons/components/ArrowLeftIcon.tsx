@@ -1,6 +1,6 @@
 import React from "react";
-import Svg from "../Svg";
-import { SvgProps } from "../types";
+import Svg from "../../Svg";
+import { SvgProps } from "../../types";
 
 const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => (
   <Svg viewBox="0 0 16 16" {...props} fill="none">

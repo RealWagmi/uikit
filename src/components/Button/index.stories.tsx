@@ -3,7 +3,7 @@ import Button from "./index";
 import { BrowserRouter } from "react-router-dom";
 import { Box, Grid } from "../Box";
 import Text from "../Text";
-import { InfoIcon, QuestionIcon } from "../Svg";
+import { InfoIcon, QuestionIcon } from "../Svg/Icons";
 import Tooltip from "../Tooltip";
 
 export default {
