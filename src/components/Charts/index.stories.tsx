@@ -1,5 +1,5 @@
 import React from "react";
-import { TerminalChart } from "./Terminal";
+import { TerminalChart } from "./index";
 import { ChainId } from "@real-wagmi/sdk";
 
 export default {

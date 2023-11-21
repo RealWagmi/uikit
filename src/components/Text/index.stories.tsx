@@ -1,5 +1,5 @@
 import React from "react";
-import TextComponent from "./index";
+import TextComponent from "./Text";
 import { Grid } from "../Box";
 
 export default {

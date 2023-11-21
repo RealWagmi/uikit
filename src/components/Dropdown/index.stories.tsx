@@ -1,7 +1,7 @@
-import DropdownComponent from "./index";
+import DropdownComponent from "./Dropdown";
 import { useState } from "react";
 import { Box, Flex, Grid } from "../Box";
-import Text from "../Text";
+import { Text } from "../Text";
 
 export default {
   title: "Components/Dropdown",

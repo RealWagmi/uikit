@@ -1,8 +1,8 @@
 import React from "react";
-import TooltipComponent from "./index";
+import TooltipComponent from "./Tooltip";
 import { InfoIcon, QuestionIcon } from "../Svg/Icons";
 import { Flex } from "../Box";
-import Text from "../Text";
+import { Text } from "../Text";
 
 export default {
   title: "Components/Tooltip",

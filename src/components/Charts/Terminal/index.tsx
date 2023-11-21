@@ -8,7 +8,7 @@ interface IProps {
   chainId: TerminalChainId;
 }
 
-export function TerminalChart({ poolAddress, chainId }: IProps) {
+export default function TerminalChart({ poolAddress, chainId }: IProps) {
   const url = useMemo(() => URLS[chainId](poolAddress), [chainId]);
 
   return (

@@ -1,5 +1,4 @@
-export { default as ArrowLeftIcon } from "./Icons/ArrowLeftIcon";
-export { default as QuestionIcon } from "./Icons/QuestionIcon";
-export { default as InfoIcon } from "./Icons/InfoIcon";
-export { default as ArrowDownIcon } from "./Icons/ArrowDownIcon";
-export { default as SortIcon } from "./Icons/SortIcon";
+export * from "./Icons";
+export * from "./Tokens";
+export * from "./Networks";
+export * from "./Wallets";

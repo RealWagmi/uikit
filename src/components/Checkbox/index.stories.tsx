@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Checkbox from "./index";
+import { Checkbox } from "./index";
 import { Box } from "../Box";
-import Text from "../Text";
+import { Text } from "../Text";
 
 export default {
   title: "Components/Checkbox",
