@@ -12,7 +12,7 @@ const ResetCSS = createGlobalStyle`
     border-radius: 3px;
   }
   ::-webkit-scrollbar-track {
-    background: ${({ theme }) => rgba(theme.colors.lightTextGray, 0.12)};
+    background: ${({ theme }) => rgba(theme.colors.white, 0.12)};
     border-radius: 3px;
   }
 
