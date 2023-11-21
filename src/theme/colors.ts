@@ -20,6 +20,9 @@ export const colors: ThemeColors = {
   neutralLight: "#d9d9d9",
   shuttleGray: "#545d6b",
   ebonyGray: "#1f242e",
+  green: '#638e5d',
+  red: '#b84c45',
+  yellow: '#c39905',
 };
 
 type ButtonColorsConfig = {
