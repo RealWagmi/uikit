@@ -4,6 +4,7 @@ import { rgba } from "polished";
 const ResetCSS = createGlobalStyle`
   html {
     background-color: ${({ theme }) => theme.background} !important;
+    color: ${({ theme }) => theme.colors.white};
   }
 
   summary::-webkit-details-marker {
