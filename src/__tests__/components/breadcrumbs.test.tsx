@@ -1,6 +1,6 @@
 import React from "react";
 import { renderWithProvider } from "../../testHelpers";
-import Breadcrumbs from "../../components/Breadcrumbs";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import { expect, it } from "vitest";
 import { fireEvent, waitFor } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
@@ -38,7 +38,7 @@ it("should render breadcrumbs and redirect with click", async () => {
     stroke: #7b8187;
     width: 16px;
   }
-  
+
   .c3 {
     color: #7b8187;
     font-size: 14px;
@@ -49,14 +49,14 @@ it("should render breadcrumbs and redirect with click", async () => {
     -ms-letter-spacing: 0.25px;
     letter-spacing: 0.25px;
   }
-  
+
   .c0 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
-  
+
   .c1 {
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -78,14 +78,14 @@ it("should render breadcrumbs and redirect with click", async () => {
     border: 0.5px solid rgba(97,105,113,0.2);
     background: rgba(97,105,113,0.08);
   }
-  
+
   @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
     .c2 {
       -webkit-filter: none !important;
       filter: none !important;
     }
   }
-  
+
   <a
       aria-current="page"
       class="active"

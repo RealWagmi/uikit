@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, waitFor } from "@testing-library/react";
 import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import Button from "../../components/Button";
+import Button from "../../components/Button/Button";
 import { createMemoryHistory } from "history";
 import { MemoryRouter } from "react-router-dom";
 
@@ -22,13 +22,13 @@ describe("Button", () => {
     width: 16px;
     stroke: #5d93b2;
   }
-  
+
   .c5 {
     fill: none !important;
     -webkit-animation: 0.4s fvtopB linear infinite;
     animation: 0.4s fvtopB linear infinite;
   }
-  
+
   .c0 {
     width: 100%;
     background: linear-gradient(90deg,#7da0c1 3.46%,#34627d 100%);
@@ -57,26 +57,26 @@ describe("Button", () => {
     -webkit-text-decoration: none;
     text-decoration: none;
   }
-  
+
   .c0:hover:not(:disabled),
   .c0:focus {
     background: linear-gradient(90deg,#91B9de 3.46%,#40708b 100%);
   }
-  
+
   .c0 svg {
     fill: #f7f8f2;
     stroke: #f7f8f2;
   }
-  
+
   .c0:disabled {
     box-shadow: none;
   }
-  
+
   .c0:disabled {
     cursor: default;
     opacity: 0.5;
   }
-  
+
   .c1 {
     display: -webkit-box;
     display: -webkit-flex;
@@ -94,7 +94,7 @@ describe("Button", () => {
     -webkit-transition: opacity 0.15s;
     transition: opacity 0.15s;
   }
-  
+
   .c3 {
     position: absolute;
     display: -webkit-box;
@@ -106,11 +106,11 @@ describe("Button", () => {
     -webkit-transition: opacity 0.15s;
     transition: opacity 0.15s;
   }
-  
+
   .c2 {
     margin: 0 8px;
   }
-  
+
   <button
       class="c0"
       color="primary"

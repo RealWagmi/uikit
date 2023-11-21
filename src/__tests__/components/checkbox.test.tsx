@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import Checkbox from "../../components/Checkbox";
+import Checkbox from "../../components/Checkbox/Checkbox";
 
 describe("Checkbox", () => {
   it("should render the checkbox in the correct state", () => {
@@ -39,7 +39,7 @@ describe("Checkbox", () => {
     -webkit-transition: outline-color 0.2s;
     transition: outline-color 0.2s;
   }
-  
+
   .c0:after {
     content: "";
     position: absolute;
@@ -50,25 +50,25 @@ describe("Checkbox", () => {
     -webkit-transition: background 0.2s,width 0.05s,height 0.05s;
     transition: background 0.2s,width 0.05s,height 0.05s;
   }
-  
+
   .c0:hover:not(:disabled) {
     outline: 1px solid #6da6c6;
   }
-  
+
   .c0:hover:not(:disabled):after {
     background: #6da6c6;
   }
-  
+
   .c0:disabled {
     outline: 1px solid #6a757b;
     cursor: default;
   }
-  
+
   .c0:disabled:after {
     background: #6a757b;
     cursor: default;
   }
-  
+
   <button
       class="c0"
       data-testid="checkbox"
@@ -76,7 +76,7 @@ describe("Checkbox", () => {
     />
   </DocumentFragment>
 
-    
+
     `);
   });
   it("should call onChange function for enabled checkbox", () => {

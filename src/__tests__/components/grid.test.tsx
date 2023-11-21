@@ -10,7 +10,7 @@ it("renders correctly", () => {
     .c0 {
     display: grid;
   }
-  
+
   <div
       class="c0"
     >

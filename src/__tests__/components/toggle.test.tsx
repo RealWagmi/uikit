@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import Toggle from "../../components/Toggle";
+import Toggle from "../../components/Toggle/Toggle";
 
 describe("Toggle", () => {
   it("should render the toggle and call onChange function for enabled toggle", () => {
@@ -35,16 +35,16 @@ describe("Toggle", () => {
      -webkit-transition: background 0.2s;
      transition: background 0.2s;
    }
-   
+
    .c0:hover:not(:disabled) {
      background: #6da6c6;
    }
-   
+
    .c0:disabled {
      background: #6a757b;
      cursor: default;
    }
-   
+
    .c1 {
      position: absolute;
      top: 2px;
@@ -56,7 +56,7 @@ describe("Toggle", () => {
      -webkit-transition: left 0.2s,background 0.2s;
      transition: left 0.2s,background 0.2s;
    }
-   
+
    <button
        class="c0"
        data-testid="toggle"
