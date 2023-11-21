@@ -2,6 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import { rgba } from "polished";
 
 const ResetCSS = createGlobalStyle`
+  * {
+    font-family: Lexend Deca, sans-serif;
+  }
   /* Scrollbar */
   ::-webkit-scrollbar {
     width: 6px;
