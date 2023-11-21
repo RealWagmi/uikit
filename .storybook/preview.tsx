@@ -17,19 +17,19 @@ const CustomProvider = (props) => {
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    backgrounds: {
-      default: "dark",
-      values: [
-        {
-          name: "dark",
-          value: dark.background,
-        },
-        {
-          name: "light",
-          value: light.background,
-        },
-      ],
-    },
+    // backgrounds: {
+    //   default: "dark",
+    //   values: [
+    //     {
+    //       name: "dark",
+    //       value: dark.background,
+    //     },
+    //     {
+    //       name: "light",
+    //       value: light.background,
+    //     },
+    //   ],
+    // },
   },
   decorators: [
     withThemeFromJSXProvider({
