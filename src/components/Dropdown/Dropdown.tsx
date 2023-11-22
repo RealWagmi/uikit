@@ -1,6 +1,6 @@
 import { Grid } from "../Box";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useOnClickOutside } from "../../hooks";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 import { ArrowDownIcon } from "../Svg";
 import { DropdownContainer, DropdownActivatorWrapper, DropdownItemWrapper, DropdownWrap } from "./styles";
 import { IDropdownProps } from "./types";
