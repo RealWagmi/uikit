@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { Text as TextOrig, TextProps as TextPropsOriginal } from "rebass";
 import { ThemeColors } from "../../theme/types";
-import { variant } from "styled-system";
+import { layout, space, typography, variant } from "styled-system";
 import { typographyVariants } from "./theme";
 import { typographies } from "./types";
 import { ReactNode } from "react";
-import shouldForwardProp from "@styled-system/should-forward-prop";
 
 type TextProps = Omit<TextPropsOriginal, "variant" | "color"> & {
   color?: keyof ThemeColors | string;
@@ -14,13 +13,16 @@ type TextProps = Omit<TextPropsOriginal, "variant" | "color"> & {
 };
 
 const TextWrap = styled(TextOrig).withConfig({
-  shouldForwardProp,
-})<TextProps>`
+  shouldForwardProp: (prop: string) => !["color"].includes(prop),
+} as any)<TextProps>`
   color: ${({ theme, color }) => theme.colors[color] || color || theme.colors.white};
   ${variant({
     prop: "variant",
     variants: typographyVariants,
   })}
+  ${space}
+  ${typography}
+  ${layout}
 `;
 
 TextWrap.defaultProps = {
