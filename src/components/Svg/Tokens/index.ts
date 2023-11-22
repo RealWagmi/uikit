@@ -1,9 +1,9 @@
-export * as Avax from "./components/Avax";
-export * as Bnb from "./components/Bnb";
-export * as Eth from "./components/Eth";
-export * as Ftm from "./components/Ftm";
-export * as Gmi from "./components/Gmi";
-export * as Kava from "./components/Kava";
-export * as Matic from "./components/Matic";
-export * as Swagmi from "./components/Swagmi";
-export * as Wagmi from "./components/Wagmi";
+export { default as Avax } from "./components/Avax";
+export { default as Bnb } from "./components/Bnb";
+export { default as Eth } from "./components/Eth";
+export { default as Ftm } from "./components/Ftm";
+export { default as Gmi } from "./components/Gmi";
+export { default as Kava } from "./components/Kava";
+export { default as Matic } from "./components/Matic";
+export { default as Swagmi } from "./components/Swagmi";
+export { default as Wagmi } from "./components/Wagmi";

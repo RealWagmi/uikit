@@ -1,3 +1,2 @@
-export * as useChainSvgLogo from "./useChainSvgLogo";
-export * as useNativeTokenSvgLogo from "./useNativeTokenSvgLogo";
-export * as useOnClickOutside from "./useOnClickOutside";
+export { default as useChainSvgLogo } from "./useChainSvgLogo";
+export { default as useNativeTokenSvgLogo } from "./useNativeTokenSvgLogo";

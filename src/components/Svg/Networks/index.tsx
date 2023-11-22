@@ -1,9 +1,9 @@
-export * as Arbitrum from "./components/Arbitrum";
-export * as Avalanche from "./components/Avalanche";
-export * as BnbChain from "./components/Bnb-chain";
-export * as Ethereum from "./components/Ethereum";
-export * as Fantom from "./components/Fantom";
-export * as KavaEvm from "./components/Kava-evm";
-export * as Optimism from "./components/Optimism";
-export * as Polygon from "./components/Polygon";
-export * as ZkSyncEra from "./components/ZkSync-era";
+export { default as Arbitrum } from "./components/Arbitrum";
+export { default as Avalanche } from "./components/Avalanche";
+export { default as BnbChain } from "./components/Bnb-chain";
+export { default as Ethereum } from "./components/Ethereum";
+export { default as Fantom } from "./components/Fantom";
+export { default as KavaEvm } from "./components/Kava-evm";
+export { default as Optimism } from "./components/Optimism";
+export { default as Polygon } from "./components/Polygon";
+export { default as ZkSyncEra } from "./components/ZkSync-era";
