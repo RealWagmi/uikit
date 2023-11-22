@@ -1,2 +1,2 @@
-export { default as LoadingSpinner } from "./LoadingSpinner";
-export { default as LoadingBubble } from "./LoadingBubble";
+export * as LoadingSpinner from "./LoadingSpinner";
+export * as LoadingBubble from "./LoadingBubble";

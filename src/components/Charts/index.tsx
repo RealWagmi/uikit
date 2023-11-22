@@ -1,1 +1,1 @@
-export { default as TerminalChart } from "./Terminal";
+export * as TerminalChart from "./Terminal";

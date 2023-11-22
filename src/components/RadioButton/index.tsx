@@ -1,1 +1,1 @@
-export { default as RadioButton } from "./RadioButton";
+export * as RadioButton from "./RadioButton";

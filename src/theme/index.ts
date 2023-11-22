@@ -7,5 +7,5 @@ export interface UIKitTheme {
   background: string;
 }
 
-export { default as dark } from "./dark";
-export { default as light } from "./light";
+export * as dark from "./dark";
+export * as light from "./light";
