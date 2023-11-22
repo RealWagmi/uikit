@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { vitest, expect, it } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import RadioButton from "../../components/RadioButton";
+import { RadioButton } from "../../components/RadioButton";
 import Grid from "../../components/Box/Grid";
 
 it("should render the radiobutton and respond correctly to clicks", () => {
@@ -68,7 +68,7 @@ it("should render the radiobutton and respond correctly to clicks", () => {
      font-weight: 300;
      line-height: 18px;
    }
-   
+
    .c4 {
      display: -webkit-box;
      display: -webkit-flex;
@@ -115,7 +115,7 @@ it("should render the radiobutton and respond correctly to clicks", () => {
      -webkit-transition: outline-color 0.2s;
      transition: outline-color 0.2s;
    }
-   
+
    .c2:after {
      content: "";
      position: absolute;
@@ -126,25 +126,25 @@ it("should render the radiobutton and respond correctly to clicks", () => {
      -webkit-transition: background 0.2s,width 0.05s,height 0.05s;
      transition: background 0.2s,width 0.05s,height 0.05s;
    }
-   
+
    .c2:hover:not(:disabled) {
      outline: 1px solid #d9d9d9;
    }
-   
+
    .c2:hover:not(:disabled):after {
      background: #d9d9d9;
    }
-   
+
    .c2:disabled {
      outline: 1px solid #6a757b;
      cursor: default;
    }
-   
+
    .c2:disabled:after {
      background: #6a757b;
      cursor: default;
    }
-   
+
    .c3 {
      margin-right: 8px;
      position: relative;
@@ -171,7 +171,7 @@ it("should render the radiobutton and respond correctly to clicks", () => {
      -webkit-transition: outline-color 0.2s;
      transition: outline-color 0.2s;
    }
-   
+
    .c3:after {
      content: "";
      position: absolute;
@@ -182,29 +182,29 @@ it("should render the radiobutton and respond correctly to clicks", () => {
      -webkit-transition: background 0.2s,width 0.05s,height 0.05s;
      transition: background 0.2s,width 0.05s,height 0.05s;
    }
-   
+
    .c3:hover:not(:disabled) {
      outline: 1px solid #d9d9d9;
    }
-   
+
    .c3:hover:not(:disabled):after {
      background: #d9d9d9;
    }
-   
+
    .c3:disabled {
      outline: 1px solid #6a757b;
      cursor: default;
    }
-   
+
    .c3:disabled:after {
      background: #6a757b;
      cursor: default;
    }
-   
+
    .c0 {
      display: grid;
    }
-   
+
    <div
        class="c0"
        data-testid="radiobutton"

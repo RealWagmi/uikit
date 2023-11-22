@@ -1,11 +1,11 @@
-import TableComponent from "./index";
 import React, { useState } from "react";
+import TableComponent from "./Table";
 import { Box, Flex, Grid } from "../Box";
-import Button from "../Button";
-import Text from "../Text";
-import Dropdown from "../Dropdown";
-import Checkbox from "../Checkbox";
-import Tooltip from "../Tooltip";
+import { Button } from "../Button";
+import { Text } from "../Text";
+import { Dropdown } from "../Dropdown";
+import { Checkbox } from "../Checkbox";
+import { Tooltip } from "../Tooltip";
 import { InfoIcon } from "../Svg";
 
 export default {

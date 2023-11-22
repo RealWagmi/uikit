@@ -1,7 +1,7 @@
 import * as React from "react";
 import { renderWithProvider } from "../../testHelpers";
 import { expect, it } from "vitest";
-import { LoadingBubble } from "../../components";
+import { LoadingBubble } from "../../components/Loaders";
 
 it("renders correctly", () => {
   const { asFragment } = renderWithProvider(<LoadingBubble />);
@@ -19,12 +19,12 @@ it("renders correctly", () => {
     will-change: background-position;
     background-size: 400%;
   }
-  
+
   <div
       class="c0"
     />
   </DocumentFragment>
-  
+
 
   `);
 });

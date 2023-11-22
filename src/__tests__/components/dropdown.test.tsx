@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent } from "@testing-library/react";
-import Dropdown from "../../components/Dropdown";
+import { Dropdown } from "../../components/Dropdown";
 import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
 
@@ -32,32 +32,32 @@ describe("Dropdown", () => {
       .c0 {
       height: 34px;
     }
-    
+
     .c2 {
       max-height: 34px;
     }
-    
+
     .c8 {
       max-height: 200px;
       overflow-y: auto;
       padding-top: 6px;
     }
-    
+
     .c3 {
       display: grid;
     }
-    
+
     .c9 {
       display: grid;
       grid-gap: 4px;
     }
-    
+
     .c7 {
       fill: none !important;
       stroke: #000000;
       width: 16px;
     }
-    
+
     .c1 {
       width: -webkit-max-content;
       width: -moz-max-content;
@@ -67,7 +67,7 @@ describe("Dropdown", () => {
       z-index: 100;
       height: 34px;
     }
-    
+
     .c4 {
       width: 100%;
       max-height: 34px;
@@ -83,7 +83,7 @@ describe("Dropdown", () => {
       -webkit-transition: max-height 0.15s,background 0.2s;
       transition: max-height 0.15s,background 0.2s;
     }
-    
+
     .c4 svg {
       -webkit-transform: rotate(0);
       -ms-transform: rotate(0);
@@ -92,15 +92,15 @@ describe("Dropdown", () => {
       -webkit-transition: all 0.15s;
       transition: all 0.15s;
     }
-    
+
     .c4:hover {
       background: rgba(97,105,113,0.16);
     }
-    
+
     .c4:hover svg {
       stroke: #ffffff;
     }
-    
+
     .c5 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -127,12 +127,12 @@ describe("Dropdown", () => {
       -webkit-transition: color 0.15s;
       transition: color 0.15s;
     }
-    
+
     .c5:hover,
     .c5:focus {
       color: #5d93b2;
     }
-    
+
     .c10 {
       display: -webkit-box;
       display: -webkit-flex;
@@ -159,24 +159,24 @@ describe("Dropdown", () => {
       -webkit-transition: color 0.15s;
       transition: color 0.15s;
     }
-    
+
     .c10:hover,
     .c10:focus {
       color: #5d93b2;
     }
-    
+
     .c6 {
       height: 34px;
       padding: 0 20px;
     }
-    
+
     @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
       .c7 {
         -webkit-filter: none !important;
         filter: none !important;
       }
     }
-    
+
     <div
         class="c0 c1"
         height="34px"

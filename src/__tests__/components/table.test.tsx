@@ -1,8 +1,8 @@
 import React from "react";
 import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import Table from "../../components/Table";
-import Button from "../../components/Button";
+import { Table } from "../../components/Table";
+import Button from "../../components/Button/Button";
 import { fireEvent } from "@testing-library/react";
 
 const getOnlyItemsOfTable = (table: HTMLDivElement) =>
@@ -60,32 +60,32 @@ describe("Table", () => {
      .c2 {
      width: 100%;
    }
-   
+
    .c14 {
      margin-right: 0.4em;
    }
-   
+
    .c15 {
      min-width: 10px;
      color: #5d93b2;
    }
-   
+
    .c16 {
      margin-left: 0.4em;
      margin-right: 0.4em;
    }
-   
+
    .c13 {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
      display: flex;
    }
-   
+
    .c0 {
      display: grid;
    }
-   
+
    .c1 {
      justify-items: center;
      grid-template-rows: auto 1fr auto;
@@ -95,13 +95,13 @@ describe("Table", () => {
      padding: 16px;
      box-sizing: border-box;
    }
-   
+
    .c3 {
      overflow-y: hidden;
      overflow-x: auto;
      width: 100%;
    }
-   
+
    .c4 {
      -webkit-align-items: center;
      -webkit-box-align: center;
@@ -111,7 +111,7 @@ describe("Table", () => {
      grid-column-gap: 8px;
      grid-template-columns: calc(50% - 4px) calc(50% - 4px);
    }
-   
+
    .c5 {
      display: -webkit-box;
      display: -webkit-flex;
@@ -124,7 +124,7 @@ describe("Table", () => {
      padding: 8px 0 12px;
      min-height: 17px;
    }
-   
+
    .c6 {
      display: -webkit-box;
      display: -webkit-flex;
@@ -143,11 +143,11 @@ describe("Table", () => {
      font-size: 12px;
      font-weight: 400;
    }
-   
+
    .c6:disabled {
      cursor: default;
    }
-   
+
    .c7 {
      display: -webkit-box;
      display: -webkit-flex;
@@ -166,11 +166,11 @@ describe("Table", () => {
      font-size: 12px;
      font-weight: 400;
    }
-   
+
    .c7:disabled {
      cursor: default;
    }
-   
+
    .c9 {
      font-size: 14px;
      font-weight: 300;
@@ -178,7 +178,7 @@ describe("Table", () => {
      text-align: left;
      color: #ffffff;
    }
-   
+
    .c10 {
      grid-template-columns: 1fr max-content 1fr;
      -webkit-align-items: center;
@@ -195,7 +195,7 @@ describe("Table", () => {
      margin-top: 8px;
      font-size: 12px;
    }
-   
+
    .c11 {
      display: -webkit-inline-box;
      display: -webkit-inline-flex;
@@ -211,75 +211,75 @@ describe("Table", () => {
      padding: 6px;
      border-radius: 14px;
    }
-   
+
    .c11:disabled {
      visibility: hidden;
    }
-   
+
    .c8 {
      margin-right: 4px;
      fill: none !important;
      stroke: #000000;
      width: 12px;
    }
-   
+
    .c12 {
      fill: none !important;
      stroke: #5d93b2;
      width: 16px;
    }
-   
+
    @media (min-width:640px) {
      .c1 {
        padding: 24px 40px;
      }
    }
-   
+
    @media (min-width:640px) {
      .c3 {
        overflow-x: hidden;
      }
    }
-   
+
    @media (min-width:420px) {
      .c4 {
        grid-template-columns: calc(33.333333333333336% - 5.333333333333333px) calc(33.333333333333336% - 5.333333333333333px);
      }
    }
-   
+
    @media (min-width:640px) {
      .c4 {
        grid-template-columns: auto auto;
      }
    }
-   
+
    @media (min-width:420px) {
      .c10 {
        font-size: 14px;
      }
    }
-   
+
    @media (min-width:640px) {
      .c10 {
        font-size: 16px;
        margin-top: 44px;
      }
    }
-   
+
    @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
      .c8 {
        -webkit-filter: none !important;
        filter: none !important;
      }
    }
-   
+
    @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
      .c12 {
        -webkit-filter: none !important;
        filter: none !important;
      }
    }
-   
+
    <div
        class="c0 c1"
      >

@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent } from "@testing-library/react";
 import { vitest, expect, it } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
-import Tabs from "../../components/Tabs";
+import { Tabs } from "../../components/Tabs";
 
 it("should render tabs and call onChange function with correct argument", () => {
   const items = [
@@ -37,7 +37,7 @@ it("should render tabs and call onChange function with correct argument", () => 
      display: -ms-flexbox;
      display: flex;
    }
-   
+
    .c1 {
      display: -webkit-inline-box;
      display: -webkit-inline-flex;
@@ -50,7 +50,7 @@ it("should render tabs and call onChange function with correct argument", () => 
      border-radius: 32px;
      padding: 5px 10px;
    }
-   
+
    .c2 {
      padding: 10px;
      border: none;
@@ -66,21 +66,21 @@ it("should render tabs and call onChange function with correct argument", () => 
      -webkit-transition: background 0.2s;
      transition: background 0.2s;
    }
-   
+
    .c2:disabled {
      color: #5d93b2;
    }
-   
+
    .c2:not(:last-child) {
      margin-right: 16px;
    }
-   
+
    .c2:hover,
    .c2:focus,
    .c2:disabled {
      background: rgba(175,182,201,0.08);
    }
-   
+
    <div
        class="c0 c1"
        data-testid="tabs"

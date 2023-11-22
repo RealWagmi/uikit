@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Button from "./index";
+import ButtonComponent from "./Button";
 import { BrowserRouter } from "react-router-dom";
 import { Box, Grid } from "../Box";
-import Text from "../Text";
+import { Text } from "../Text";
 import { InfoIcon, QuestionIcon } from "../Svg/Icons";
-import Tooltip from "../Tooltip";
+import { Tooltip } from "../Tooltip";
 
 export default {
   title: "Components/Buttons",
-  component: Button,
+  component: ButtonComponent,
   argTypes: {},
 };
 
@@ -33,26 +33,26 @@ export const Buttons = () => {
         <Text>Outlined</Text>
         <Text>Text</Text>
         <Box>
-          <Button>Button</Button>
+          <ButtonComponent>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button variant={"outlined"}>Button</Button>
+          <ButtonComponent variant={"outlined"}>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button variant={"text"}>Button</Button>
+          <ButtonComponent variant={"text"}>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button disabled={true}>Button</Button>
+          <ButtonComponent disabled={true}>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button variant={"outlined"} disabled={true}>
+          <ButtonComponent variant={"outlined"} disabled={true}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button variant={"text"} disabled={true}>
+          <ButtonComponent variant={"text"} disabled={true}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
@@ -63,32 +63,32 @@ export const Buttons = () => {
         <Text>Outlined</Text>
         <Text>Text</Text>
         <Box>
-          <Button scale={"small"}>Button</Button>
+          <ButtonComponent scale={"small"}>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button scale={"small"} variant={"outlined"}>
+          <ButtonComponent scale={"small"} variant={"outlined"}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button scale={"small"} variant={"text"}>
+          <ButtonComponent scale={"small"} variant={"text"}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button scale={"small"} disabled={true}>
+          <ButtonComponent scale={"small"} disabled={true}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button scale={"small"} variant={"outlined"} disabled={true}>
+          <ButtonComponent scale={"small"} variant={"outlined"} disabled={true}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button scale={"small"} variant={"text"} disabled={true}>
+          <ButtonComponent scale={"small"} variant={"text"} disabled={true}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
@@ -96,49 +96,49 @@ export const Buttons = () => {
       </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
         <Box>
-          <Button color={"error"}>Button</Button>
+          <ButtonComponent color={"error"}>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button color={"error"} variant={"outlined"}>
+          <ButtonComponent color={"error"} variant={"outlined"}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button color={"error"} variant={"text"}>
+          <ButtonComponent color={"error"} variant={"text"}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button disabled color={"error"}>Button</Button>
+          <ButtonComponent disabled color={"error"}>Button</ButtonComponent>
         </Box>
         <Box>
-          <Button disabled color={"error"} variant={"outlined"}>
+          <ButtonComponent disabled color={"error"} variant={"outlined"}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
         <Box>
-          <Button disabled color={"error"} variant={"text"}>
+          <ButtonComponent disabled color={"error"} variant={"text"}>
             Button
-          </Button>
+          </ButtonComponent>
         </Box>
       </Grid>
       <Text variant={"h5"} m="40px 0 20px">
         Link Button
       </Text>
       <Box>
-        <Button to={"https://docs.popsicle.finance/"} target={"_blank"} width={"50%"}>
+        <ButtonComponent to={"https://docs.popsicle.finance/"} target={"_blank"} width={"50%"}>
           Button
-        </Button>
+        </ButtonComponent>
       </Box>
       <Text variant={"h5"} m="40px 0 20px">
         With Start/End components
       </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
-        <Button startIcon={<InfoIcon size={"16px"} />}>Button</Button>
-        <Button endIcon={<QuestionIcon size={"16px"} />} variant={"outlined"}>
+        <ButtonComponent startIcon={<InfoIcon size={"16px"} />}>Button</ButtonComponent>
+        <ButtonComponent endIcon={<QuestionIcon size={"16px"} />} variant={"outlined"}>
           Button
-        </Button>
-        <Button
+        </ButtonComponent>
+        <ButtonComponent
           color={"error"}
           disabled={true}
           variant={"text"}
@@ -167,14 +167,14 @@ export const Buttons = () => {
           }
         >
           With Tooltips
-        </Button>
+        </ButtonComponent>
       </Grid>
 
       <Text variant={"h5"} m="40px 0 20px">
         With Loader
       </Text>
 
-      <Button
+      <ButtonComponent
         width={"50%"}
         onClick={() => {
           setLoading(true);
@@ -183,7 +183,7 @@ export const Buttons = () => {
         variant={"outlined"}
       >
         Click here
-      </Button>
+      </ButtonComponent>
     </BrowserRouter>
   );
 };

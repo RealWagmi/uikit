@@ -20,9 +20,9 @@ export const colors: ThemeColors = {
   neutralLight: "#d9d9d9",
   shuttleGray: "#545d6b",
   ebonyGray: "#1f242e",
-  green: '#638e5d',
-  red: '#b84c45',
-  yellow: '#c39905',
+  green: "#638e5d",
+  red: "#b84c45",
+  yellow: "#c39905",
 };
 
 type ButtonColorsConfig = {
@@ -47,9 +47,4 @@ export const buttons: ButtonsColors = {
     grad1: "#7d3434",
     text: "#966060",
   },
-};
-
-export const theme = {
-  grad0: "rgba(84, 93, 107, 0.12)",
-  grad1: "rgba(31, 36, 46, 0.12)",
 };

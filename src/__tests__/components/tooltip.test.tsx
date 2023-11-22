@@ -1,7 +1,7 @@
 import * as React from "react";
 import { renderWithProvider } from "../../testHelpers";
 import { expect, it } from "vitest";
-import Tooltip from "../../components/Tooltip";
+import Tooltip from "../../components/Tooltip/Tooltip";
 
 it("renders correctly", () => {
   const label = "Some Label";
@@ -19,7 +19,7 @@ it("renders correctly", () => {
      display: -ms-flexbox;
      display: flex;
    }
-   
+
    <div
        class=""
      >

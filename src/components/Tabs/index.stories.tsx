@@ -1,4 +1,4 @@
-import TabsComponent from "./index";
+import TabsComponent from "./Tabs";
 import React, { useState } from "react";
 import { Box } from "../Box";
 import { TabValue } from "./types";

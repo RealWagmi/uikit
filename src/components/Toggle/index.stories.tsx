@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ToggleComponent from "./index";
+import ToggleComponent from "./Toggle";
 import { Box } from "../Box";
-import Text from "../Text";
+import { Text } from "../Text";
 
 export default {
   title: "Components/Toggle",

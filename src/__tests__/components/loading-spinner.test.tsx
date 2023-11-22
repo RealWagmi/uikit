@@ -1,7 +1,7 @@
 import * as React from "react";
 import { renderWithProvider } from "../../testHelpers";
 import { expect, it } from "vitest";
-import { LoadingSpinner } from "../../components";
+import { LoadingSpinner } from "../../components/Loaders";
 
 it("renders correctly", () => {
   const { asFragment } = renderWithProvider(<LoadingSpinner />);
@@ -12,13 +12,13 @@ it("renders correctly", () => {
     width: 16px;
     stroke: #5d93b2;
   }
-  
+
   .c1 {
     fill: none !important;
     -webkit-animation: 2s fvtopB linear infinite;
     animation: 2s fvtopB linear infinite;
   }
-  
+
 <svg
       class="c0 c1"
       fill="none"
