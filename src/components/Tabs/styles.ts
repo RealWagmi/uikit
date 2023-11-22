@@ -13,16 +13,16 @@ export const TabsWrap = styled(Flex)`
   outline-offset: -1px;
   background: ${({ theme }) => rgba(theme.colors.strokeGray, 0.08)};
   border-radius: 32px;
-  padding: 5px 10px;
+  padding: 3px 10px;
 `;
 
 export const TabWrap = styled.button`
-  padding: 10px;
+  padding: 9px 10px;
   border: none;
   border-radius: 32px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 11px;
+  line-height: 10px;
   min-width: 62px;
   cursor: pointer;
   outline: none;

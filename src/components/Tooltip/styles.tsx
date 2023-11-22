@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Z_INDEX } from "../../constants";
 
 export const Arrow = styled.div`
   width: 8px;
@@ -48,4 +49,6 @@ export const TooltipContainer = styled.div<{ show: boolean }>`
   word-break: break-word;
   background: ${({ theme }) => theme.colors.darkBg};
   border-radius: 8px;
+  
+  z-index: ${Z_INDEX.TOOLTIP};
 `;

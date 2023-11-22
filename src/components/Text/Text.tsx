@@ -5,15 +5,18 @@ import { variant } from "styled-system";
 import { typographyVariants } from "./theme";
 import { typographies } from "./types";
 import { ReactNode } from "react";
+import shouldForwardProp from "@styled-system/should-forward-prop";
 
 type TextProps = Omit<TextPropsOriginal, "variant" | "color"> & {
-  color?: keyof ThemeColors;
+  color?: keyof ThemeColors | string;
   variant?: (typeof typographies)[keyof typeof typographies];
   children?: ReactNode;
 };
 
-const TextWrap = styled(TextOrig)<TextProps>`
-  color: ${({ theme, color }) => theme.colors[color as string] || color || theme.colors.white};
+const TextWrap = styled(TextOrig).withConfig({
+  shouldForwardProp,
+})<TextProps>`
+  color: ${({ theme, color }) => theme.colors[color] || color || theme.colors.white};
   ${variant({
     prop: "variant",
     variants: typographyVariants,

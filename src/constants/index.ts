@@ -9,4 +9,5 @@ export enum SCREEN_WIDTH {
 
 export enum Z_INDEX {
   DROPDOWN = 100,
+  TOOLTIP = 1000
 }
