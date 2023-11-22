@@ -37,7 +37,7 @@ it("should render tabs and call onChange function with correct argument", () => 
      display: -ms-flexbox;
      display: flex;
    }
-
+   
    .c1 {
      display: -webkit-inline-box;
      display: -webkit-inline-flex;
@@ -48,16 +48,16 @@ it("should render tabs and call onChange function with correct argument", () => 
      outline-offset: -1px;
      background: rgba(97,105,113,0.08);
      border-radius: 32px;
-     padding: 5px 10px;
+     padding: 3px 10px;
    }
-
+   
    .c2 {
-     padding: 10px;
+     padding: 9px 10px;
      border: none;
      border-radius: 32px;
-     font-size: 16px;
+     font-size: 14px;
      font-weight: 400;
-     line-height: 11px;
+     line-height: 10px;
      min-width: 62px;
      cursor: pointer;
      outline: none;
@@ -66,21 +66,21 @@ it("should render tabs and call onChange function with correct argument", () => 
      -webkit-transition: background 0.2s;
      transition: background 0.2s;
    }
-
+   
    .c2:disabled {
      color: #5d93b2;
    }
-
+   
    .c2:not(:last-child) {
      margin-right: 16px;
    }
-
+   
    .c2:hover,
    .c2:focus,
    .c2:disabled {
      background: rgba(175,182,201,0.08);
    }
-
+   
    <div
        class="c0 c1"
        data-testid="tabs"
