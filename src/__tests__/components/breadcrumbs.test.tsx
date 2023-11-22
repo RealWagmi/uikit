@@ -113,7 +113,7 @@ it("should render breadcrumbs and redirect with click", async () => {
           />
         </svg>
         <div
-          class="c3 css-ldvhnx"
+          class="c3 css-vurnku"
         >
           ${label}
         </div>

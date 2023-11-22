@@ -24,6 +24,8 @@ export const Text: React.FC<React.PropsWithChildren> = () => {
       <TextComponent variant="button">Button/Regular</TextComponent>
       <TextComponent variant="caption">Caption/Regular</TextComponent>
       <TextComponent variant="overline">Overline/Regular</TextComponent>
+
+      <TextComponent color="red">Red text</TextComponent>
     </Grid>
   );
 };
