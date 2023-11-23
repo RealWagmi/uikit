@@ -1,6 +1,6 @@
 import { ChainId } from "@real-wagmi/sdk";
 import { NamedExoticComponent, PropsWithChildren, useMemo } from "react";
-import { Arbitrum, Fantom, KavaEvm, Polygon, Ethereum, Optimism, ZkSyncEra, BnbChain, Avalanche } from '../components/Svg/Networks'
+import { ArbitrumChain, FantomChain, KavaEvmChain, PolygonChain, EthereumChain, OptimismChain, ZkSyncEraChain, BscChain, AvalancheChain } from '../components/Svg/Networks'
 import { SvgProps } from "../components/Svg/types";
 
 type UseNetworksSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgProps>>;
@@ -8,15 +8,15 @@ type UseNetworksSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgPr
 export default function useChainSvgLogo(chainId: ChainId = ChainId.ZKSYNC): UseNetworksSvgLogoReturnType {
   let layout: UseNetworksSvgLogoReturnType;
   switch (chainId) {
-    case ChainId.FANTOM: layout = Fantom; break;
-    case ChainId.KAVA: layout = KavaEvm; break;
-    case ChainId.BSC: layout = BnbChain; break;
-    case ChainId.POLYGON: layout = Polygon; break;
-    case ChainId.AVALANCHE: layout = Avalanche; break;
-    case ChainId.OPTIMISM: layout = Optimism; break;
-    case ChainId.ZKSYNC: layout = ZkSyncEra; break;
-    case ChainId.ARBITRUM: layout = Arbitrum; break;
-    default: layout = Ethereum;
+    case ChainId.FANTOM: layout = FantomChain; break;
+    case ChainId.KAVA: layout = KavaEvmChain; break;
+    case ChainId.BSC: layout = BscChain; break;
+    case ChainId.POLYGON: layout = PolygonChain; break;
+    case ChainId.AVALANCHE: layout = AvalancheChain; break;
+    case ChainId.OPTIMISM: layout = OptimismChain; break;
+    case ChainId.ZKSYNC: layout = ZkSyncEraChain; break;
+    case ChainId.ARBITRUM: layout = ArbitrumChain; break;
+    default: layout = EthereumChain;
   }
   return useMemo((): UseNetworksSvgLogoReturnType => layout, [chainId]);
 }
