@@ -1,7 +1,7 @@
 import * as React from "react";
 import { renderWithProvider } from "../../testHelpers";
 import { expect, it } from "vitest";
-import Box from "../../components/Box/Box";
+import Box from "../../components/Box/components/Box";
 
 it("renders correctly", () => {
   const { asFragment } = renderWithProvider(<Box>box</Box>);

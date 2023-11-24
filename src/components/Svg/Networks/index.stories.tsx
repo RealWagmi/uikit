@@ -1,4 +1,4 @@
-import Flex from "../../Box/Flex";
+import Flex from "../../Box/components/Flex";
 import Svg from "../Svg";
 import { FC, ReactElement } from "react";
 
