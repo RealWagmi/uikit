@@ -1,4 +1,12 @@
 export { default as Box, MotionBox, LazyMotion, AnimatePresence, domAnimation } from "./components/Box";
 export { default as Flex } from "./components/Flex";
 export { default as Grid } from "./components/Grid";
+export { default as Row } from "./components/Row";
+export { default as RowBetween } from "./components/RowBetween";
+export { default as AutoRow } from "./components/AutoRow";
+export { default as RowFixed } from "./components/RowFixed";
 export type { BoxProps, FlexProps, GridProps } from "./types";
+export type { IRowProps } from "./components/Row/types";
+export type { IRowBetweenProps } from "./components/RowBetween/types";
+export type { IAutoRowProps } from "./components/AutoRow/types";
+export type { IRowFixedProps } from "./components/RowFixed/types";
