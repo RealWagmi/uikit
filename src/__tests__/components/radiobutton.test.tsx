@@ -3,7 +3,7 @@ import { fireEvent } from "@testing-library/react";
 import { vitest, expect, it } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
 import { RadioButton } from "../../components/RadioButton";
-import Grid from "../../components/Box/Grid";
+import Grid from "../../components/Box/components/Grid";
 
 it("should render the radiobutton and respond correctly to clicks", () => {
   const onChange = vitest.fn();

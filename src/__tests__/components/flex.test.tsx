@@ -1,6 +1,6 @@
 import * as React from "react";
 import { renderWithProvider } from "../../testHelpers";
-import Flex from "../../components/Box/Flex";
+import Flex from "../../components/Box/components/Flex";
 import {expect, it} from "vitest";
 
 it("renders correctly", () => {

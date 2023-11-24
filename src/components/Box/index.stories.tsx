@@ -1,7 +1,7 @@
 import React from "react";
-import BoxComponent from "./Box";
-import FlexComponent from "./Flex";
-import GridComponent from "./Grid";
+import BoxComponent from "./components/Box";
+import FlexComponent from "./components/Flex";
+import GridComponent from "./components/Grid";
 
 export default {
   title: "Components/Base",
