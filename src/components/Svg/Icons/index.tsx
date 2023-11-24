@@ -6,4 +6,5 @@ export { default as SortIcon } from "./components/SortIcon";
 export { default as SettingsIcon } from "./components/SettingsIcon";
 export { default as WarningIcon } from "./components/WarningIcon";
 export { default as ClearIcon } from "./components/ClearIcon";
+export { default as CloseIcon } from "./components/CloseIcon";
 export { default as SwapArrowIcon } from "./components/SwapArrow";
