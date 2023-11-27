@@ -3,6 +3,7 @@ import {
   TableContentWrap,
   TableHeader,
   TableHeaderTitleBtn,
+  TableHeaderWrap,
   TableItem,
   TablePagBtn,
   TablePagWrap,
@@ -77,7 +78,7 @@ export default function Table<T = any>({
 
   return (
     <TableWrap minHeight={minHeight}>
-      <Box width={"100%"}>{header}</Box>
+      <TableHeaderWrap>{header}</TableHeaderWrap>
       <TableContentWrap>
         {items.length && !loading ? (
           <TableContent data-testid={`table-content`} cols={headers}>

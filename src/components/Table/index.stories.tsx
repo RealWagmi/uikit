@@ -132,7 +132,7 @@ export const Table = () => {
         changePage={setPage}
         header={
           showCustomHeader ? (
-            <Text pb={"24px"} px={"8px"} variant="h5">
+            <Text pb={"24px"} variant="h5">
               Custom header
             </Text>
           ) : undefined

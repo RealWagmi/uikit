@@ -19,6 +19,15 @@ export const TableWrap = styled(Grid)`
   }
 `;
 
+export const TableHeaderWrap = styled(Box)`
+  width: 100%;
+  padding: 0 4px;
+  box-sizing: border-box;
+
+  @media (min-width: ${SCREEN_WIDTH.SM}px) {
+    padding: 0 8px;
+  }
+`;
 export const TableContentWrap = styled(Box)`
   overflow-x: auto;
   width: 100%;
@@ -39,7 +48,6 @@ export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
   }
 `;
 
-//${(cols.length / 2) * 100}% + ${(cols.length - 1) * 8}px}
 export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: boolean }>`
   position: relative;
   align-items: center;
@@ -54,13 +62,13 @@ export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: bo
   }
 
   cursor: ${({ clickable }) => (clickable ? "pointer" : "default")};
-  
+
   &:hover {
-    background: ${({theme, clickable}) => clickable ? rgba( theme.colors.primaryDefault, 0.2) : ''};
+    background: ${({ theme, clickable }) => (clickable ? rgba(theme.colors.primaryDefault, 0.2) : "")};
   }
-  
+
   transition: background-color 0.2s;
-  
+
   & > * {
     padding: 0 4px;
   }
