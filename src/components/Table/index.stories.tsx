@@ -102,7 +102,6 @@ export const Table = () => {
               </Flex>
             ),
           },
-
           {
             key: "price",
             title: "Price $",
@@ -115,7 +114,8 @@ export const Table = () => {
             width: "77px",
             renderFunc: (item) => (
               <Button
-                onClick={() => {
+                onClick={(e) => {
+                  e.stopPropagation();
                   console.log("Click table item", item);
                 }}
                 scale={"small"}
@@ -132,13 +132,16 @@ export const Table = () => {
         changePage={setPage}
         header={
           showCustomHeader ? (
-            <Text pb={"24px"} variant="h5">
+            <Text pb={"24px"} px={"8px"} variant="h5">
               Custom header
             </Text>
           ) : undefined
         }
-        minHeight={withMinHeight ? "369px" : undefined}
+        minHeight={withMinHeight ? "392px" : undefined}
         loading={loading}
+        clickRow={(item) => {
+          console.log("clicked row:", item.id);
+        }}
       />
     </Box>
   );

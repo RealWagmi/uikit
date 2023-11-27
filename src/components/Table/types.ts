@@ -16,6 +16,7 @@ export interface ITableProps<T> {
   items: T[];
   loading?: boolean;
   changePage?: (page: number) => void;
+  clickRow?: (item: T) => void;
   minHeight?: string;
   header?: ReactNode;
   emptyCard?: ReactNode;

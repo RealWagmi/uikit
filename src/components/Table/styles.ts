@@ -3,7 +3,6 @@ import { Box, Grid } from "../Box";
 import { rgba } from "polished";
 import { ITableHeader } from "./types";
 import { SCREEN_WIDTH } from "../../constants";
-import { genAdaptiveGrid } from "./utils";
 
 export const TableWrap = styled(Grid)`
   justify-items: center;
@@ -16,12 +15,11 @@ export const TableWrap = styled(Grid)`
   box-sizing: border-box;
 
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    padding: 24px 40px;
+    padding: 24px 32px;
   }
 `;
 
 export const TableContentWrap = styled(Box)`
-  overflow-y: hidden;
   overflow-x: auto;
   width: 100%;
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
@@ -29,23 +27,49 @@ export const TableContentWrap = styled(Box)`
   }
 `;
 export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
-  align-items: center;
-  grid-row-gap: 18px;
-  grid-column-gap: 8px;
-  grid-template-columns: ${({ cols }) => genAdaptiveGrid(cols.length, 2)};
+  width: ${({ cols }) => (cols.length / 2) * 100}%;
+  grid-row-gap: 10px;
 
   @media (min-width: ${SCREEN_WIDTH.XS}px) {
-    grid-template-columns: ${({ cols }) => genAdaptiveGrid(cols.length, 3)};
+    width: ${({ cols }) => (cols.length / 3) * 100}%;
   }
+
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    grid-template-columns: ${({ cols }) => cols.map((col) => col.width || "auto").join(" ")};
+    width: 100%;
+  }
+`;
+
+//${(cols.length / 2) * 100}% + ${(cols.length - 1) * 8}px}
+export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: boolean }>`
+  position: relative;
+  align-items: center;
+  padding: 8px 0;
+  border-radius: 12px;
+
+  grid-template-columns: ${({ cols }) => `repeat(${cols.length}, 1fr)`};
+
+  @media (min-width: ${SCREEN_WIDTH.SM}px) {
+    grid-template-columns: ${({ cols }) => cols.map((col) => col.width || "1fr").join(" ")};
+    padding: 8px 4px;
+  }
+
+  cursor: ${({ clickable }) => (clickable ? "pointer" : "default")};
+  
+  &:hover {
+    background: ${({theme, clickable}) => clickable ? rgba( theme.colors.primaryDefault, 0.2) : ''};
+  }
+  
+  transition: background-color 0.2s;
+  
+  & > * {
+    padding: 0 4px;
   }
 `;
 
 export const TableHeader = styled(Box)`
   display: flex;
   align-items: center;
-  padding: 8px 0 12px;
+  padding-bottom: 4px;
   min-height: 17px;
 `;
 

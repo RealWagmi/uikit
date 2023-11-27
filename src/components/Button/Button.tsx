@@ -1,6 +1,6 @@
 import { ButtonProps } from "./types";
 import LoadingSpinner from "../Loaders/LoadingSpinner";
-import { ButtonContainer, ButtonContent, ButtonLoader, ButtonWrapper } from './styles';
+import { ButtonContainer, ButtonContent, ButtonLoader, ButtonWrapper } from "./styles";
 
 ButtonWrapper.defaultProps = {
   variant: "default",
@@ -14,7 +14,7 @@ export default function ({
   loading,
   onClick,
   ...props
-}: ButtonProps & { loading?: boolean; onClick?: () => void }) {
+}: ButtonProps & { loading?: boolean; onClick?: (e: MouseEvent) => void }) {
   return (
     <ButtonWrapper
       {...props}
@@ -22,7 +22,7 @@ export default function ({
       href={props.to}
       onClick={(e: any) => {
         if (loading || props.disabled) e.preventDefault();
-        else if (onClick) onClick();
+        else if (onClick) onClick(e);
       }}
     >
       <ButtonContainer isLoading={loading}>
