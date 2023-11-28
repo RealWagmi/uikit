@@ -21,6 +21,7 @@ export const Table = () => {
   const [showCustomHeader, setShowCustomHeader] = useState(true);
   const [loading, setLoading] = useState(false);
   const [empty, setEmpty] = useState(false);
+  const [disabledRows, setDisabledRows] = useState(false);
 
   const items = [
     { id: 0, price: 12, name: "H Name", someField: "Some Field 1", sortField: "123" },
@@ -79,6 +80,10 @@ export const Table = () => {
           </Tooltip>
           <Checkbox value={empty} onChange={setEmpty} />
         </label>
+        <label style={{ cursor: "pointer", display: "flex" }}>
+          <Text mr={"8px"}>Non clickable rows</Text>
+          <Checkbox value={disabledRows} onChange={setDisabledRows} />
+        </label>
       </Grid>
       <TableComponent<ItemType>
         headers={[
@@ -116,7 +121,7 @@ export const Table = () => {
               <Button
                 onClick={(e) => {
                   e.stopPropagation();
-                  console.log("Click table item", item);
+                  alert(`Click action: ${item.id}`);
                 }}
                 scale={"small"}
                 variant={"outlined"}
@@ -139,9 +144,13 @@ export const Table = () => {
         }
         minHeight={withMinHeight ? "392px" : undefined}
         loading={loading}
-        clickRow={(item) => {
-          console.log("clicked row:", item.id);
-        }}
+        clickRow={
+          !disabledRows
+            ? (item) => {
+                alert(`Click row: ${item.id}`);
+              }
+            : undefined
+        }
       />
     </Box>
   );
