@@ -1,6 +1,5 @@
 import { ButtonProps } from "./types";
-import LoadingSpinner from "../Loaders/LoadingSpinner";
-import { ButtonContainer, ButtonContent, ButtonLoader, ButtonWrapper } from "./styles";
+import { ButtonContainer, ButtonContent, ButtonWrapper } from "./styles";
 
 ButtonWrapper.defaultProps = {
   variant: "default",
@@ -25,14 +24,11 @@ export default function ({
         else if (onClick) onClick(e);
       }}
     >
-      <ButtonContainer isLoading={loading}>
+      <ButtonContainer>
         {props.startIcon}
-        <ButtonContent>{props.children}</ButtonContent>
+        <ButtonContent loading={loading}>{props.children}</ButtonContent>
         {props.endIcon}
       </ButtonContainer>
-      <ButtonLoader isLoading={loading}>
-        <LoadingSpinner duration={"0.4s"} />
-      </ButtonLoader>
     </ButtonWrapper>
   );
 }
