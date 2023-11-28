@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { ButtonProps } from './types';
+import styled, { keyframes } from "styled-components";
+import { ButtonProps } from "./types";
 import { layout, space, variant } from "styled-system";
 import { variantVariants, scaleVariants } from "./theme";
 
@@ -17,7 +17,6 @@ export const ButtonWrapper = styled.button<ButtonProps>`
     variants: scaleVariants,
   })}
   
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,21 +31,38 @@ export const ButtonWrapper = styled.button<ButtonProps>`
   }
 `;
 
-export const ButtonContainer = styled.span<{ isLoading?: boolean }>`
+export const ButtonContainer = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: ${({ isLoading }) => (isLoading ? 0.3 : 1)};
-  transition: opacity 0.15s;
-`;
-export const ButtonLoader = styled.span<{ isLoading?: boolean }>`
-  position: absolute;
-  display: flex;
-  opacity: ${({ isLoading }) => (isLoading ? 1 : 0)};
-  pointer-events: none;
   transition: opacity 0.15s;
 `;
 
-export const ButtonContent = styled.span`
-  margin: 0 8px;
+export const loadingDotsAnimation = keyframes`
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+`;
+
+export const ButtonContent = styled.span<{ loading?: boolean }>`
+  position: relative;
+  margin: 0 12px;
+
+  &:after {
+    display: ${({ loading }) => (loading ? "block" : "none")};
+    content: ".";
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    animation: ${loadingDotsAnimation} 0.6s infinite;
+  }
 `;
