@@ -3,9 +3,11 @@ import {
   TableContentWrap,
   TableHeader,
   TableHeaderTitleBtn,
+  TableHeaderWrap,
   TableItem,
   TablePagBtn,
   TablePagWrap,
+  TableRow,
   TableWrap,
 } from "./styles";
 import { ITableProps, SortData } from "./types";
@@ -43,6 +45,7 @@ export default function Table<T = any>({
   changePage = (page: number) => {},
   loading,
   emptyCard,
+  clickRow,
 }: ITableProps<T>) {
   const maxPage = useMemo(() => Math.ceil(items.length / perPage), [items, perPage]);
 
@@ -75,51 +78,64 @@ export default function Table<T = any>({
 
   return (
     <TableWrap minHeight={minHeight}>
-      <Box width={"100%"}>{header}</Box>
+      <TableHeaderWrap>{header}</TableHeaderWrap>
       <TableContentWrap>
         {items.length && !loading ? (
-          <TableContent cols={headers} data-testid={`table-content`}>
-            {headers.map((header, i) => {
-              const isSortable = !!((header.sortable && header.key) || header.sortFunc);
-              return (
-                <TableHeader key={i} data-testid={`table-header-${i}`}>
-                  {header.key && header.title && (
-                    <TableHeaderTitleBtn
-                      disabled={!isSortable}
-                      onClick={() => {
-                        const sortBy = header.key;
-                        if (sortBy) {
-                          if (sortData?.sortBy === sortBy && sortData.reverseOrder) setSortData(null);
-                          else {
-                            const reverseOrder = sortData?.sortBy !== sortBy ? false : !sortData?.reverseOrder;
-                            setSortData({ sortBy, reverseOrder });
+          <TableContent data-testid={`table-content`} cols={headers}>
+            <TableRow cols={headers}>
+              {headers.map((header, i) => {
+                const isSortable = !!((header.sortable && header.key) || header.sortFunc);
+                return (
+                  <TableHeader key={i} data-testid={`table-header-${i}`}>
+                    {header.key && header.title && (
+                      <TableHeaderTitleBtn
+                        disabled={!isSortable}
+                        onClick={() => {
+                          const sortBy = header.key;
+                          if (sortBy) {
+                            if (sortData?.sortBy === sortBy && sortData.reverseOrder) setSortData(null);
+                            else {
+                              const reverseOrder = sortData?.sortBy !== sortBy ? false : !sortData?.reverseOrder;
+                              setSortData({ sortBy, reverseOrder });
+                            }
                           }
-                        }
-                      }}
-                      active={sortData?.sortBy === header.key}
-                    >
-                      {isSortable && <SortBtn data={sortData || undefined} active={sortData?.sortBy === header.key} />}
-                      <span>{header.title}</span>
-                    </TableHeaderTitleBtn>
-                  )}
-                  {header.tooltip && (
-                    <Box ml={"4px"}>
-                      <Tooltip content={header.tooltip}>
-                        <QuestionIcon size={"13px"} color="darkGray" />
-                      </Tooltip>
-                    </Box>
-                  )}
-                </TableHeader>
-              );
-            })}
-            {paginatedItems.map((item) =>
-              headers.map((header, j) => {
-                const customContent = header.renderFunc && header.renderFunc(item);
-                const nativeContent = String(header.key ? item[header.key] : "");
-                const content = customContent || nativeContent;
-                return <TableItem key={j}>{content}</TableItem>;
-              })
-            )}
+                        }}
+                        active={sortData?.sortBy === header.key}
+                      >
+                        {isSortable && (
+                          <SortBtn data={sortData || undefined} active={sortData?.sortBy === header.key} />
+                        )}
+                        <span>{header.title}</span>
+                      </TableHeaderTitleBtn>
+                    )}
+                    {header.tooltip && (
+                      <Box ml={"4px"}>
+                        <Tooltip content={header.tooltip}>
+                          <QuestionIcon size={"13px"} color="darkGray" />
+                        </Tooltip>
+                      </Box>
+                    )}
+                  </TableHeader>
+                );
+              })}
+            </TableRow>
+            {paginatedItems.map((item, k) => (
+              <TableRow
+                cols={headers}
+                key={k}
+                onClick={() => {
+                  if (clickRow) clickRow(item);
+                }}
+                clickable={!!clickRow}
+              >
+                {headers.map((header, j) => {
+                  const customContent = header.renderFunc && header.renderFunc(item);
+                  const nativeContent = String(header.key ? item[header.key] : "");
+                  const content = customContent || nativeContent;
+                  return <TableItem key={j}>{content}</TableItem>;
+                })}
+              </TableRow>
+            ))}
           </TableContent>
         ) : loading ? (
           <Flex alignItems={"center"} justifyContent={"center"} height={"100%"}>

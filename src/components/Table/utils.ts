@@ -8,11 +8,3 @@ export const defaultSortCallback = <T = any>(itemA: T, itemB: T, sortData: SortD
   if (a > b) return 1 * orderFactor;
   return 0;
 };
-
-export const genAdaptiveGrid = (length: number, shown: number, gapCol = 8) => {
-  const percent = 100 / shown;
-  const gap = (gapCol * (shown - 1)) / shown;
-  return Array.from({ length })
-    .map(() => `calc(${percent}% - ${gap}px)`)
-    .join(" ");
-};

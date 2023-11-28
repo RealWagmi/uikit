@@ -6,7 +6,10 @@ import Button from "../../components/Button/Button";
 import { fireEvent } from "@testing-library/react";
 
 const getOnlyItemsOfTable = (table: HTMLDivElement) =>
-  Array.from(table.children).filter((el) => !el.getAttribute("data-testid"));
+  Array.from(table.children)
+    .map((row) => Array.from(row.children))
+    .flat()
+    .filter((el) => !el.getAttribute("data-testid"));
 
 const getItemsTextContent = (table: HTMLDivElement) => getOnlyItemsOfTable(table).map((el) => el.textContent);
 
@@ -56,36 +59,32 @@ describe("Table", () => {
     expect(JSON.stringify(amountColTextReversed)).toEqual(JSON.stringify(["4", "3"]));
 
     expect(asFragment()).toMatchInlineSnapshot(`
-      <DocumentFragment>
-     .c2 {
-     width: 100%;
-   }
-
-   .c14 {
+   <DocumentFragment>
+     .c15 {
      margin-right: 0.4em;
    }
-
-   .c15 {
+   
+   .c16 {
      min-width: 10px;
      color: #5d93b2;
    }
-
-   .c16 {
+   
+   .c17 {
      margin-left: 0.4em;
      margin-right: 0.4em;
    }
-
-   .c13 {
+   
+   .c14 {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
      display: flex;
    }
-
+   
    .c0 {
      display: grid;
    }
-
+   
    .c1 {
      justify-items: center;
      grid-template-rows: auto 1fr auto;
@@ -95,24 +94,42 @@ describe("Table", () => {
      padding: 16px;
      box-sizing: border-box;
    }
-
+   
+   .c2 {
+     width: 100%;
+     padding: 0 4px;
+     box-sizing: border-box;
+   }
+   
    .c3 {
-     overflow-y: hidden;
      overflow-x: auto;
      width: 100%;
    }
-
+   
    .c4 {
+     width: 100%;
+     grid-row-gap: 10px;
+   }
+   
+   .c5 {
+     position: relative;
      -webkit-align-items: center;
      -webkit-box-align: center;
      -ms-flex-align: center;
      align-items: center;
-     grid-row-gap: 18px;
-     grid-column-gap: 8px;
-     grid-template-columns: calc(50% - 4px) calc(50% - 4px);
+     padding: 8px 0;
+     border-radius: 12px;
+     grid-template-columns: repeat(2,1fr);
+     cursor: default;
+     -webkit-transition: background-color 0.2s;
+     transition: background-color 0.2s;
    }
-
-   .c5 {
+   
+   .c5 > * {
+     padding: 0 4px;
+   }
+   
+   .c6 {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -121,11 +138,11 @@ describe("Table", () => {
      -webkit-box-align: center;
      -ms-flex-align: center;
      align-items: center;
-     padding: 8px 0 12px;
+     padding-bottom: 4px;
      min-height: 17px;
    }
-
-   .c6 {
+   
+   .c7 {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -143,12 +160,12 @@ describe("Table", () => {
      font-size: 12px;
      font-weight: 400;
    }
-
-   .c6:disabled {
+   
+   .c7:disabled {
      cursor: default;
    }
-
-   .c7 {
+   
+   .c8 {
      display: -webkit-box;
      display: -webkit-flex;
      display: -ms-flexbox;
@@ -166,20 +183,20 @@ describe("Table", () => {
      font-size: 12px;
      font-weight: 400;
    }
-
-   .c7:disabled {
+   
+   .c8:disabled {
      cursor: default;
    }
-
-   .c9 {
+   
+   .c10 {
      font-size: 14px;
      font-weight: 300;
      line-height: 18px;
      text-align: left;
      color: #ffffff;
    }
-
-   .c10 {
+   
+   .c11 {
      grid-template-columns: 1fr max-content 1fr;
      -webkit-align-items: center;
      -webkit-box-align: center;
@@ -195,8 +212,8 @@ describe("Table", () => {
      margin-top: 8px;
      font-size: 12px;
    }
-
-   .c11 {
+   
+   .c12 {
      display: -webkit-inline-box;
      display: -webkit-inline-flex;
      display: -ms-inline-flexbox;
@@ -211,81 +228,93 @@ describe("Table", () => {
      padding: 6px;
      border-radius: 14px;
    }
-
-   .c11:disabled {
+   
+   .c12:disabled {
      visibility: hidden;
    }
-
-   .c8 {
+   
+   .c9 {
      margin-right: 4px;
      fill: none !important;
      stroke: #000000;
      width: 12px;
    }
-
-   .c12 {
+   
+   .c13 {
      fill: none !important;
      stroke: #5d93b2;
      width: 16px;
    }
-
+   
    @media (min-width:640px) {
      .c1 {
-       padding: 24px 40px;
+       padding: 24px 32px;
      }
    }
-
+   
+   @media (min-width:640px) {
+     .c2 {
+       padding: 0 8px;
+     }
+   }
+   
    @media (min-width:640px) {
      .c3 {
        overflow-x: hidden;
      }
    }
-
+   
    @media (min-width:420px) {
      .c4 {
-       grid-template-columns: calc(33.333333333333336% - 5.333333333333333px) calc(33.333333333333336% - 5.333333333333333px);
+       width: 66.66666666666666%;
      }
    }
-
+   
    @media (min-width:640px) {
      .c4 {
-       grid-template-columns: auto auto;
+       width: 100%;
      }
    }
-
+   
+   @media (min-width:640px) {
+     .c5 {
+       grid-template-columns: 1fr 1fr;
+       padding: 8px 4px;
+     }
+   }
+   
    @media (min-width:420px) {
-     .c10 {
+     .c11 {
        font-size: 14px;
      }
    }
-
+   
    @media (min-width:640px) {
-     .c10 {
+     .c11 {
        font-size: 16px;
        margin-top: 44px;
      }
    }
-
+   
    @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
-     .c8 {
+     .c9 {
        -webkit-filter: none !important;
        filter: none !important;
      }
    }
-
+   
    @supports (-webkit-text-size-adjust:none) and (not (-ms-accelerator:true)) and (not (-moz-appearance:none)) {
-     .c12 {
+     .c13 {
        -webkit-filter: none !important;
        filter: none !important;
      }
    }
-
+   
    <div
        class="c0 c1"
      >
        <div
          class="c2"
-         width="100%"
        >
          Custom header
        </div>
@@ -297,94 +326,106 @@ describe("Table", () => {
            data-testid="table-content"
          >
            <div
-             class="c5"
-             data-testid="table-header-0"
+             class="c0 c5"
            >
-             <button
+             <div
                class="c6"
-               disabled=""
+               data-testid="table-header-0"
              >
-               <span>
-                 Value
-               </span>
-             </button>
-           </div>
-           <div
-             class="c5"
-             data-testid="table-header-1"
-           >
-             <button
-               class="c7"
-             >
-               <svg
-                 class="c8"
-                 color="#000000"
-                 fill="none"
-                 viewBox="0 0 12 12"
-                 xmlns="http://www.w3.org/2000/svg"
+               <button
+                 class="c7"
+                 disabled=""
                >
-                 <path
-                   d="M5.25 9L3.75 10.5L2.25 9"
-                   stroke="#7b8187"
-                   stroke-linecap="round"
-                   stroke-linejoin="round"
-                 />
-                 <path
-                   d="M6.75 3L8.25 1.5L9.75 3"
-                   stroke="#5d93b2"
-                   stroke-linecap="round"
-                   stroke-linejoin="round"
-                 />
-                 <path
-                   d="M8.25 10.5V1.5"
-                   stroke="#5d93b2"
-                   stroke-linecap="round"
-                   stroke-linejoin="round"
-                 />
-                 <path
-                   d="M3.75 1.5V10.5"
-                   stroke="#7b8187"
-                   stroke-linecap="round"
-                   stroke-linejoin="round"
-                 />
-               </svg>
-               <span>
-                 Amount
-               </span>
-             </button>
+                 <span>
+                   Value
+                 </span>
+               </button>
+             </div>
+             <div
+               class="c6"
+               data-testid="table-header-1"
+             >
+               <button
+                 class="c8"
+               >
+                 <svg
+                   class="c9"
+                   color="#000000"
+                   fill="none"
+                   viewBox="0 0 12 12"
+                   xmlns="http://www.w3.org/2000/svg"
+                 >
+                   <path
+                     d="M5.25 9L3.75 10.5L2.25 9"
+                     stroke="#7b8187"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                   />
+                   <path
+                     d="M6.75 3L8.25 1.5L9.75 3"
+                     stroke="#5d93b2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                   />
+                   <path
+                     d="M8.25 10.5V1.5"
+                     stroke="#5d93b2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                   />
+                   <path
+                     d="M3.75 1.5V10.5"
+                     stroke="#7b8187"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                   />
+                 </svg>
+                 <span>
+                   Amount
+                 </span>
+               </button>
+             </div>
            </div>
            <div
-             class="c9"
+             class="c0 c5"
            >
-             Value 1
+             <div
+               class="c10"
+             >
+               Value 1
+             </div>
+             <div
+               class="c10"
+             >
+               4
+             </div>
            </div>
            <div
-             class="c9"
+             class="c0 c5"
            >
-             4
-           </div>
-           <div
-             class="c9"
-           >
-             Value 4
-           </div>
-           <div
-             class="c9"
-           >
-             3
+             <div
+               class="c10"
+             >
+               Value 4
+             </div>
+             <div
+               class="c10"
+             >
+               3
+             </div>
            </div>
          </div>
        </div>
        <div
-         class="c0 c10"
+         class="c0 c11"
        >
          <button
-           class="c11"
+           class="c12"
            data-testid="table-btn-previous"
            disabled=""
          >
            <svg
-             class="c12"
+             class="c13"
              color="primaryDefault"
              fill="none"
              viewBox="0 0 16 16"
@@ -403,21 +444,21 @@ describe("Table", () => {
            </svg>
          </button>
          <div
-           class="c13"
+           class="c14"
          >
            <div
-             class="c14"
+             class="c15"
            >
              Page
            </div>
            <div
-             class="c15"
+             class="c16"
              color="#5d93b2"
            >
              1
            </div>
            <div
-             class="c16"
+             class="c17"
            >
              of
            </div>
@@ -428,11 +469,11 @@ describe("Table", () => {
            </div>
          </div>
          <button
-           class="c11"
+           class="c12"
            data-testid="table-btn-next"
          >
            <svg
-             class="c12"
+             class="c13"
              color="primaryDefault"
              fill="none"
              style="transform: scaleX(-1);"
