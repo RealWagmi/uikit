@@ -40,7 +40,7 @@ export const TooltipContainer = styled.div<{ show: boolean }>`
   max-width: 256px;
   cursor: default;
   padding: 6px 8px;
-  color: ${({ theme }) => theme.colors.darkGray};
+  color: ${({ theme }) => theme.colors.textGray};
 
   font-size: 14px;
   font-weight: 300;
