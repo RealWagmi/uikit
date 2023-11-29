@@ -96,6 +96,7 @@ const FeeActivator = ({ values }: { values: (typeof feeItems)[number]["value"][]
           </Box>
         );
       })}
+      <ArrowDownIcon color={"textGray"} size={"16px"} ml={"4px"} />
     </Flex>
   );
 };
@@ -132,9 +133,31 @@ export const Menu = () => {
           value={value0}
           onChange={setValue0}
         />
-      </Box>
+      </Box>{" "}
       <Box>
-        <Text variant={"h5"} mb="20px">
+        <Text variant={"h5"} mb="20px" mt={"40px"}>
+          Custom Styles
+        </Text>
+        <MenuComponent<(typeof chainItems)[number]>
+          listWidth={"100%"}
+          align={"center"}
+          offsetY={8}
+          items={chainItems}
+          value={value2}
+          onChange={setValue2}
+          activator={<ChainActivator chainId={value2} />}
+          renderItem={(item, isActive) => <ChainItem chainId={item} active={isActive} />}
+          closeOnClick={true}
+        />
+      </Box>
+      <Text color="strokeGray" variant={"h5"} mt="40px">
+        Overlapping content.
+      </Text>
+      <Text color="strokeGray" variant={"h5"} mt="40px">
+        Overlapping content.
+      </Text>
+      <Box>
+        <Text variant={"h5"} mb="20px" mt={"40px"}>
           Reactive
         </Text>
         <Flex alignItems={"center"}>
@@ -162,28 +185,6 @@ export const Menu = () => {
           </Button>
         </Flex>
       </Box>
-      <Text color="strokeGray" variant={"h5"} mt="40px">
-        Overlapping content.
-      </Text>
-      <Text color="strokeGray" variant={"h5"} mt="40px">
-        Overlapping content.
-      </Text>
-      <Box>
-        <Text variant={"h5"} mb="20px" mt={"40px"}>
-          Custom Styles
-        </Text>
-        <MenuComponent<(typeof chainItems)[number]>
-          listWidth={"100%"}
-          align={"center"}
-          offsetY={8}
-          items={chainItems}
-          value={value2}
-          onChange={setValue2}
-          activator={<ChainActivator chainId={value2} />}
-          renderItem={(item, isActive) => <ChainItem chainId={item} active={isActive} />}
-          closeOnClick={true}
-        />
-      </Box>
       <Box>
         <Text variant={"h5"} mb="20px" mt={"40px"}>
           Multiply select
@@ -203,7 +204,6 @@ export const Menu = () => {
           />
         </Flex>
       </Box>
-
       <Text color="strokeGray" variant={"h5"} mt="40px">
         Overlapping content.
       </Text>
