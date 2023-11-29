@@ -9,6 +9,7 @@ import { Flex } from "../Box";
 export default function Menu<T = any>({
   activator,
   listWidth,
+  maxHeight = "400px",
   align = "center",
   offsetX = 0,
   offsetY = 0,
@@ -16,6 +17,7 @@ export default function Menu<T = any>({
   openedChange = (v: boolean) => {},
   value,
   onChange,
+  closeOnClick,
   renderItem,
   items = [],
   valueKey,
@@ -60,15 +62,15 @@ export default function Menu<T = any>({
         )}
       </MenuBtnWrap>
       {isOpened && (
-        <MenuList width={listWidth} offsetX={offsetX} offsetY={offsetY}>
+        <MenuList width={listWidth} maxHeight={maxHeight} offsetX={offsetX} offsetY={offsetY}>
           {items.map((item, i) => {
-            const isActive = values.includes(getWithValueKey(item));
+            const itemValue = getWithValueKey(item);
+            const isActive = values.includes(itemValue);
             return (
               <MenuBtnWrap
-                key={i}
+                key={`${itemValue}-${i}`}
                 onClick={() => {
                   if (onChange) {
-                    const itemValue = getWithValueKey(item);
                     if (!multiple) {
                       const newValue = isActive ? undefined : itemValue;
                       if (!(newValue === undefined && !canByEmpty)) onChange(newValue);
@@ -83,13 +85,14 @@ export default function Menu<T = any>({
                       onChange(newValues);
                     }
                   }
+                  if (closeOnClick) openedChangeHandler(false);
                 }}
               >
                 {renderItem ? (
                   renderItem(item, isActive)
                 ) : (
                   <Flex p={"8px"} alignItems={"center"} justifyContent={"space-between"}>
-                    <Text color={"textGray"}>{String(getWithValueKey(item))}</Text>
+                    <Text color={"textGray"}>{String(itemValue)}</Text>
                     {isActive && <CheckIcon size={"16px"} color={"textGray"} />}
                   </Flex>
                 )}

@@ -36,5 +36,6 @@ export const MenuList = styled(Grid)<{ offsetX: number; offsetY: number }>`
   border-radius: 12px;
   box-sizing: border-box;
   z-index: ${Z_INDEX.DROPDOWN};
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 `;

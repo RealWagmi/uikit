@@ -5,6 +5,7 @@ export interface IMenuProps<T = any> {
   openedChange?: (value: boolean) => any;
   activator?: ReactNode;
   listWidth?: string;
+  maxHeight?: string;
   align?: "center" | "left" | "right";
   offsetX?: number;
   offsetY?: number;
@@ -13,6 +14,7 @@ export interface IMenuProps<T = any> {
   value?: any;
   valueKey?: keyof T;
   onChange?: (value: any) => any;
+  closeOnClick?: boolean;
   multiple?: boolean;
   canByEmpty?: boolean;
 }
