@@ -8,3 +8,4 @@ export { default as WarningIcon } from "./components/WarningIcon";
 export { default as ClearIcon } from "./components/ClearIcon";
 export { default as CloseIcon } from "./components/CloseIcon";
 export { default as SwapArrowIcon } from "./components/SwapArrow";
+export { default as CheckIcon } from "./components/CheckIcon";
