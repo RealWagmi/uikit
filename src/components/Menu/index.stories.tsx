@@ -119,7 +119,7 @@ export const Menu = () => {
   const [value2, setValue2] = useState(1);
   const [value3, setValue3] = useState([30, 100]);
   return (
-    <Grid gridTemplateColumns={"repeat(4, 1fr)"} mt={"10px"}>
+    <Grid gridTemplateColumns={"repeat(2, 1fr)"} mt={"10px"}>
       <Box>
         <Text variant={"h5"} mb="20px">
           Simple
@@ -162,8 +162,14 @@ export const Menu = () => {
           </Button>
         </Flex>
       </Box>
+      <Text color="strokeGray" variant={"h5"} mt="40px">
+        Overlapping content.
+      </Text>
+      <Text color="strokeGray" variant={"h5"} mt="40px">
+        Overlapping content.
+      </Text>
       <Box>
-        <Text variant={"h5"} mb="20px">
+        <Text variant={"h5"} mb="20px" mt={"40px"}>
           Custom Styles
         </Text>
         <MenuComponent<(typeof chainItems)[number]>
@@ -179,7 +185,7 @@ export const Menu = () => {
         />
       </Box>
       <Box>
-        <Text variant={"h5"} mb="20px">
+        <Text variant={"h5"} mb="20px" mt={"40px"}>
           Multiply select
         </Text>
         <Flex justifyContent={"center"}>
@@ -197,12 +203,7 @@ export const Menu = () => {
           />
         </Flex>
       </Box>
-      <Text color="strokeGray" variant={"h5"} mt="40px">
-        Overlapping content.
-      </Text>
-      <Text color="strokeGray" variant={"h5"} mt="40px">
-        Overlapping content.
-      </Text>
+
       <Text color="strokeGray" variant={"h5"} mt="40px">
         Overlapping content.
       </Text>
