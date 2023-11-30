@@ -5,6 +5,7 @@ export interface IMenuProps<T = any> {
   openedChange?: (value: boolean) => any;
   activator?: ReactNode;
   listWidth?: string;
+  width?: string;
   maxHeight?: string;
   align?: "center" | "left" | "right";
   offsetX?: number;

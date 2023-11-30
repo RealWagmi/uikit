@@ -133,10 +133,10 @@ export const Menu = () => {
           value={value0}
           onChange={setValue0}
         />
-      </Box>{" "}
+      </Box>
       <Box>
         <Text variant={"h5"} mb="20px" mt={"40px"}>
-          Custom Styles
+          Custom styles
         </Text>
         <MenuComponent<(typeof chainItems)[number]>
           listWidth={"100%"}

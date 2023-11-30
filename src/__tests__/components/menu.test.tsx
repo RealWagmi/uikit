@@ -16,7 +16,7 @@ describe("Menu", () => {
   const activatorContent = "Custom activator";
 
   it("should render the menu with correct items and call onChange", () => {
-    const { getByText } = renderWithProvider(
+    const { getByText, asFragment } = renderWithProvider(
       <Menu<(typeof items)[number]>
         items={items}
         value={value}
@@ -45,5 +45,47 @@ describe("Menu", () => {
     expect(onChange).toHaveBeenCalledWith(2);
 
     expect(openChanged).toHaveBeenCalledTimes(2);
+
+    expect(asFragment()).toMatchInlineSnapshot(`
+   <DocumentFragment>
+     .c0 {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+   }
+   
+   .c1 {
+     display: -webkit-inline-box;
+     display: -webkit-inline-flex;
+     display: -ms-inline-flexbox;
+     display: inline-flex;
+     position: relative;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+   }
+   
+   .c2 {
+     outline: none;
+     background: transparent;
+     border: none;
+     cursor: pointer;
+     padding: 0;
+     width: 100%;
+   }
+   
+   <div
+       class="c0 c1"
+     >
+       <button
+         class="c2"
+       >
+         Custom activator
+       </button>
+     </div>
+   </DocumentFragment>
+    `);
   });
 });

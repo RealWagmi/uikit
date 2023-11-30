@@ -24,6 +24,7 @@ export const MenuBtnWrap = styled.button`
   border: none;
   cursor: pointer;
   padding: 0;
+  width: 100%;
 `;
 
 export const MenuList = styled(Grid)<{ offsetX: number; offsetY: number }>`
