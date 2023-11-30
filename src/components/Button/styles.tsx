@@ -3,7 +3,9 @@ import { ButtonProps } from "./types";
 import { layout, space, variant } from "styled-system";
 import { variantVariants, scaleVariants } from "./theme";
 
-export const ButtonWrapper = styled.button<ButtonProps>`
+export const ButtonWrapper = styled.button.withConfig({
+  shouldForwardProp: (prop: string) => !["endIcon", "startIcon"].includes(prop),
+} as any)<ButtonProps>`
   ${layout}
   ${space}
   
@@ -53,7 +55,9 @@ export const loadingDotsAnimation = keyframes`
   }
 `;
 
-export const ButtonContent = styled.span<{ loading?: boolean }>`
+export const ButtonContent = styled.span.withConfig({
+  shouldForwardProp: (prop: string) => !["loading"].includes(prop),
+} as any)<{ loading?: boolean }>`
   position: relative;
   margin: 0 12px;
 

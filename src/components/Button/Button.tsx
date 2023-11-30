@@ -1,5 +1,6 @@
 import { ButtonProps } from "./types";
 import { ButtonContainer, ButtonContent, ButtonWrapper } from "./styles";
+import { MouseEventHandler } from "react";
 
 ButtonWrapper.defaultProps = {
   variant: "default",
@@ -13,15 +14,14 @@ export default function ({
   loading,
   onClick,
   ...props
-}: ButtonProps & { loading?: boolean; onClick?: (e: MouseEvent) => void }) {
+}: ButtonProps & { loading?: boolean; onClick?: MouseEventHandler<any> }) {
   return (
     <ButtonWrapper
       {...props}
-      as={props.to ? "a" : "button"}
+      as={props.to && !loading && !props.disabled ? "a" : "button"}
       href={props.to}
       onClick={(e: any) => {
-        if (loading || props.disabled) e.preventDefault();
-        else if (onClick) onClick(e);
+        if (!props.disabled && !loading && onClick) onClick(e);
       }}
     >
       <ButtonContainer>

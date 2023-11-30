@@ -100,6 +100,7 @@ describe("Button", () => {
        class="c0"
        color="primary"
        scale="default"
+       variant="default"
        width="100%"
      >
        <span

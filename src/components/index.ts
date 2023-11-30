@@ -12,3 +12,4 @@ export * from "./Tabs";
 export * from "./Dropdown";
 export * from "./Table";
 export * from "./Tooltip";
+export * from "./Menu";
