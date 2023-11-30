@@ -9,6 +9,7 @@ import { Flex } from "../Box";
 export default function Menu<T = any>({
   activator,
   listWidth,
+  width,
   maxHeight = "400px",
   align = "center",
   offsetX = 0,
@@ -49,7 +50,7 @@ export default function Menu<T = any>({
   );
 
   return (
-    <MenuWrap align={align} ref={menuRef}>
+    <MenuWrap align={align} width={width} ref={menuRef}>
       <MenuBtnWrap
         onClick={() => {
           openedChangeHandler(!isOpened);
