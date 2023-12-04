@@ -1,7 +1,8 @@
-import { IToggleProps } from './types';
-import { ToggleWrapper, ToggleCircle } from './styles';
+import { IToggleProps } from "./types";
+import { ToggleWrapper, ToggleCircle } from "./styles";
+import { memo } from "react";
 
-export default function ({ value, onChange, ...props }: IToggleProps) {
+function Toggle({ value, onChange, ...props }: IToggleProps) {
   return (
     <ToggleWrapper
       {...props}
@@ -15,3 +16,5 @@ export default function ({ value, onChange, ...props }: IToggleProps) {
     </ToggleWrapper>
   );
 }
+
+export default memo(Toggle);

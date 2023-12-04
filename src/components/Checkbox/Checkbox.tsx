@@ -1,7 +1,8 @@
-import { ICheckboxProps } from './types';
-import { CheckboxWrapper } from './styles';
+import { ICheckboxProps } from "./types";
+import { CheckboxWrapper } from "./styles";
+import { memo } from "react";
 
-export default function ({ value, onChange, ...props }: ICheckboxProps) {
+function Checkbox({ value, onChange, ...props }: ICheckboxProps) {
   return (
     <CheckboxWrapper
       {...props}
@@ -13,3 +14,5 @@ export default function ({ value, onChange, ...props }: ICheckboxProps) {
     ></CheckboxWrapper>
   );
 }
+
+export default memo(Checkbox);

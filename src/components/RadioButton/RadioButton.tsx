@@ -1,8 +1,8 @@
-import { useMemo } from "react";
-import { RadioButtonLabel, RadioButtonWrapper } from './styles';
-import { IRadioButtonProps } from './types'
+import { useMemo, memo } from "react";
+import { RadioButtonLabel, RadioButtonWrapper } from "./styles";
+import { IRadioButtonProps } from "./types";
 
-export default function ({ value, name, onChange, children, ...props }: IRadioButtonProps) {
+function RadioButton({ value, name, onChange, children, ...props }: IRadioButtonProps) {
   const isActive = useMemo(() => value === name, [value, name]);
 
   return (
@@ -22,3 +22,5 @@ export default function ({ value, name, onChange, children, ...props }: IRadioBu
     </RadioButtonLabel>
   );
 }
+
+export default memo(RadioButton);

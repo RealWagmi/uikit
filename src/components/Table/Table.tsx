@@ -15,7 +15,7 @@ import { Text } from "../Text";
 import { ArrowLeftIcon, QuestionIcon } from "../Svg";
 import { Tooltip } from "../Tooltip";
 import { Box, Flex } from "../Box";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, memo } from "react";
 import { useTheme } from "styled-components";
 import Svg from "../Svg/Svg";
 import { defaultSortCallback } from "./utils";
@@ -35,7 +35,7 @@ function SortBtn({ data, active }: { data: SortData<any> | undefined; active: bo
   );
 }
 
-export default function Table<T = any>({
+function Table<T = any>({
   headers,
   items,
   page,
@@ -180,3 +180,5 @@ export default function Table<T = any>({
     </TableWrap>
   );
 }
+
+export default memo(Table);

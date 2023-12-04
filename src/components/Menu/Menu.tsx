@@ -1,12 +1,12 @@
 import { MenuBtnWrap, MenuList, MenuWrap } from "./styles";
 import { IMenuProps } from "./types";
 import { Text } from "../Text";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState, memo } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 import { CheckIcon } from "../Svg";
 import { Flex } from "../Box";
 
-export default function Menu<T = any>({
+function Menu<T = any>({
   activator,
   listWidth,
   width,
@@ -105,3 +105,5 @@ export default function Menu<T = any>({
     </MenuWrap>
   );
 }
+
+export default memo(Menu);

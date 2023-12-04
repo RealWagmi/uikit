@@ -1,7 +1,8 @@
 import { TabsWrap, TabWrap } from "./styles";
 import { ITabsProps } from "./types";
+import { memo } from "react";
 
-export default function Tabs({ tabs, value, onChange, ...props }: ITabsProps) {
+function Tabs({ tabs, value, onChange, ...props }: ITabsProps) {
   return (
     <TabsWrap {...props}>
       {tabs.map((tab, i) => (
@@ -18,3 +19,5 @@ export default function Tabs({ tabs, value, onChange, ...props }: ITabsProps) {
     </TabsWrap>
   );
 }
+
+export default memo(Tabs);

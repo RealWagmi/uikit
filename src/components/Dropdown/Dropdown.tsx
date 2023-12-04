@@ -1,11 +1,11 @@
 import { Grid } from "../Box";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, memo } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 import { ArrowDownIcon } from "../Svg";
 import { DropdownContainer, DropdownActivatorWrapper, DropdownItemWrapper, DropdownWrap } from "./styles";
 import { IDropdownProps } from "./types";
 
-export default function Dropdown({ items, value, onChange }: IDropdownProps) {
+function Dropdown({ items, value, onChange }: IDropdownProps) {
   const activeItem = useMemo(() => items.find((v) => v.value === value), [items, value]);
   const minHeight = 34;
   const [maxHeight, setMaxHeight] = useState(minHeight);
@@ -80,3 +80,5 @@ export default function Dropdown({ items, value, onChange }: IDropdownProps) {
     </DropdownWrap>
   );
 }
+
+export default memo(Dropdown);
