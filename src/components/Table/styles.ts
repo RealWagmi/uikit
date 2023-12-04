@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, Grid } from "../Box";
+import { Box, Flex, Grid } from "../Box";
 import { rgba } from "polished";
 import { ITableHeader } from "./types";
 import { SCREEN_WIDTH } from "../../constants";
@@ -29,6 +29,7 @@ export const TableHeaderWrap = styled(Box)`
   }
 `;
 export const TableContentWrap = styled(Box)`
+  position: relative;
   overflow-x: auto;
   width: 100%;
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
@@ -141,4 +142,14 @@ export const TablePagBtn = styled.button`
   &:disabled {
     visibility: hidden;
   }
+`;
+
+export const TableLoadWrap = styled(Flex)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 `;
