@@ -1,6 +1,6 @@
 import { ButtonProps } from "./types";
 import { ButtonContainer, ButtonContent, ButtonWrapper } from "./styles";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, memo } from "react";
 
 ButtonWrapper.defaultProps = {
   variant: "default",
@@ -10,7 +10,7 @@ ButtonWrapper.defaultProps = {
   width: "100%",
 };
 
-export default function ({
+function Button({
   loading,
   onClick,
   ...props
@@ -32,3 +32,5 @@ export default function ({
     </ButtonWrapper>
   );
 }
+
+export default memo(Button)

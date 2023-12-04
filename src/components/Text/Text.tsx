@@ -4,7 +4,7 @@ import { ThemeColors } from "../../theme/types";
 import { layout, space, typography, variant } from "styled-system";
 import { typographyVariants } from "./theme";
 import { typographies } from "./types";
-import { ReactNode } from "react";
+import { ReactNode, memo } from "react";
 
 type TextProps = Omit<TextPropsOriginal, "variant" | "color"> & {
   color?: keyof ThemeColors | string;
@@ -28,6 +28,8 @@ const TextWrap = styled(TextOrig).withConfig({
 TextWrap.defaultProps = {
   variant: "body-2",
 };
-export default function Text(props: TextProps) {
+function Text(props: TextProps) {
   return <TextWrap {...props}>{props.children}</TextWrap>;
 }
+
+export default memo(Text);

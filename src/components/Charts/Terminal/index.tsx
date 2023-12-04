@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, memo } from "react";
 import { URLS } from "./constants";
 import { ChartWrapper } from "./styles";
 import { TerminalChainId } from "./types";
@@ -8,7 +8,7 @@ interface IProps {
   chainId: TerminalChainId;
 }
 
-export default function TerminalChart({ poolAddress, chainId }: IProps) {
+function TerminalChart({ poolAddress, chainId }: IProps) {
   const url = useMemo(() => URLS[chainId](poolAddress), [chainId]);
 
   return (
@@ -17,3 +17,5 @@ export default function TerminalChart({ poolAddress, chainId }: IProps) {
     </ChartWrapper>
   );
 }
+
+export default memo(TerminalChart)

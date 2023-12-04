@@ -3,8 +3,9 @@ import { Text } from "../Text";
 import { BreadcrumbsWrapper } from "./styles";
 import { IBreadcrumbsProps } from "./types";
 import { NavLink } from "react-router-dom";
+import { memo } from "react";
 
-export default function ({ label, to }: IBreadcrumbsProps) {
+function Breadcrumbs({ label, to }: IBreadcrumbsProps) {
   return (
     <NavLink to={to}>
       <BreadcrumbsWrapper>
@@ -16,3 +17,5 @@ export default function ({ label, to }: IBreadcrumbsProps) {
     </NavLink>
   );
 }
+
+export default memo(Breadcrumbs);
