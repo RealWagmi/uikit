@@ -9,20 +9,33 @@ export type ITableHeader<T> = {
   tooltip?: ReactNode;
   width?: string;
 };
-export interface ITableProps<T> {
-  page: number;
-  perPage?: number;
-  headers: ITableHeader<T>[];
-  items: T[];
-  loading?: boolean;
-  changePage?: (page: number) => void;
-  clickRow?: (item: T) => void;
-  minHeight?: string;
-  header?: ReactNode;
-  emptyCard?: ReactNode;
-}
 
 export interface SortData<T> {
   sortBy: keyof T;
   reverseOrder: boolean;
+}
+
+export interface ITableOptions<T> {
+  page: number;
+  sort?: SortData<T> | undefined;
+  total: number;
+}
+
+export interface ITableServerProps<T> {
+  options: ITableOptions<T>;
+  perPage: number;
+  headers: ITableHeader<T>[];
+  items: T[];
+  loading?: boolean;
+  changeOptions?: (value: ITableOptions<T>) => void;
+  clickRow?: (item: T) => void;
+  minHeight?: string;
+  header?: ReactNode;
+  emptyCard?: ReactNode;
+  isSync?: boolean;
+}
+
+export interface ITableProps<T> extends Omit<ITableServerProps<T>, "options" | "changeOptions" | "isSync"> {
+  page: number;
+  changePage?: (page: number) => void;
 }
