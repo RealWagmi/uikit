@@ -13,7 +13,7 @@ export interface IMenuProps<T = any> {
   items: T[];
   renderItem?: (value: T, isActive: boolean) => ReactNode;
   value?: any;
-  valueKey?: keyof T;
+  valueKey?: keyof T & string;
   onChange?: (value: any) => any;
   closeOnClick?: boolean;
   multiple?: boolean;
