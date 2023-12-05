@@ -22,7 +22,7 @@ function Table<T = any>({ headers, items, page, perPage, changePage, ...props }:
     const start = (page - 1) * perPage;
     const end = start + perPage;
     return sortedItems.slice(start, end);
-  }, [sortedItems, perPage]);
+  }, [sortedItems, perPage, page]);
 
   return (
     <TableServer<T>
