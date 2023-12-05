@@ -1,5 +1,5 @@
 import { ITableProps, SortData } from "./types";
-import React, { useMemo, useState, memo } from "react";
+import React, { useMemo, useState } from "react";
 import { defaultSortCallback } from "./utils";
 import TableServer from "./TableServer";
 function Table<T = any>({ headers, items, page, perPage, changePage, ...props }: ITableProps<T>) {
@@ -40,4 +40,4 @@ function Table<T = any>({ headers, items, page, perPage, changePage, ...props }:
   );
 }
 
-export default memo(Table);
+export default Table;
