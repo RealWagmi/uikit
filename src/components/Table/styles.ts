@@ -36,13 +36,14 @@ export const TableContentWrap = styled(Box)`
     overflow-x: hidden;
   }
 `;
-export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
-  width: ${({ cols }) => (cols.length / 2) * 100}%;
-  grid-row-gap: 10px;
 
-  @media (min-width: ${SCREEN_WIDTH.XS}px) {
-    width: ${({ cols }) => (cols.length / 3) * 100}%;
-  }
+//  width: ${({ cols }) => (cols.length / 2) * 100}%;
+// @media (min-width: ${SCREEN_WIDTH.XS}px) {
+//   width: ${({ cols }) => (cols.length / 3) * 100}%;
+// }
+export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
+  width: max-content;
+  grid-row-gap: 10px;
 
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
     width: 100%;
