@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box, Grid } from "../Box";
+import { Box, Flex, Grid } from "../Box";
 import { rgba } from "polished";
 import { ITableHeader } from "./types";
 import { SCREEN_WIDTH } from "../../constants";
@@ -11,37 +11,37 @@ export const TableWrap = styled(Grid)`
     `linear-gradient(180deg, ${rgba(theme.colors.shuttleGray, 0.12)} 0%, ${rgba(theme.colors.ebonyGray, 0.12)} 100%)`};
   border-radius: 16px;
   border: 1px solid ${({ theme }) => rgba(theme.colors.strokeGray, 0.2)};
-  padding: 16px;
+  padding: 16px 20px;
   box-sizing: border-box;
 
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    padding: 24px 32px;
+    padding: 24px 36px;
   }
 `;
 
 export const TableHeaderWrap = styled(Box)`
   width: 100%;
-  padding: 0 4px;
   box-sizing: border-box;
-
-  @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    padding: 0 8px;
-  }
+  padding: 0 4px;
 `;
+
 export const TableContentWrap = styled(Box)`
+  position: relative;
   overflow-x: auto;
   width: 100%;
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
     overflow-x: hidden;
   }
 `;
-export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
-  width: ${({ cols }) => (cols.length / 2) * 100}%;
-  grid-row-gap: 10px;
 
-  @media (min-width: ${SCREEN_WIDTH.XS}px) {
-    width: ${({ cols }) => (cols.length / 3) * 100}%;
-  }
+//  width: ${({ cols }) => (cols.length / 2) * 100}%;
+// @media (min-width: ${SCREEN_WIDTH.XS}px) {
+//   width: ${({ cols }) => (cols.length / 3) * 100}%;
+// }
+export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
+  width: max-content;
+  min-width: 100%;
+  grid-row-gap: 10px;
 
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
     width: 100%;
@@ -51,15 +51,11 @@ export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
 export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: boolean }>`
   position: relative;
   align-items: center;
-  padding: 8px 0;
+  padding: 8px 4px;
   border-radius: 12px;
+  grid-column-gap: 8px;
 
-  grid-template-columns: ${({ cols }) => `repeat(${cols.length}, 1fr)`};
-
-  @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    grid-template-columns: ${({ cols }) => cols.map((col) => col.width || "1fr").join(" ")};
-    padding: 8px 4px;
-  }
+  grid-template-columns: ${({ cols }) => cols.map((col) => col.width || "1fr").join(" ")};
 
   cursor: ${({ clickable }) => (clickable ? "pointer" : "default")};
 
@@ -68,10 +64,6 @@ export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: bo
   }
 
   transition: background-color 0.2s;
-
-  & > * {
-    padding: 0 4px;
-  }
 `;
 
 export const TableHeader = styled(Box)`
@@ -141,4 +133,14 @@ export const TablePagBtn = styled.button`
   &:disabled {
     visibility: hidden;
   }
+`;
+
+export const TableLoadWrap = styled(Flex)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 `;

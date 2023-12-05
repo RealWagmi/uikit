@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import TableComponent from "./Table";
+import TableServerComponent from "./TableServer";
 import { Box, Flex, Grid } from "../Box";
 import { Button } from "../Button";
 import { Text } from "../Text";
@@ -7,6 +8,7 @@ import { Dropdown } from "../Dropdown";
 import { Checkbox } from "../Checkbox";
 import { Tooltip } from "../Tooltip";
 import { InfoIcon } from "../Svg";
+import { ITableOptions } from "./types";
 
 export default {
   title: "Components/Table",
@@ -150,6 +152,81 @@ export const Table = () => {
                 alert(`Click row: ${item.id}`);
               }
             : undefined
+        }
+      />
+    </Box>
+  );
+};
+
+interface PostItem {
+  id: number;
+  userId: number;
+  title: string;
+  body: string;
+}
+export const TableServer = () => {
+  const [posts, setPosts] = useState<PostItem[]>([]);
+  const perPage = 5;
+  const defOptions: ITableOptions<PostItem> = { page: 1, total: 1 };
+  const [options, setOptions] = useState<ITableOptions<PostItem>>({ ...defOptions });
+  const [loading, setLoading] = useState(true);
+
+  const fetchPosts = useCallback(async ({ page, sort }: ITableOptions<PostItem>) => {
+    try {
+      setLoading(true);
+      const { total, list } = await fetch(
+        `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=${perPage}${
+          sort ? `&_sort=${sort.sortBy}&_order=${sort.reverseOrder ? "desc" : "asc"}` : ""
+        }`
+      ).then(async (res) => {
+        const posts: PostItem[] = (await res.json()) as any;
+        const total = Number(res.headers.get("X-Total-Count"));
+        return {
+          total,
+          list: posts,
+        };
+      });
+
+      setPosts(list);
+      setOptions({ total, page, sort });
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    void fetchPosts(defOptions);
+  }, []);
+
+  return (
+    <Box>
+      <TableServerComponent<PostItem>
+        items={posts}
+        headers={[
+          { key: "id", title: "ID", sortable: true, width: '40px' },
+          { key: "userId", title: "User ID", sortable: true, width: '80px' },
+          {
+            key: "title",
+            title: "Title",
+            renderFunc: (item) => <Tooltip content={item.title}>{item.title.slice(0, 20)}...</Tooltip>,
+          },
+          {
+            key: "body",
+            title: "Content",
+            renderFunc: (item) => <Tooltip content={item.body}>{item.body.slice(0, 20)}...</Tooltip>,
+          },
+        ]}
+        options={options}
+        changeOptions={fetchPosts}
+        perPage={perPage}
+        minHeight={"433px"}
+        loading={loading}
+        header={
+          <Text pb={"24px"} variant="h5">
+            Async Posts list
+          </Text>
         }
       />
     </Box>
