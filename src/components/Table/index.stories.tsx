@@ -205,17 +205,17 @@ export const TableServer = () => {
       <TableServerComponent<PostItem>
         items={posts}
         headers={[
-          { key: "id", title: "ID", sortable: true },
-          { key: "userId", title: "User ID", sortable: true },
+          { key: "id", title: "ID", sortable: true, width: '40px' },
+          { key: "userId", title: "User ID", sortable: true, width: '80px' },
           {
             key: "title",
             title: "Title",
-            renderFunc: (item) => <Tooltip content={item.title}>{item.title.slice(0, 16)}...</Tooltip>,
+            renderFunc: (item) => <Tooltip content={item.title}>{item.title.slice(0, 20)}...</Tooltip>,
           },
           {
             key: "body",
             title: "Content",
-            renderFunc: (item) => <Tooltip content={item.body}>{item.body.slice(0, 16)}...</Tooltip>,
+            renderFunc: (item) => <Tooltip content={item.body}>{item.body.slice(0, 20)}...</Tooltip>,
           },
         ]}
         options={options}

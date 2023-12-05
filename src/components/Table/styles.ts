@@ -11,23 +11,20 @@ export const TableWrap = styled(Grid)`
     `linear-gradient(180deg, ${rgba(theme.colors.shuttleGray, 0.12)} 0%, ${rgba(theme.colors.ebonyGray, 0.12)} 100%)`};
   border-radius: 16px;
   border: 1px solid ${({ theme }) => rgba(theme.colors.strokeGray, 0.2)};
-  padding: 16px;
+  padding: 16px 20px;
   box-sizing: border-box;
 
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    padding: 24px 32px;
+    padding: 24px 36px;
   }
 `;
 
 export const TableHeaderWrap = styled(Box)`
   width: 100%;
-  padding: 0 4px;
   box-sizing: border-box;
-
-  @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    padding: 0 8px;
-  }
+  padding: 0 4px;
 `;
+
 export const TableContentWrap = styled(Box)`
   position: relative;
   overflow-x: auto;
@@ -43,6 +40,7 @@ export const TableContentWrap = styled(Box)`
 // }
 export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
   width: max-content;
+  min-width: 100%;
   grid-row-gap: 10px;
 
   @media (min-width: ${SCREEN_WIDTH.SM}px) {
@@ -53,15 +51,11 @@ export const TableContent = styled(Grid)<{ cols: ITableHeader<any>[] }>`
 export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: boolean }>`
   position: relative;
   align-items: center;
-  padding: 8px 0;
+  padding: 8px 4px;
   border-radius: 12px;
+  grid-column-gap: 8px;
 
-  grid-template-columns: ${({ cols }) => `repeat(${cols.length}, 1fr)`};
-
-  @media (min-width: ${SCREEN_WIDTH.SM}px) {
-    grid-template-columns: ${({ cols }) => cols.map((col) => col.width || "1fr").join(" ")};
-    padding: 8px 4px;
-  }
+  grid-template-columns: ${({ cols }) => cols.map((col) => col.width || "1fr").join(" ")};
 
   cursor: ${({ clickable }) => (clickable ? "pointer" : "default")};
 
@@ -70,10 +64,6 @@ export const TableRow = styled(Grid)<{ cols: ITableHeader<any>[]; clickable?: bo
   }
 
   transition: background-color 0.2s;
-
-  & > * {
-    padding: 0 4px;
-  }
 `;
 
 export const TableHeader = styled(Box)`
