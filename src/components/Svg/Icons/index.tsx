@@ -9,3 +9,6 @@ export { default as ClearIcon } from "./components/ClearIcon";
 export { default as CloseIcon } from "./components/CloseIcon";
 export { default as SwapArrowIcon } from "./components/SwapArrow";
 export { default as CheckIcon } from "./components/CheckIcon";
+export { default as ShareIcon } from "./components/ShareIcon";
+export { default as SquareArrowIcon } from "./components/SquareArrowIcon";
+export { default as ChartBarIcon } from "./components/ChartBarIcon";
