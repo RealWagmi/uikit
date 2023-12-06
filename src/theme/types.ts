@@ -20,4 +20,5 @@ export type ThemeColors = {
   green: string;
   red: string;
   yellow: string;
+  bayouxBlue: string;
 };
