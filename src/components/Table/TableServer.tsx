@@ -16,7 +16,7 @@ import { Text } from "../Text";
 import { ArrowLeftIcon, QuestionIcon } from "../Svg";
 import { Tooltip } from "../Tooltip";
 import { Box, Flex } from "../Box";
-import React, { useMemo, memo, useCallback } from "react";
+import React, { useMemo, useCallback } from "react";
 import { useTheme } from "styled-components";
 import Svg from "../Svg/Svg";
 import { LoadingSpinner } from "../Loaders";
@@ -172,4 +172,4 @@ function TableServer<T = any>({
   );
 }
 
-export default memo(TableServer);
+export default TableServer;

@@ -1,2 +1,3 @@
 export { default as Table } from "./Table";
-export type { ITableHeader, ITableProps } from "./types";
+export { default as TableServer } from "./TableServer";
+export type { ITableHeader, ITableProps, ITableServerProps, ITableOptions } from "./types";

@@ -1,7 +1,7 @@
 import { MenuBtnWrap, MenuList, MenuWrap } from "./styles";
 import { IMenuProps } from "./types";
 import { Text } from "../Text";
-import { useCallback, useMemo, useRef, useState, memo } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import useOnClickOutside from "../../hooks/useOnClickOutside";
 import { CheckIcon } from "../Svg";
 import { Flex } from "../Box";
@@ -15,7 +15,7 @@ function Menu<T = any>({
   offsetX = 0,
   offsetY = 0,
   opened,
-  openedChange = (v: boolean) => {},
+  openedChange,
   value,
   onChange,
   closeOnClick,
@@ -32,7 +32,7 @@ function Menu<T = any>({
   const values = useMemo(() => (Array.isArray(value) ? value : value ? [value] : []), [value]);
 
   const openedChangeHandler = (opened: boolean) => {
-    openedChange(opened);
+    if (openedChange) openedChange(opened);
     setLocOpened(opened);
   };
 
@@ -106,4 +106,4 @@ function Menu<T = any>({
   );
 }
 
-export default memo(Menu);
+export default Menu;
