@@ -21,6 +21,7 @@ function Modal({
   }, [onClose]);
 
   useEffect(() => {
+    document.body.style.overflow = value ? 'hidden' : 'auto';
     if (value) {
       setOpened(true);
     } else {

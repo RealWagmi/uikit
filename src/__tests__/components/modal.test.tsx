@@ -44,7 +44,7 @@ it("should render the menu with correct content and call onClose", () => {
      width: 100%;
      height: 100vh;
      background: rgba(0,0,0,0.8);
-     z-index: 900;
+     z-index: 1040;
      -webkit-animation: cJoqxJ 0.2s forwards;
      animation: cJoqxJ 0.2s forwards;
      visibility: visible;

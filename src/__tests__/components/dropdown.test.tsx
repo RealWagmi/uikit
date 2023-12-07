@@ -64,7 +64,7 @@ describe("Dropdown", () => {
       width: max-content;
       position: relative;
       overflow: visible;
-      z-index: 100;
+      z-index: 1000;
       height: 34px;
     }
 
