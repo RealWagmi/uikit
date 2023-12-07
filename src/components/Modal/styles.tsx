@@ -77,7 +77,7 @@ export const ModalCloseBtn = styled.button`
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 0;
+  padding: 4px;
 `;
 
 export const ModalContent = styled.div`
