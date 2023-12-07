@@ -106,6 +106,14 @@ export const Modal = () => {
           </Box>
         </Grid>
       </ModalComponent>
+
+      <Box mt={'40px'}>
+        {Array.from({ length: 20 }).map((_, i) => (
+          <Text variant={"h5"} color={'darkGray'} py={'10px'} key={i}>
+            Scrolled content
+          </Text>
+        ))}
+      </Box>
     </Box>
   );
 };
