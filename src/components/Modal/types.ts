@@ -7,6 +7,6 @@ export interface IModalProps {
   width?: string;
   height?: string;
   value?: boolean;
-  onChange?: (value: boolean) => any;
+  onClose?: (value: false) => any;
   closeOnOutsideClick?: boolean;
 }

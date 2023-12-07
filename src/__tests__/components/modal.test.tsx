@@ -5,13 +5,13 @@ import { renderWithProvider } from "../../testHelpers";
 import Modal from "../../components/Modal/Modal";
 
 const value = true;
-const onChange = vitest.fn();
+const onClose = vitest.fn();
 const headerContent = "Custom header";
 const modalContent = "Modal content";
 
-it("should render the menu with correct content and call onChange", () => {
+it("should render the menu with correct content and call onClose", () => {
   const { getByText, asFragment, getByTestId } = renderWithProvider(
-    <Modal header={headerContent} value={value} onChange={onChange}>
+    <Modal header={headerContent} value={value} onClose={onClose}>
       {modalContent}
     </Modal>
   );
@@ -26,8 +26,8 @@ it("should render the menu with correct content and call onChange", () => {
 
   fireEvent.click(closeBtn);
 
-  expect(onChange).toHaveBeenCalledTimes(1);
-  expect(onChange).toHaveBeenCalledWith(false);
+  expect(onClose).toHaveBeenCalledTimes(1);
+  expect(onClose).toHaveBeenCalledWith(false);
 
   expect(asFragment()).toMatchInlineSnapshot(`
    <DocumentFragment>

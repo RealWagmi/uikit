@@ -51,13 +51,13 @@ export const Modal = () => {
         </Button>
       </Grid>
 
-      <ModalComponent header={"Simple modal"} value={opened1} onChange={setOpened1} closeOnOutsideClick={true}>
+      <ModalComponent header={"Simple modal"} value={opened1} onClose={setOpened1} closeOnOutsideClick={true}>
         <Box p={"24px"} pt={0}>
           You can close the modal by close button or click outside.
         </Box>
       </ModalComponent>
 
-      <ModalComponent header={"300x300px modal"} value={opened2} onChange={setOpened2} height={"300px"} width={"300px"}>
+      <ModalComponent header={"300x300px modal"} value={opened2} onClose={setOpened2} height={"300px"} width={"300px"}>
         <Box p={"24px"} pt={0}>
           {Array.from({ length: 10 }).map((_, i) => (
             <Text variant={"h5"} key={i}>
@@ -81,7 +81,7 @@ export const Modal = () => {
           </Flex>
         }
         value={opened3}
-        onChange={setOpened3}
+        onClose={setOpened3}
       >
         <Box p={"24px"} pt={0}>
           {Array.from({ length: 10 }).map((_, i) => (
@@ -92,7 +92,7 @@ export const Modal = () => {
         </Box>
       </ModalComponent>
 
-      <ModalComponent header={"Scrolled Modal"} value={opened4} onChange={setOpened4} height={"300px"}>
+      <ModalComponent header={"Scrolled Modal"} value={opened4} onClose={setOpened4} height={"300px"}>
         <Grid gridTemplateRows={"auto 1fr"} height={"100%"}>
           <Box p={"24px"} pt={0}>
             Non scrolled content

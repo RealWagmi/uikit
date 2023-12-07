@@ -11,14 +11,14 @@ function Modal({
   width = "502px",
   height = "auto",
   value,
-  onChange,
+  onClose,
   closeOnOutsideClick,
 }: IModalProps) {
   const [opened, setOpened] = useState(!!value);
 
   const close = useCallback(() => {
-    if (onChange) onChange(false);
-  }, [onChange]);
+    if (onClose) onClose(false);
+  }, [onClose]);
 
   useEffect(() => {
     if (value) {
