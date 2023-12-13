@@ -134,7 +134,7 @@ function TableServer<T = any>({
         )}
         {loading && (
           <TableLoadWrap>
-            <LoadingSpinner />
+            <LoadingSpinner size={'32px'} />
           </TableLoadWrap>
         )}
       </TableContentWrap>
