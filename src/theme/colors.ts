@@ -48,4 +48,9 @@ export const buttons: ButtonsColors = {
     grad1: "#7d3434",
     text: "#966060",
   },
+  success: {
+    grad0: "#6b7d66",
+    grad1: "#4c623a",
+    text: "#638e5d",
+  },
 };

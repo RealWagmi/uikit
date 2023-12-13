@@ -4,6 +4,7 @@ import { ElementType, HTMLAttributeAnchorTarget, ReactNode } from "react";
 export const colors = {
   PRIMARY: "primary",
   ERROR: "error",
+  SUCCESS: "success"
 } as const;
 
 export const variants = {

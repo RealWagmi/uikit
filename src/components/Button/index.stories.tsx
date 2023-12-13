@@ -109,7 +109,9 @@ export const Buttons = () => {
           </ButtonComponent>
         </Box>
         <Box>
-          <ButtonComponent disabled color={"error"}>Button</ButtonComponent>
+          <ButtonComponent disabled color={"error"}>
+            Button
+          </ButtonComponent>
         </Box>
         <Box>
           <ButtonComponent disabled color={"error"} variant={"outlined"}>
@@ -118,6 +120,39 @@ export const Buttons = () => {
         </Box>
         <Box>
           <ButtonComponent disabled color={"error"} variant={"text"}>
+            Button
+          </ButtonComponent>
+        </Box>
+      </Grid>
+      <Text variant={"h5"} m="40px 0 20px">
+        Success Button
+      </Text>
+      <Grid gridTemplateColumns="repeat(3, 1fr)" gridGap="20px">
+        <Box>
+          <ButtonComponent color={"success"}>Button</ButtonComponent>
+        </Box>
+        <Box>
+          <ButtonComponent color={"success"} variant={"outlined"}>
+            Button
+          </ButtonComponent>
+        </Box>
+        <Box>
+          <ButtonComponent color={"success"} variant={"text"}>
+            Button
+          </ButtonComponent>
+        </Box>
+        <Box>
+          <ButtonComponent disabled color={"success"}>
+            Button
+          </ButtonComponent>
+        </Box>
+        <Box>
+          <ButtonComponent disabled color={"success"} variant={"outlined"}>
+            Button
+          </ButtonComponent>
+        </Box>
+        <Box>
+          <ButtonComponent disabled color={"success"} variant={"text"}>
             Button
           </ButtonComponent>
         </Box>
