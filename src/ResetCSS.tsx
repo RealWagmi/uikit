@@ -23,16 +23,16 @@ const ResetCSS = createGlobalStyle`
  
   /* Scrollbar */
   ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
   }
   ::-webkit-scrollbar-thumb {
     background: ${({ theme }) => theme.colors.primaryDefault};
-    border-radius: 3px;
+    border-radius: 4px;
   }
   ::-webkit-scrollbar-track {
     background: ${({ theme }) => rgba(theme.colors.white, 0.12)};
-    border-radius: 3px;
+    border-radius: 4px;
   }
 
 `;
