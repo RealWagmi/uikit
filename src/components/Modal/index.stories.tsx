@@ -98,7 +98,7 @@ export const Modal = () => {
             Non scrolled content
           </Box>
           <Box p={"24px"} pt={0} overflowY={"auto"}>
-            {Array.from({ length: 10 }).map((_, i) => (
+            {Array.from({ length: 50 }).map((_, i) => (
               <Text variant={"h5"} key={i}>
                 Scrolled content
               </Text>
@@ -107,9 +107,9 @@ export const Modal = () => {
         </Grid>
       </ModalComponent>
 
-      <Box mt={'40px'}>
+      <Box mt={"40px"}>
         {Array.from({ length: 20 }).map((_, i) => (
-          <Text variant={"h5"} color={'darkGray'} py={'10px'} key={i}>
+          <Text variant={"h5"} color={"darkGray"} py={"10px"} key={i}>
             Scrolled content
           </Text>
         ))}
