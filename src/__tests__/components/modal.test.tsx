@@ -57,9 +57,9 @@ it("should render the menu with correct content and call onClose", () => {
      background: red;
      width: 100%;
      max-width: 100%;
-     height: calc(100vh - 72px);
-     top: 72px;
-     max-height: 100vh;
+     max-height: calc(100vh - 72px);
+     height: auto;
+     bottom: 0;
      background: linear-gradient(0deg,#1d222b,#1d222b), linear-gradient(180deg,rgba(89,98,111,0.4) 0%,rgba(62,70,83,0.4) 100%);
      border: 2px solid rgba(97,105,113,0.4);
      box-sizing: border-box;
@@ -104,7 +104,8 @@ it("should render the menu with correct content and call onClose", () => {
    
    @media (min-width:640px) {
      .c1 {
-       top: auto;
+       bottom: auto;
+       max-height: 100vh;
        height: auto;
        width: 502px;
        border-radius: 12px;
