@@ -13,3 +13,4 @@ export { default as ShareIcon } from "./components/ShareIcon";
 export { default as SquareArrowIcon } from "./components/SquareArrowIcon";
 export { default as ChartBarIcon } from "./components/ChartBarIcon";
 export { default as PlusIcon } from "./components/PlusIcon";
+export { default as CircularArrowsIcon } from "./components/CircularArrowsIcon";
