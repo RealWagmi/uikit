@@ -13,4 +13,8 @@ export { default as ShareIcon } from "./components/ShareIcon";
 export { default as SquareArrowIcon } from "./components/SquareArrowIcon";
 export { default as ChartBarIcon } from "./components/ChartBarIcon";
 export { default as PlusIcon } from "./components/PlusIcon";
+export { default as MinusIcon } from "./components/MinusIcon";
 export { default as CircularArrowsIcon } from "./components/CircularArrowsIcon";
+export { default as ZoomInIcon } from "./components/ZoomInIcon";
+export { default as ZoomOutIcon } from "./components/ZoomOutIcon";
+export { default as LockIcon } from "./components/LockIcon";
