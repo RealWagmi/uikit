@@ -1,6 +1,6 @@
 import { ChainId } from "@real-wagmi/sdk";
 import { NamedExoticComponent, PropsWithChildren, useMemo } from "react";
-import { FtmToken, BnbToken, EthToken, AvaxToken, KavaToken, MaticToken } from '../components/Svg/Tokens'
+import { FtmToken, BnbToken, EthToken, AvaxToken, KavaToken, MaticToken, ArbToken } from "../components/Svg/Tokens";
 import { SvgProps } from "../components/Svg/types";
 
 type UseNetworksSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgProps>>;
@@ -8,12 +8,26 @@ type UseNetworksSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgPr
 export default function useNativeTokenSvgLogo(chainId: ChainId = ChainId.ZKSYNC): UseNetworksSvgLogoReturnType {
   let layout: UseNetworksSvgLogoReturnType;
   switch (chainId) {
-    case ChainId.FANTOM: layout = FtmToken; break;
-    case ChainId.KAVA: layout = KavaToken; break;
-    case ChainId.BSC: layout = BnbToken; break;
-    case ChainId.POLYGON: layout = MaticToken; break;
-    case ChainId.AVALANCHE: layout = AvaxToken; break;
-    default: layout = EthToken;
+    case ChainId.FANTOM:
+      layout = FtmToken;
+      break;
+    case ChainId.KAVA:
+      layout = KavaToken;
+      break;
+    case ChainId.BSC:
+      layout = BnbToken;
+      break;
+    case ChainId.POLYGON:
+      layout = MaticToken;
+      break;
+    case ChainId.AVALANCHE:
+      layout = AvaxToken;
+      break;
+    case ChainId.ARBITRUM:
+      layout = ArbToken;
+      break;
+    default:
+      layout = EthToken;
   }
   return useMemo((): UseNetworksSvgLogoReturnType => layout, [chainId]);
 }
