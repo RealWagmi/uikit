@@ -8,3 +8,4 @@ export { default as MaticToken } from "./components/Matic";
 export { default as sWagmiToken } from "./components/Swagmi";
 export { default as WagmiToken } from "./components/Wagmi";
 export { default as ArbToken } from "./components/Arb";
+export { default as MetisToken } from "./components/Metis";
