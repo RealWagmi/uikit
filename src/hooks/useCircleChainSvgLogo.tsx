@@ -10,6 +10,7 @@ import {
   ZkSyncEraCircleChain,
   BscCircleChain,
   AvalancheCircleChain,
+  MetisCircleChain,
 } from "../components/Svg/NetworksCircle";
 import { SvgProps } from "../components/Svg/types";
 
@@ -41,6 +42,9 @@ export default function useCircleChainSvgLogo(chainId: ChainId = ChainId.ZKSYNC)
       break;
     case ChainId.ARBITRUM:
       layout = ArbitrumCircleChain;
+      break;
+    case ChainId.METIS:
+      layout = MetisCircleChain;
       break;
     default:
       layout = EthereumCircleChain;

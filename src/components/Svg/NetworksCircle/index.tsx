@@ -7,3 +7,4 @@ export { default as KavaEvmCircleChain } from "./components/KavaEvmCircle";
 export { default as OptimismCircleChain } from "./components/OptimismCircle";
 export { default as PolygonCircleChain } from "./components/PolygonCircle";
 export { default as ZkSyncEraCircleChain } from "./components/ZkSyncEra";
+export { default as MetisCircleChain } from "./components/MetisCircle";

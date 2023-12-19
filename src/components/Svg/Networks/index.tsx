@@ -7,3 +7,4 @@ export { default as KavaEvmChain } from "./components/Kava-evm";
 export { default as OptimismChain } from "./components/Optimism";
 export { default as PolygonChain } from "./components/Polygon";
 export { default as ZkSyncEraChain } from "./components/ZkSync-era";
+export { default as MetisChain } from "./components/Metis";

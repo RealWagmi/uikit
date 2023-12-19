@@ -60,7 +60,7 @@
     "@ethersproject/address": "5.7.0",
     "@popperjs/core": "^2.11.8",
     "@reach/portal": "^0.18.0",
-    "@real-wagmi/sdk": "^1.1.6",
+    "@real-wagmi/sdk": "^1.2.0",
     "@storybook/addon-themes": "^7.5.3",
     "@types/styled-system": "^5.1.15",
     "framer-motion": "10.11.2",

@@ -1,6 +1,15 @@
 import { ChainId } from "@real-wagmi/sdk";
 import { NamedExoticComponent, PropsWithChildren, useMemo } from "react";
-import { FtmToken, BnbToken, EthToken, AvaxToken, KavaToken, MaticToken, ArbToken } from "../components/Svg/Tokens";
+import {
+  FtmToken,
+  BnbToken,
+  EthToken,
+  AvaxToken,
+  KavaToken,
+  MaticToken,
+  ArbToken,
+  MetisToken,
+} from "../components/Svg/Tokens";
 import { SvgProps } from "../components/Svg/types";
 
 type UseNetworksSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgProps>>;
@@ -25,6 +34,9 @@ export default function useNativeTokenSvgLogo(chainId: ChainId = ChainId.ZKSYNC)
       break;
     case ChainId.ARBITRUM:
       layout = ArbToken;
+      break;
+    case ChainId.METIS:
+      layout = MetisToken;
       break;
     default:
       layout = EthToken;
