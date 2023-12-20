@@ -99,6 +99,7 @@ test('exports', () => {
       "useCircleChainSvgLogo",
       "useNativeTokenSvgLogo",
       "useOnClickOutside",
+      "getChainLogo",
       "ResetCSS",
     ]
   `)
