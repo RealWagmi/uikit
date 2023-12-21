@@ -37,6 +37,7 @@ test("exports", () => {
       "LockIcon",
       "DatabaseIcon",
       "ArrowUpRightIcon",
+      "SuccessIcon",
       "AvaxToken",
       "BnbToken",
       "EthToken",
