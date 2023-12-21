@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Flex } from "../Box";
 import { rgba } from "polished";
 
-export const BreadcrumbsWrapper = styled(Flex)`
+export const BreadcrumbsWrapper = styled.a`
   display: inline-flex;
   justify-content: center;
   align-items: center;
