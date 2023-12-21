@@ -1,5 +1,4 @@
 import BreadcrumbsComponent from "./Breadcrumbs";
-import { BrowserRouter } from "react-router-dom";
 import React from "react";
 
 export default {
@@ -9,9 +8,5 @@ export default {
 };
 
 export const Breadcrumbs = () => {
-  return (
-    <BrowserRouter>
-      <BreadcrumbsComponent label={"Some route"} to={"/"} />
-    </BrowserRouter>
-  );
+  return <BreadcrumbsComponent label={"Some route"} to={"/"} />;
 };

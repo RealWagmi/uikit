@@ -1,12 +1,11 @@
 import { DefaultTheme } from "styled-components";
-import { buttons, colors } from "./colors";
+import dark from "./dark";
 
 //Buttons
 
 const lightTheme: DefaultTheme = {
-  colors: colors,
+  ...dark,
   background: "#ffffff",
-  buttons,
 };
 
 export default lightTheme;

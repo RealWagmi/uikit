@@ -18,3 +18,5 @@ export { default as CircularArrowsIcon } from "./components/CircularArrowsIcon";
 export { default as ZoomInIcon } from "./components/ZoomInIcon";
 export { default as ZoomOutIcon } from "./components/ZoomOutIcon";
 export { default as LockIcon } from "./components/LockIcon";
+export { default as DatabaseIcon } from "./components/DatabaseIcon";
+export { default as ArrowUpRightIcon } from "./components/ArrowUpRightIcon";

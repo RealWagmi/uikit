@@ -21,4 +21,5 @@ export type ThemeColors = {
   red: string;
   yellow: string;
   bayouxBlue: string;
+  bigStone: string;
 };
