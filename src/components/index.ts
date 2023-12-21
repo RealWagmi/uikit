@@ -14,3 +14,4 @@ export * from "./Table";
 export * from "./Tooltip";
 export * from "./Menu";
 export * from "./Modal";
+export * from "./GradientWrap";

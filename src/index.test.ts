@@ -1,7 +1,7 @@
-import { expect, test } from 'vitest'
-import * as exports from './index';
+import { expect, test } from "vitest";
+import * as exports from "./index";
 
-test('exports', () => {
+test("exports", () => {
   expect(Object.keys(exports)).toMatchInlineSnapshot(`
     [
       "Box",
@@ -35,6 +35,8 @@ test('exports', () => {
       "ZoomInIcon",
       "ZoomOutIcon",
       "LockIcon",
+      "DatabaseIcon",
+      "ArrowUpRightIcon",
       "AvaxToken",
       "BnbToken",
       "EthToken",
@@ -92,6 +94,7 @@ test('exports', () => {
       "Tooltip",
       "Menu",
       "Modal",
+      "GradientWrap",
       "dark",
       "light",
       "UIKitProvider",
@@ -102,5 +105,5 @@ test('exports', () => {
       "getChainLogo",
       "ResetCSS",
     ]
-  `)
-})
+  `);
+});

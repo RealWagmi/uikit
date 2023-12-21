@@ -6,6 +6,7 @@ export interface UIKitTheme {
   buttons: ButtonsColors;
   background: string;
   primaryGradient: string
+  primaryDarkGradient: string
 }
 
 export { default as dark } from "./dark";
