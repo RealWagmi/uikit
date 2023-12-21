@@ -20,3 +20,4 @@ export { default as ZoomOutIcon } from "./components/ZoomOutIcon";
 export { default as LockIcon } from "./components/LockIcon";
 export { default as DatabaseIcon } from "./components/DatabaseIcon";
 export { default as ArrowUpRightIcon } from "./components/ArrowUpRightIcon";
+export { default as SuccessIcon } from "./components/SuccessIcon";
