@@ -23,7 +23,8 @@ export const colors: ThemeColors = {
   green: "#638e5d",
   red: "#b84c45",
   yellow: "#c39905",
-  bayouxBlue: '#566E81'
+  bayouxBlue: "#566E81",
+  bigStone: "#172539",
 };
 
 type ButtonColorsConfig = {
