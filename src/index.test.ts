@@ -39,6 +39,7 @@ test("exports", () => {
       "ArrowUpRightIcon",
       "SuccessIcon",
       "LineGraphIcon",
+      "FilterIcon",
       "AvaxToken",
       "BnbToken",
       "EthToken",
