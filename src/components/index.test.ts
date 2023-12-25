@@ -39,6 +39,7 @@ test("exports", () => {
       "ArrowUpRightIcon",
       "SuccessIcon",
       "LineGraphIcon",
+      "FilterIcon",
       "AvaxToken",
       "BnbToken",
       "EthToken",
@@ -97,6 +98,7 @@ test("exports", () => {
       "Menu",
       "Modal",
       "GradientWrap",
+      "RangeChip",
     ]
   `);
 });
