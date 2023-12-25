@@ -11,25 +11,43 @@ describe("RangeChip", () => {
     expect(rangeChip).toBeInTheDocument();
     expect(asFragment()).toMatchInlineSnapshot(`
    <DocumentFragment>
-     .c0 {
+     .c2 {
+     border-radius: inherit;
+     padding: 10px 12px;
+   }
+   
+   .c1 {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+   }
+   
+   .c3 {
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-align-items: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+   }
+   
+   .c0 {
      background: rgba(184,76,69,0.08);
      color: #b84c45;
      display: -webkit-inline-box;
      display: -webkit-inline-flex;
      display: -ms-inline-flexbox;
      display: inline-flex;
-     -webkit-align-items: center;
-     -webkit-box-align: center;
-     -ms-flex-align: center;
-     align-items: center;
      font-size: 14px;
      font-weight: 400;
-     padding: 10px 12px;
      line-height: 10px;
      border-radius: 6px;
    }
    
-   .c1 {
+   .c4 {
      background: #b84c45;
      display: -webkit-box;
      display: -webkit-flex;
@@ -45,9 +63,21 @@ describe("RangeChip", () => {
        class="c0"
      >
        <div
-         class="c1"
-       />
-       Out of range
+         class=""
+       >
+         <div
+           class="c1"
+         >
+           <div
+             class="c2 c3"
+           >
+             <div
+               class="c4"
+             />
+             Out of range
+           </div>
+         </div>
+       </div>
      </div>
    </DocumentFragment>
     `);
