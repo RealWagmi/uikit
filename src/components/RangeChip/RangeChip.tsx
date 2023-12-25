@@ -3,6 +3,8 @@ import { statuses } from "./types";
 import styled from "styled-components";
 import { layout, space, variant, LayoutProps, SpaceProps } from "styled-system";
 import { getStatusPointVariants, getStatusVariants } from "./theme";
+import { Flex } from "../Box";
+import Tooltip from "../Tooltip/Tooltip";
 
 type RangeChipProps = LayoutProps &
   SpaceProps & {
@@ -18,10 +20,8 @@ const RangeChipWrap = styled.div<RangeChipProps>`
     })}
 
   display: inline-flex;
-  align-items: center;
   font-size: 14px;
   font-weight: 400;
-  padding: 10px 12px;
   line-height: 10px;
   border-radius: 6px;
 
@@ -55,10 +55,26 @@ function RangeChip({ variant, ...props }: RangeChipProps) {
     return "";
   }, [variant]);
 
+  const tooltipContent = useMemo(() => {
+    switch (variant) {
+      case statuses.IN_RANGE:
+        return "The price of this pool is within your selected range. Your position is currently earning fees.";
+      case statuses.OUT_OF_RANGE:
+        return "The price of this pool is outside of your selected range. Your position is not currently earning fees.";
+      case statuses.CLOSED:
+        return "Your position has 0 liquidity, and is not earning fees.";
+    }
+    return "";
+  }, [variant]);
+
   return (
     <RangeChipWrap variant={variant} {...props}>
-      <RangeChipPoint variant={variant} />
-      {label}
+      <Tooltip content={tooltipContent}>
+        <Flex p={"10px 12px"} alignItems={"center"} borderRadius={"inherit"}>
+          <RangeChipPoint variant={variant} />
+          {label}
+        </Flex>
+      </Tooltip>
     </RangeChipWrap>
   );
 }
