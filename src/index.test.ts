@@ -98,6 +98,7 @@ test("exports", () => {
       "Menu",
       "Modal",
       "GradientWrap",
+      "RangeChip",
       "dark",
       "light",
       "UIKitProvider",

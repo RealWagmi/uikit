@@ -15,3 +15,4 @@ export * from "./Tooltip";
 export * from "./Menu";
 export * from "./Modal";
 export * from "./GradientWrap";
+export * from "./RangeChip";
