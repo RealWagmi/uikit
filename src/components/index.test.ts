@@ -84,6 +84,7 @@ test("exports", () => {
       "Breadcrumbs",
       "LoadingSpinner",
       "LoadingBubble",
+      "LoadingShip",
       "TerminalChart",
       "Text",
       "Button",
