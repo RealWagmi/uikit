@@ -5,4 +5,5 @@ export interface IDropdownProps {
   items: { title?: ReactNode; value?: DropdownItemValue }[];
   value?: DropdownItemValue;
   onChange?: (value?: DropdownItemValue) => void;
+  placeholder?: ReactNode;
 }

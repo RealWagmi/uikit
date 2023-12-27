@@ -13,6 +13,7 @@ export const Dropdown = () => {
   const [value, setValue] = useState(1);
   const [value2, setValue2] = useState(1);
   const [value3, setValue3] = useState(1);
+  const [value4, setValue4] = useState<number>();
 
   const CustomItem = (color: string, value: string) => (
     <Flex alignItems={"center"}>
@@ -22,7 +23,7 @@ export const Dropdown = () => {
   );
 
   return (
-    <Grid gridTemplateColumns={"repeat(3, 1fr)"} mt={"10px"}>
+    <Grid gridTemplateColumns={"repeat(4, 1fr)"} mt={"10px"}>
       <Box>
         <Text variant={"h5"} mb="20px">
           Simple
@@ -77,7 +78,25 @@ export const Dropdown = () => {
           value={value3}
           onChange={setValue3}
         />
+      </Box>{" "}
+      <Box>
+        <Text variant={"h5"} mb="20px">
+          With placeholder
+        </Text>
+        <DropdownComponent
+          items={[
+            { value: 1, title: "Item 1" },
+            { value: 2, title: "Item 2" },
+            { value: 3, title: "Item 3" },
+          ]}
+          value={value4}
+          onChange={setValue4}
+          placeholder={"None"}
+        />
       </Box>
+      <Text color="strokeGray" variant={"h5"} mt="40px">
+        Overlapping content.
+      </Text>
       <Text color="strokeGray" variant={"h5"} mt="40px">
         Overlapping content.
       </Text>
