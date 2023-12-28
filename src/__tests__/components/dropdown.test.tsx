@@ -97,7 +97,7 @@ describe("Dropdown", () => {
       background: rgba(97,105,113,0.16);
     }
 
-    .c4:hover svg {
+    .c4:hover svg.dropdown-svg {
       stroke: #ffffff;
     }
 
