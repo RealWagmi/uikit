@@ -34,7 +34,7 @@ export const DropdownContainer = styled(Grid)<{ maxHeight: number; opened?: bool
   &:hover {
     background: ${({ theme }) => rgba(theme.colors.strokeGray, 0.16)};
 
-    & svg {
+    & svg.dropdown-svg {
       stroke: ${({ theme }) => theme.colors.white};
     }
   }
