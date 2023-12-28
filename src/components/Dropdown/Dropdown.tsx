@@ -58,7 +58,7 @@ function Dropdown({ items, value, onChange, placeholder = "-" }: IDropdownProps)
           tabIndex={-1}
         >
           <span>{activeItem?.title || activeItem?.value || placeholder}</span>
-          <ArrowDownIcon size={"16px"} />
+          <ArrowDownIcon size={"16px"} className={'dropdown-svg'} />
         </DropdownActivatorWrapper>
 
         <Grid maxHeight={200} overflowY={"auto"} gridGap={"4px"} pt={"6px"} data-testid={"dropdown-items"}>
