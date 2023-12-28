@@ -26,6 +26,9 @@ export const Text: React.FC<React.PropsWithChildren> = () => {
       <TextComponent variant="overline">Overline/Regular</TextComponent>
 
       <TextComponent color="red">Red text</TextComponent>
+      <TextComponent textOverflow={"ellipsis"} whiteSpace={"nowrap"} overflow={"hidden"} width={"120px"}>
+        Overflowed text Lorem Ipsum
+      </TextComponent>
     </Grid>
   );
 };
