@@ -5,7 +5,7 @@ import { ArrowDownIcon } from "../Svg";
 import { DropdownContainer, DropdownActivatorWrapper, DropdownItemWrapper, DropdownWrap } from "./styles";
 import { IDropdownProps } from "./types";
 
-function Dropdown({ items, value, onChange }: IDropdownProps) {
+function Dropdown({ items, value, onChange, placeholder = "-" }: IDropdownProps) {
   const activeItem = useMemo(() => items.find((v) => v.value === value), [items, value]);
   const minHeight = 34;
   const [maxHeight, setMaxHeight] = useState(minHeight);
@@ -57,7 +57,7 @@ function Dropdown({ items, value, onChange }: IDropdownProps) {
           active={true}
           tabIndex={-1}
         >
-          <span>{activeItem?.title || activeItem?.value || "-"}</span>
+          <span>{activeItem?.title || activeItem?.value || placeholder}</span>
           <ArrowDownIcon size={"16px"} />
         </DropdownActivatorWrapper>
 
