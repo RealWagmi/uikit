@@ -5,6 +5,7 @@ import { GridProps } from "../types";
 
 const Grid = styled(Box)<GridProps>`
   display: grid;
+  gap: ${({ gap }) => gap};
   ${flexbox}
   ${grid}
 `;
