@@ -47,7 +47,6 @@ it("should render the menu with correct content and call onClose", () => {
      z-index: 1040;
      -webkit-animation: cJoqxJ 0.2s forwards;
      animation: cJoqxJ 0.2s forwards;
-     visibility: visible;
    }
    
    .c1 {

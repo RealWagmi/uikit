@@ -21,7 +21,7 @@ function Modal({
   }, [onClose]);
 
   useEffect(() => {
-    document.body.style.overflow = value ? 'hidden' : 'auto';
+    document.body.style.overflow = value ? "hidden" : "auto";
     if (value) {
       setOpened(true);
     } else {
@@ -32,30 +32,31 @@ function Modal({
   }, [value]);
 
   return (
-    <ModalWrap
-      opened={value}
-      visible={opened}
-      onClick={() => {
-        if (closeOnOutsideClick) close();
-      }}
-    >
-      <ModalContainer
-        navbarOffset={navbarOffset}
-        width={width}
-        height={height}
-        onClick={(e) => {
-          e.stopPropagation();
+    opened && (
+      <ModalWrap
+        opened={value}
+        onClick={() => {
+          if (closeOnOutsideClick) close();
         }}
       >
-        <ModalHeader>
-          <Box>{header}</Box>
-          <ModalCloseBtn onClick={close} data-testid={`close-modal-btn`}>
-            <CloseIcon color={"textGray"} size={"16px"} />
-          </ModalCloseBtn>
-        </ModalHeader>
-        <ModalContent>{children}</ModalContent>
-      </ModalContainer>
-    </ModalWrap>
+        <ModalContainer
+          navbarOffset={navbarOffset}
+          width={width}
+          height={height}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
+          <ModalHeader>
+            <Box>{header}</Box>
+            <ModalCloseBtn onClick={close} data-testid={`close-modal-btn`}>
+              <CloseIcon color={"textGray"} size={"16px"} />
+            </ModalCloseBtn>
+          </ModalHeader>
+          <ModalContent>{children}</ModalContent>
+        </ModalContainer>
+      </ModalWrap>
+    )
   );
 }
 
