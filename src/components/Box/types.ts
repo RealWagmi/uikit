@@ -19,6 +19,6 @@ export interface BoxProps
     Omit<ColorProps, "color">,
     HTMLAttributes<HTMLElement> {}
 
-export interface FlexProps extends BoxProps, FlexboxProps {}
+export interface FlexProps extends BoxProps, FlexboxProps { gap?: string }
 
-export interface GridProps extends FlexProps, _GridProps {}
+export interface GridProps extends FlexProps, _GridProps { gap?: string }

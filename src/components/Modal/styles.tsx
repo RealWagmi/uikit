@@ -20,7 +20,7 @@ const hideAnimation = keyframes`
   }
 `;
 
-export const ModalWrap = styled.div<{ opened?: boolean; visible?: boolean }>`
+export const ModalWrap = styled.div<{ opened?: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
@@ -33,7 +33,6 @@ export const ModalWrap = styled.div<{ opened?: boolean; visible?: boolean }>`
   z-index: ${Z_INDEX.MODAL};
 
   animation: ${({ opened }) => (opened ? showAnimation : hideAnimation)} 0.2s forwards;
-  visibility: ${({ visible }) => (visible ? "visible" : "hidden")};
 `;
 
 export const ModalContainer = styled.div<{ navbarOffset: string; width: string; height: string }>`

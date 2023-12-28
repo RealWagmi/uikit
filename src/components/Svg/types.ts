@@ -4,6 +4,6 @@ import { ThemeColors } from "../../theme/types";
 
 export type SvgProps = SVGAttributes<HTMLOrSVGElement> &
   SpaceProps & {
-    color?: keyof ThemeColors;
+    color?: keyof ThemeColors | string;
     size?: string;
   };

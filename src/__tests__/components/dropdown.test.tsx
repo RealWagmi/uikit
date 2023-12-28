@@ -84,7 +84,7 @@ describe("Dropdown", () => {
       transition: max-height 0.15s,background 0.2s;
     }
 
-    .c4 svg {
+    .c4 svg.dropdown-svg {
       -webkit-transform: rotate(0);
       -ms-transform: rotate(0);
       transform: rotate(0);
@@ -97,7 +97,7 @@ describe("Dropdown", () => {
       background: rgba(97,105,113,0.16);
     }
 
-    .c4:hover svg {
+    .c4:hover svg.dropdown-svg {
       stroke: #ffffff;
     }
 
@@ -192,7 +192,7 @@ describe("Dropdown", () => {
               Item 1
             </span>
             <svg
-              class="c7"
+              class="c7 dropdown-svg"
               color="#000000"
               fill="none"
               viewBox="0 0 16 16"
