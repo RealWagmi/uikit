@@ -1,7 +1,8 @@
 import TabsComponent from "./Tabs";
 import React, { useState } from "react";
-import { Box } from "../Box";
+import { Box, Flex } from "../Box";
 import { TabValue } from "./types";
+import { QuestionIcon } from "../Svg";
 
 export default {
   title: "Components/Tabs",
@@ -15,9 +16,17 @@ export const Tabs = () => {
     <Box>
       <TabsComponent
         tabs={[
-          { value: 1, title: "First" },
-          { value: 2, title: "Second" },
-          { value: 3, title: "Last" },
+          { value: 1, title: "First tab" },
+          {
+            value: 2,
+            title: (
+              <Flex alignItems={"center"}>
+                Second custom tab
+                <QuestionIcon color={"red"} ml={"8px"} />
+              </Flex>
+            ),
+          },
+          { value: 3, title: "Last tab" },
         ]}
         value={tab}
         onChange={(value) => setTab(() => value!)}
