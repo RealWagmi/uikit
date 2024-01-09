@@ -4,11 +4,12 @@ import { SvgProps } from "../../types";
 import { v4 as uuid } from "uuid";
 
 const Token: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => {
-  const id = uuid();
+  const clipId = uuid();
+  const gradId = uuid();
   return (
     <Svg viewBox="0 0 32 32" {...props} fill="none" stroke="none">
-      <g clipPath={`url(#${id})`}>
-        <circle cx="16" cy="16" r="16" fill="url(#paint0_radial_2855_61221)" />
+      <g clipPath={`url(#${clipId})`}>
+        <circle cx="16" cy="16" r="16" fill={`url(#${gradId})`} />
         <circle cx="16" cy="16" r="15.5" stroke="white" strokeOpacity="0.2" />
         <path
           d="M11.7245 14.2448L16.0006 9.96995L20.2768 14.2448L22.7625 11.7598L16.0006 5L9.23877 11.7598L11.7245 14.2448Z"
@@ -27,7 +28,7 @@ const Token: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => {
       </g>
       <defs>
         <radialGradient
-          id="paint0_radial_2855_61221"
+          id={gradId}
           cx="0"
           cy="0"
           r="1"
@@ -37,7 +38,7 @@ const Token: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => {
           <stop stopColor="#FFDE98" />
           <stop offset="1" stopColor="#F6BF48" />
         </radialGradient>
-        <clipPath id={id}>
+        <clipPath id={clipId}>
           <rect width="32" height="32" rx="10" fill="white" />
         </clipPath>
       </defs>
