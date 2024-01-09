@@ -9,7 +9,7 @@ const GradientWrap = styled.div<GradientWrapProps>`
   position: relative;
   background: ${({ theme }) => theme.primaryDarkGradient};
   padding: 6px 12px;
-  ]font-size: 16px;
+  font-size: 16px; //TODO kek
   font-weight: 400;
   line-height: 20px;
   border-radius: 12px;
