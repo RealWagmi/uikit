@@ -6,16 +6,16 @@ import { Text } from "../Text";
 function ColorsList() {
   const theme = useTheme();
   return (
-    <Grid width={"280px"} gap={"16px"}>
+    <Grid gridTemplateColumns={'repeat(auto-fill, minmax(140px, 1fr))'} gridRowGap={'28px'}>
       {Object.entries(theme.colors).map(([key, value], i) => (
-        <Grid key={i} gridTemplateColumns={"100px auto"} p={"4px"} gap={"8px"} alignItems={"center"}>
+        <Box key={i} p={"4px"}>
           <Box bg={key} py={"8px"} borderRadius={"4px"}>
             <Text textAlign={"center"} style={{ textShadow: "#000000 0px 1px 2px" }}>
               {value}
             </Text>
           </Box>
-          <Text>{key}</Text>
-        </Grid>
+          <Text mt={'4px'}>{key}</Text>
+        </Box>
       ))}
     </Grid>
   );
