@@ -23,3 +23,4 @@ export { default as ArrowUpRightIcon } from "./components/ArrowUpRightIcon";
 export { default as SuccessIcon } from "./components/SuccessIcon";
 export { default as LineGraphIcon } from "./components/LineGraphIcon";
 export { default as FilterIcon } from "./components/FilterIcon";
+export { default as WarningOctagonIcon } from "./components/WarningOctagonIcon";
