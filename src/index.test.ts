@@ -82,6 +82,10 @@ test("exports", () => {
       "MediumIcon",
       "TelegramIcon",
       "TwitterIcon",
+      "KinetixIconProtocol",
+      "SushiIconProtocol",
+      "UniswapIconProtocol",
+      "WagmiIconProtocol",
       "Breadcrumbs",
       "LoadingSpinner",
       "LoadingBubble",
@@ -107,8 +111,10 @@ test("exports", () => {
       "useChainSvgLogo",
       "useCircleChainSvgLogo",
       "useNativeTokenSvgLogo",
+      "useProtocolLogo",
       "useOnClickOutside",
       "getChainLogo",
+      "getProtocolLogo",
       "ResetCSS",
     ]
   `);

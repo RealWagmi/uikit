@@ -2039,10 +2039,10 @@
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.18.0.tgz#4f3cebe093dd436eeaff633809bf0f68f4f9d2ee"
   integrity sha512-KdVMdpTgDyK8FzdKO9SCpiibuy/kbv3pwgfXshTI6tEcQT1OOwj7BAksnzGC0rPz0UholwC+AgkqEl3EJX3M1A==
 
-"@real-wagmi/sdk@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@real-wagmi/sdk/-/sdk-1.2.0.tgz#71d260bf63acabb62ac546ddd2edaab25e148722"
-  integrity sha512-Ow55NcPh3ZqvUkwGzkWTEiNheX9Wax7EkDSLQmNY4XkiHw2xVd3QTKZnA08L7zOgRwjTSc1YyD4Yas7TPQOocw==
+"@real-wagmi/sdk@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@real-wagmi/sdk/-/sdk-1.2.2.tgz#d861f131ca98a73a92770e730699f8eb84f51081"
+  integrity sha512-YlmPlSFjK07+dT8/2vJBXaD1bvUQX4wS6d0+f4O7TE3nqPNPTb78gYqUo/w1i9i3RU1o78ID7bNYyKDtiSqVqw==
   dependencies:
     "@uniswap/token-lists" "1.0.0-beta.33"
     big.js "^6.2.1"
