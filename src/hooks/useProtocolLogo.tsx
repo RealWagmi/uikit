@@ -5,6 +5,6 @@ import getProtocolLogo from "../utils/getProtocolLogo";
 
 type UseProtocolSvgLogoReturnType = NamedExoticComponent<PropsWithChildren<SvgProps>>;
 
-export default function useProtocolLogo(protocol: Project = Project.WAGMI): UseProtocolSvgLogoReturnType {
+export default function useProtocolLogo(protocol?: Project): UseProtocolSvgLogoReturnType {
   return useMemo((): UseProtocolSvgLogoReturnType => getProtocolLogo(protocol), [protocol]);
 }
