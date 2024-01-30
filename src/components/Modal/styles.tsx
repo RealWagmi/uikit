@@ -43,7 +43,7 @@ export const ModalContainer = styled.div<{ navbarOffset: string; width: string; 
   width: 100%;
   max-width: 100%;
   max-height: ${({ navbarOffset }) => `calc(100vh - ${navbarOffset || 0})`};
-  height: auto;
+  height: 100%;
   bottom: 0;
   background: linear-gradient(0deg, #1d222b, #1d222b),
     linear-gradient(180deg, rgba(89, 98, 111, 0.4) 0%, rgba(62, 70, 83, 0.4) 100%);
