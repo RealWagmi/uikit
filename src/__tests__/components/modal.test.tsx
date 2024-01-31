@@ -60,7 +60,6 @@ it("should render the menu with correct content and call onClose", () => {
      height: 100%;
      bottom: 0;
      background: linear-gradient(0deg,#1d222b,#1d222b), linear-gradient(180deg,rgba(89,98,111,0.4) 0%,rgba(62,70,83,0.4) 100%);
-     border: 2px solid rgba(97,105,113,0.4);
      box-sizing: border-box;
      border-radius: 12px 12px 0 0;
    }
