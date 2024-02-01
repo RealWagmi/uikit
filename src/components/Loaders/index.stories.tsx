@@ -15,7 +15,7 @@ export const LoadingSpinner: React.FC<React.PropsWithChildren> = () => {
     <Grid gap={"24px"}>
       <Flex flexDirection={"column"} justifyContent={"space-between"} alignItems={"center"}>
         <Text variant={"h5"} m="40px 0 20px">
-          Default width (16px)
+          Default size (16px)
         </Text>
         <LoadingSpinnerComponent />
       </Flex>
