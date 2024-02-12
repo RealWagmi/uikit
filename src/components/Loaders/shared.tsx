@@ -16,6 +16,6 @@ export const StyledSVG = styled.svg<{ size: string }>`
 `;
 
 export const StyledRotatingSVG = styled(StyledSVG)<{ duration?: string }>`
-  fill: none !important;
+  stroke: none !important;
   animation: ${({ duration }) => duration || "2s"} ${rotateAnimation} linear infinite;
 `;
