@@ -25,3 +25,5 @@ export { default as LineGraphIcon } from "./components/LineGraphIcon";
 export { default as FilterIcon } from "./components/FilterIcon";
 export { default as WarningOctagonIcon } from "./components/WarningOctagonIcon";
 export { default as EqualSignIcon } from "./components/EqualSignIcon";
+export { default as WalletIcon } from "./components/WalletIcon";
+export { default as ExitIcon } from "./components/ExitIcon";
