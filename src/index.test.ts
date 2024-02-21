@@ -89,6 +89,7 @@ test("exports", () => {
       "SushiIconProtocol",
       "UniswapIconProtocol",
       "WagmiIconProtocol",
+      "AppLogo",
       "Breadcrumbs",
       "LoadingSpinner",
       "LoadingBubble",
