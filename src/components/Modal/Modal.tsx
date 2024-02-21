@@ -31,6 +31,13 @@ function Modal({
     }
   }, [value]);
 
+  useEffect(() => {
+    return () => {
+      //update body.overflow when component unmounted
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
   return (
     opened && (
       <ModalWrap
