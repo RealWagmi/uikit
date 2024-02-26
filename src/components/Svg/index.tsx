@@ -6,3 +6,4 @@ export * from "./Wallets";
 export * from "./SocialNetworks";
 export * from "./Protocols";
 export * from "./Logos";
+export * from "./Images";

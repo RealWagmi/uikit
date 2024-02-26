@@ -90,6 +90,7 @@ test("exports", () => {
       "UniswapIconProtocol",
       "WagmiIconProtocol",
       "AppLogo",
+      "ShipImage",
       "Breadcrumbs",
       "LoadingSpinner",
       "LoadingBubble",
