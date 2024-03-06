@@ -14,6 +14,8 @@ const ResetCSS = createGlobalStyle`
   *, *::before, *::after {
     margin: 0;
     font-family: Lexend Deca, sans-serif;
+    scrollbar-color: ${({ theme }) => `${theme.colors.primaryDefault} ${rgba(theme.colors.white, 0.12)}`};
+    scrollbar-width: thin;
   }
 
   #root {
@@ -22,6 +24,7 @@ const ResetCSS = createGlobalStyle`
   }
  
   /* Scrollbar */
+  
   ::-webkit-scrollbar {
     width: 4px;
     height: 4px;
