@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     // Fix tooltip "border"
     .recharts-tooltip-wrapper {
         outline: none;
+        z-index: 15;
     }
 `;
 

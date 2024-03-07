@@ -12,7 +12,6 @@ export const TooltipWrapper = styled.div`
     padding: 8px 10px;
     width: 320px;
     font-size: 12px;
-    z-index: 10;
     border-radius: 8px;
     background: #1d2128;
     border: 1px solid rgba(97, 105, 113, 0.2);
