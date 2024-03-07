@@ -1,5 +1,5 @@
 import type { GraphQLClient } from 'graphql-request';
-import { DEFAULT_SURROUNDING_TICKS, PRICE_FIXED_DIGITS } from '../constants';
+import { DEFAULT_SURROUNDING_TICKS } from '../constants';
 import { PoolResult, PoolTickData, TickProcessed } from '../types';
 import { poolQuery } from './gql';
 import { TickMath, tickToPrice, TICK_SPACINGS, FeeAmount } from '@real-wagmi/v3-sdk';
@@ -63,8 +63,8 @@ export const fetchTicksSurroundingPrice = async (
         liquidityActive: BigInt(liquidity),
         tickIdx: activeTickIdx,
         liquidityNet: 0n,
-        price0: tickToPrice(token0, token1, activeTickIdxForPrice).toFixed(PRICE_FIXED_DIGITS),
-        price1: tickToPrice(token1, token0, activeTickIdxForPrice).toFixed(PRICE_FIXED_DIGITS),
+        price0: tickToPrice(token0, token1, activeTickIdxForPrice).toSignificant(),
+        price1: tickToPrice(token1, token0, activeTickIdxForPrice).toSignificant(),
         liquidityGross: 0n,
     };
 
@@ -102,8 +102,8 @@ export const fetchTicksSurroundingPrice = async (
                 liquidityActive: previousTickProcessed.liquidityActive,
                 tickIdx: currentTickIdx,
                 liquidityNet: BigInt(0),
-                price0: tickToPrice(token0, token1, currentTickIdx).toFixed(PRICE_FIXED_DIGITS),
-                price1: tickToPrice(token1, token0, currentTickIdx).toFixed(PRICE_FIXED_DIGITS),
+                price0: tickToPrice(token0, token1, currentTickIdx).toSignificant(),
+                price1: tickToPrice(token1, token0, currentTickIdx).toSignificant(),
                 liquidityGross: BigInt(0),
             };
 

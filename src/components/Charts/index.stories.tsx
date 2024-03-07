@@ -16,5 +16,5 @@ export const Terminal: React.FC<React.PropsWithChildren> = () => {
 const client = new GraphQLClient('https://metis.graph.wagmi.com/subgraphs/name/v3');
 
 export const Density: React.FC<React.PropsWithChildren> = () => {
-  return <DensityChart address="0x1d347deBF7B4c6Ef0e7fbEFd94d74F75156a16a5" client={client} />;
+  return <DensityChart address="0x28D5576057A27F95d5dB75776BA50e6e84FAf477" client={client} />;
 };
