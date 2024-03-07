@@ -4,7 +4,7 @@ import { ChartWrapper } from "./styles";
 import { TerminalChainId } from "./types";
 
 interface IProps {
-  poolAddress: string;
+  poolAddress: `0x${string}`;
   chainId: TerminalChainId;
 }
 
