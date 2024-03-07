@@ -95,6 +95,7 @@ test("exports", () => {
       "LoadingSpinner",
       "LoadingBubble",
       "TerminalChart",
+      "DensityChart",
       "Text",
       "Button",
       "Toggle",
