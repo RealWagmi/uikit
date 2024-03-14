@@ -73,22 +73,18 @@ export const TableHeader = styled(Box)`
   min-height: 17px;
 `;
 
-export const TableHeaderTitleBtn = styled.button<{ active: boolean }>`
+export const TableHeaderTitleBtn = styled.div<{ active: boolean; clickable: boolean }>`
   display: flex;
   align-items: center;
   border: none;
   outline: none;
-  cursor: pointer;
   background: transparent;
   padding: 0;
   color: ${({ theme, active }) =>
     active ? theme.colors.primaryDefault : theme.colors.darkGray}; //styleName: Caption/Regular;
   font-size: 12px;
   font-weight: 400;
-
-  &:disabled {
-    cursor: default;
-  }
+  cursor: ${({ clickable }) => (clickable ? "pointer" : "default")};
 `;
 
 export const TableItem = styled(Box)`
