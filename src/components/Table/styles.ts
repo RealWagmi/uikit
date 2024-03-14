@@ -76,9 +76,6 @@ export const TableHeader = styled(Box)`
 export const TableHeaderTitleBtn = styled.div<{ active: boolean; clickable: boolean }>`
   display: flex;
   align-items: center;
-  border: none;
-  outline: none;
-  background: transparent;
   padding: 0;
   color: ${({ theme, active }) =>
     active ? theme.colors.primaryDefault : theme.colors.darkGray}; //styleName: Caption/Regular;
