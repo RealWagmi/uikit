@@ -74,19 +74,21 @@ function TableServer<T = any>({
                   <TableHeader key={i} data-testid={`table-header-${i}`}>
                     {header.title && (
                       <TableHeaderTitleBtn
-                        disabled={!isSortable}
                         onClick={() => {
-                          const sortBy = header.key;
-                          if (sortBy) {
-                            if (options.sort?.sortBy === sortBy && options.sort.reverseOrder) {
-                              updateOptions({ ...options, sort: undefined, page: 1 });
-                            } else {
-                              const reverseOrder =
-                                options.sort?.sortBy !== sortBy ? false : !options.sort?.reverseOrder;
-                              updateOptions({ ...options, sort: { sortBy, reverseOrder }, page: 1 });
+                          if (isSortable) {
+                            const sortBy = header.key;
+                            if (sortBy) {
+                              if (options.sort?.sortBy === sortBy && options.sort.reverseOrder) {
+                                updateOptions({ ...options, sort: undefined, page: 1 });
+                              } else {
+                                const reverseOrder =
+                                  options.sort?.sortBy !== sortBy ? false : !options.sort?.reverseOrder;
+                                updateOptions({ ...options, sort: { sortBy, reverseOrder }, page: 1 });
+                              }
                             }
                           }
                         }}
+                        clickable={isSortable}
                         active={!!header.key && options.sort?.sortBy === header.key}
                       >
                         {isSortable && (
@@ -134,7 +136,7 @@ function TableServer<T = any>({
         )}
         {loading && (
           <TableLoadWrap>
-            <LoadingSpinner size={'32px'} />
+            <LoadingSpinner size={"32px"} />
           </TableLoadWrap>
         )}
       </TableContentWrap>

@@ -44,7 +44,7 @@ describe("Table", () => {
     expect(customHeader).toBeInTheDocument();
 
     const amountHeader = getByTestId("table-header-1");
-    const amountHeaderBtn = amountHeader.querySelector("button") as HTMLButtonElement;
+    const amountHeaderBtn = amountHeader.children[0] as HTMLDivElement;
 
     const tableContent = getByTestId("table-content") as HTMLDivElement;
 
