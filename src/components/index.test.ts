@@ -44,6 +44,7 @@ test("exports", () => {
       "EqualSignIcon",
       "WalletIcon",
       "ExitIcon",
+      "CopyIcon",
       "AvaxToken",
       "BnbToken",
       "EthToken",
