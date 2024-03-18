@@ -28,3 +28,5 @@ export { default as EqualSignIcon } from "./components/EqualSignIcon";
 export { default as WalletIcon } from "./components/WalletIcon";
 export { default as ExitIcon } from "./components/ExitIcon";
 export { default as CopyIcon } from "./components/CopyIcon";
+export { default as GearIcon } from "./components/GearIcon";
+export { default as PowerIcon } from './components/PowerIcon';
