@@ -123,6 +123,7 @@ test("exports", () => {
       "useOnClickOutside",
       "getChainLogo",
       "getProtocolLogo",
+      "getNativeCurrencyLogo",
       "ResetCSS",
     ]
   `);

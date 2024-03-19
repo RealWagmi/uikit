@@ -6,6 +6,7 @@ test('exports', () => {
     [
       "getChainLogo",
       "getProtocolLogo",
+      "getNativeCurrencyLogo",
     ]
   `)
 })
