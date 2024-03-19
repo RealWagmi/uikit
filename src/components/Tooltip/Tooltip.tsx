@@ -1,19 +1,19 @@
 import { useEffect, useRef, useState, memo } from "react";
 import { usePopper } from "react-popper";
-import * as PopperJS from "@popperjs/core";
+import { Options } from '@popperjs/core';
 import { Box, Flex } from "../Box";
 import { Portal } from "@reach/portal";
 import { ITooltipProps } from "./types";
 import { Arrow, TooltipContainer } from "./styles";
 
-function Tooltip({ content, children }: ITooltipProps) {
+function Tooltip({ content, children, placement = 'auto' }: ITooltipProps) {
   const activatorElement = useRef<HTMLDivElement>(null);
   const popperElement = useRef<HTMLDivElement>(null);
   const arrowElement = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState(false);
 
-  const options: PopperJS.Options = {
-    placement: "auto",
+  const options: Options = {
+    placement,
     strategy: "fixed",
     modifiers: [
       { name: "offset", options: { offset: [2, 8] } },
