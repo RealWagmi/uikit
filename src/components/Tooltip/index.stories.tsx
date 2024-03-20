@@ -78,6 +78,7 @@ export const Tooltip = () => {
         >
           <InfoIcon color="strokeGray" />
         </TooltipComponent>
+        <TooltipComponent content={undefined}>Tooltip wrap without content</TooltipComponent>
       </Flex>
     </Flex>
   );
