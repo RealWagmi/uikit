@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState, memo } from "react";
 import { usePopper } from "react-popper";
-import { Options } from '@popperjs/core';
+import { Options } from "@popperjs/core";
 import { Box, Flex } from "../Box";
 import { Portal } from "@reach/portal";
 import { ITooltipProps } from "./types";
 import { Arrow, TooltipContainer } from "./styles";
 
-function Tooltip({ content, children, placement = 'auto' }: ITooltipProps) {
+function Tooltip({ content, children, placement = "auto" }: ITooltipProps) {
   const activatorElement = useRef<HTMLDivElement>(null);
   const popperElement = useRef<HTMLDivElement>(null);
   const arrowElement = useRef<HTMLDivElement>(null);
@@ -43,17 +43,19 @@ function Tooltip({ content, children, placement = 'auto' }: ITooltipProps) {
       }}
     >
       <Flex ref={activatorElement}>{children}</Flex>
-      <Portal>
-        <TooltipContainer ref={popperElement} style={styles.popper} {...attributes.popper} show={show}>
-          {content}
-          <Arrow
-            className={`arrow-${attributes.popper?.["data-popper-placement"] || ""}`}
-            ref={arrowElement}
-            style={styles.arrow}
-            {...attributes.arrow}
-          />
-        </TooltipContainer>
-      </Portal>
+      {content !== undefined && (
+        <Portal>
+          <TooltipContainer ref={popperElement} style={styles.popper} {...attributes.popper} show={show}>
+            {content}
+            <Arrow
+              className={`arrow-${attributes.popper?.["data-popper-placement"] || ""}`}
+              ref={arrowElement}
+              style={styles.arrow}
+              {...attributes.arrow}
+            />
+          </TooltipContainer>
+        </Portal>
+      )}
     </Box>
   );
 }
