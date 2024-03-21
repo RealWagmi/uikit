@@ -83,6 +83,7 @@ test("exports", () => {
       "CoinbaseWallet",
       "Rabby",
       "WalletConnect",
+      "Gnosis",
       "DiscordIcon",
       "GithubIcon",
       "MediumIcon",
