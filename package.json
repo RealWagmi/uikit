@@ -1,6 +1,6 @@
 {
   "name": "@real-wagmi/uikit",
-  "version": "1.2.29",
+  "version": "1.2.30",
   "description": "",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
