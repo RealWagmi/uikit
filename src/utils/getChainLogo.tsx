@@ -10,6 +10,7 @@ import {
     BscChain,
     AvalancheChain,
     MetisChain,
+    BlastChain
 } from "../components/Svg/Networks";
 
 import {
@@ -23,6 +24,7 @@ import {
     BscCircleChain,
     AvalancheCircleChain,
     MetisCircleChain,
+    BlastCircleChain
 } from "../components/Svg/NetworksCircle";
 
 export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false){
@@ -35,5 +37,6 @@ export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false)
     if(chainId === ChainId.BSC) return circle ? BscCircleChain : BscChain;
     if(chainId === ChainId.AVALANCHE) return circle ? AvalancheCircleChain : AvalancheChain;
     if(chainId === ChainId.METIS) return circle ? MetisCircleChain : MetisChain;
+    if(chainId === ChainId.BLAST) return circle ? BlastCircleChain : BlastChain;
     return circle ? EthereumCircleChain : EthereumChain;
 }
