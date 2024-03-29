@@ -17,6 +17,7 @@ export const Modal = () => {
   const [opened2, setOpened2] = useState(false);
   const [opened3, setOpened3] = useState(false);
   const [opened4, setOpened4] = useState(false);
+  const [opened5, setOpened5] = useState(false);
 
   return (
     <Box>
@@ -48,6 +49,13 @@ export const Modal = () => {
           }}
         >
           Scrolled Modal
+        </Button>
+        <Button
+          onClick={() => {
+            setOpened5(true);
+          }}
+        >
+          Non closable Modal
         </Button>
       </Grid>
 
@@ -105,6 +113,17 @@ export const Modal = () => {
             ))}
           </Box>
         </Grid>
+      </ModalComponent>
+      <ModalComponent header={"Non closable Modal"} value={opened5} height={"300px"}>
+        <Box p={'24px'} pt={'48px'}>
+          <Button
+            onClick={() => {
+              setOpened5(false);
+            }}
+          >
+            Custom close button
+          </Button>
+        </Box>
       </ModalComponent>
 
       <Box mt={"40px"}>

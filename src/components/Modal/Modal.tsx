@@ -56,9 +56,11 @@ function Modal({
         >
           <ModalHeader>
             <Box>{header}</Box>
-            <ModalCloseBtn onClick={close} data-testid={`close-modal-btn`}>
-              <CloseIcon color={"textGray"} size={"16px"} />
-            </ModalCloseBtn>
+            {!!onClose && (
+              <ModalCloseBtn onClick={close} data-testid={`close-modal-btn`}>
+                <CloseIcon color={"textGray"} size={"16px"} />
+              </ModalCloseBtn>
+            )}
           </ModalHeader>
           <ModalContent>{children}</ModalContent>
         </ModalContainer>

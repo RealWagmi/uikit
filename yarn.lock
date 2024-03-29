@@ -2173,10 +2173,10 @@
   resolved "https://registry.yarnpkg.com/@reach/utils/-/utils-0.18.0.tgz#4f3cebe093dd436eeaff633809bf0f68f4f9d2ee"
   integrity sha512-KdVMdpTgDyK8FzdKO9SCpiibuy/kbv3pwgfXshTI6tEcQT1OOwj7BAksnzGC0rPz0UholwC+AgkqEl3EJX3M1A==
 
-"@real-wagmi/sdk@^1.2.6", "@real-wagmi/sdk@^1.2.7":
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/@real-wagmi/sdk/-/sdk-1.2.7.tgz#c349da41ce0b7c7ab43c5bd794494cb2af18e2f6"
-  integrity sha512-JpN54kbp3W3v1r1QLhR7Hly+EwgPBeM9IkIGOvUc9q+7x1T6/boa+h9grC5SrHc5w+Ml5BqfT7YwiJ0GHWGPwg==
+"@real-wagmi/sdk@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@real-wagmi/sdk/-/sdk-1.2.8.tgz#45d5f6918eef18384334b269e9d881a6a80ad3c2"
+  integrity sha512-3FYq4YJUp5Hi4wa1D9ccA9Y/uzIJ5zG2YFTbJW9nNGkGT7Zm/4qcdGxsAKmeJHQa196OezwLqZ2fckC+ToXnrg==
   dependencies:
     "@uniswap/token-lists" "1.0.0-beta.33"
     big.js "^6.2.1"
@@ -2186,12 +2186,12 @@
     viem "^2.7.20"
     vitest "^1.3.1"
 
-"@real-wagmi/v3-sdk@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@real-wagmi/v3-sdk/-/v3-sdk-1.2.5.tgz#9c0264d9ad15b0f5a971f944914957c71aaa6f1f"
-  integrity sha512-XpdRxxmkQgPH8avMqRcqKpNo/ooEpr7fz90tw/7VQXJYCu3WWEdtQeXE61QjScGr1qzee36jD1xHnO/rCbz9RA==
+"@real-wagmi/v3-sdk@^1.2.8":
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/@real-wagmi/v3-sdk/-/v3-sdk-1.2.8.tgz#f0de463e5cef268e802fbde5c49657de7d3433a2"
+  integrity sha512-IEwMSS5XNBvKhEhUST+Rvl+l8u7lpqMcsebMlstqlAAZXK8cAFR5ZvbCZCtPh5O7h7DvP2rzTlWVUNKTAUXCMw==
   dependencies:
-    "@real-wagmi/sdk" "^1.2.6"
+    "@real-wagmi/sdk" "^1.2.8"
     viem "^2.7.22"
 
 "@rollup/pluginutils@^4.2.0":
