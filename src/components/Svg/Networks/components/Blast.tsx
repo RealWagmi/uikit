@@ -1,7 +1,6 @@
 import { FC, ReactElement, PropsWithChildren, memo } from "react";
 import Svg from "../../Svg";
 import { SvgProps } from "../../types";
-import { v4 as uuid } from "uuid";
 
 const Item: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => {
   return (
