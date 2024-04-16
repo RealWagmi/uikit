@@ -14,8 +14,8 @@ const Item: FC<PropsWithChildren<SvgProps>> = (props): ReactElement => {
         </g>
         <defs>
             <radialGradient id="paint0_radial_11876_39199" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(16 16) rotate(90) scale(16)">
-                <stop offset="0.255" stop-color="#2C6EFF"/>
-                <stop offset="1" stop-color="#032AFF"/>
+                <stop offset="0.255" stopColor="#2C6EFF"/>
+                <stop offset="1" stopColor="#032AFF"/>
             </radialGradient>
             <clipPath id="clip0_11876_39199">
                 <rect width="32" height="32" fill="white"/>
