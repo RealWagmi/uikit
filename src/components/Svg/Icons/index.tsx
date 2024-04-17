@@ -30,3 +30,4 @@ export { default as ExitIcon } from "./components/ExitIcon";
 export { default as CopyIcon } from "./components/CopyIcon";
 export { default as GearIcon } from "./components/GearIcon";
 export { default as PowerIcon } from './components/PowerIcon';
+export { default as ClockIcon } from './components/ClockIcon';

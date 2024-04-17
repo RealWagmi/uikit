@@ -47,6 +47,7 @@ test("exports", () => {
       "CopyIcon",
       "GearIcon",
       "PowerIcon",
+      "ClockIcon",
       "AvaxToken",
       "BnbToken",
       "EthToken",
