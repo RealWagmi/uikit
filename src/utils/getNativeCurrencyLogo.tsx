@@ -16,6 +16,6 @@ export default function getNativeCurrencyLogo(chainId = ChainId.ETHEREUM){
     if(chainId === ChainId.POLYGON) return PolygonCircleChain;
     if(chainId === ChainId.BSC) return BscCircleChain;
     if(chainId === ChainId.AVALANCHE) return AvalancheCircleChain;
-    if(chainId === ChainId.METIS) return MetisCircleChain;
+    if(chainId === ChainId.METIS || chainId === ChainId.METIS_SEPOLIA) return MetisCircleChain;
     return EthereumCircleChain;
 }
