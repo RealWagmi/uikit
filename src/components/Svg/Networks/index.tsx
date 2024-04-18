@@ -10,3 +10,4 @@ export { default as ZkSyncEraChain } from "./components/ZkSync-era";
 export { default as MetisChain } from "./components/Metis";
 export { default as BlastChain } from "./components/Blast";
 export { default as BaseChain } from "./components/Base";
+export { default as MetisTestnetChain } from "./components/MetisTestnet";
