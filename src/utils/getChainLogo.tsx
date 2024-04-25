@@ -12,7 +12,8 @@ import {
     MetisChain,
     BlastChain,
     BaseChain,
-    MetisTestnetChain
+    MetisTestnetChain,
+    ZkLinkNovaChain
 } from "../components/Svg/Networks";
 
 import {
@@ -28,7 +29,8 @@ import {
     MetisCircleChain,
     BlastCircleChain,
     BaseCircleChain,
-    MetisTestnetCircleChain
+    MetisTestnetCircleChain,
+    ZkLinkNovaCircleChain
 } from "../components/Svg/NetworksCircle";
 
 export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false){
@@ -44,5 +46,6 @@ export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false)
     if(chainId === ChainId.METIS_SEPOLIA) return circle ? MetisTestnetCircleChain : MetisTestnetChain;
     if(chainId === ChainId.BLAST) return circle ? BlastCircleChain : BlastChain;
     if(chainId === ChainId.BASE) return circle ? BaseCircleChain : BaseChain;
+    if(chainId === ChainId.ZKLINK) return circle ? ZkLinkNovaCircleChain : ZkLinkNovaChain;
     return circle ? EthereumCircleChain : EthereumChain;
 }

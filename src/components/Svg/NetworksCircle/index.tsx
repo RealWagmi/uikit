@@ -11,3 +11,4 @@ export { default as MetisCircleChain } from "./components/MetisCircle";
 export { default as BlastCircleChain } from "./components/BlastCircle";
 export { default as BaseCircleChain } from "./components/BaseCircle";
 export { default as MetisTestnetCircleChain } from "./components/MetisTestnetCircle";
+export { default as ZkLinkNovaCircleChain } from "./components/ZkLinkNova";

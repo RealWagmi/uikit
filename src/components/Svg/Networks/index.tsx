@@ -11,3 +11,4 @@ export { default as MetisChain } from "./components/Metis";
 export { default as BlastChain } from "./components/Blast";
 export { default as BaseChain } from "./components/Base";
 export { default as MetisTestnetChain } from "./components/MetisTestnet";
+export { default as ZkLinkNovaChain } from "./components/ZkLinkNova";
