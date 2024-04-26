@@ -6,6 +6,7 @@ test('exports', () => {
     [
       "useChainSvgLogo",
       "useCircleChainSvgLogo",
+      "useGrayChainSvgLogo",
       "useNativeTokenSvgLogo",
       "useProtocolLogo",
       "useOnClickOutside",
