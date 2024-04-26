@@ -1,9 +1,13 @@
 export { default as ArbitrumChainGray } from "./components/ArbitrumGray";
+export { default as AvalancheChainGray } from "./components/AvalancheGray";
 export { default as BscChainGray } from "./components/BscChainGray";
 export { default as EthereumChainGray } from "./components/EthereumGray";
 export { default as FantomChainGray } from "./components/FantomGray";
 export { default as KavaEvmChainGray } from "./components/KavaEvmGray";
 export { default as MetisChainGray } from "./components/MetisGray";
+export { default as OptimismChainGray } from "./components/OptimismGray";
+export { default as PolygonChainGray } from "./components/PolygonGray";
 export { default as BlastChainGray } from "./components/BlastGray";
 export { default as BaseChainGray } from "./components/BaseGray";
 export { default as ZkLinkNovaChainGray } from "./components/ZkLinkNovaGray";
+export { default as ZkSyncEraChainGray } from "./components/ZkSyncEraGray";
