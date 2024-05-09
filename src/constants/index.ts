@@ -8,7 +8,8 @@ export enum SCREEN_WIDTH {
 }
 
 export enum Z_INDEX {
-  DROPDOWN = 1000,
-  MODAL = 1040,
-  TOOLTIP = 1080,
+  TOOLTIP = 1100,
+  MODAL = 1090,
+  HEADER = 1080,
+  DROPDOWN = 1070,
 }

@@ -3,6 +3,7 @@ import { fireEvent } from "@testing-library/react";
 import { Dropdown } from "../../components/Dropdown";
 import { vitest, expect, it, describe } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
+import { Z_INDEX } from "../../constants";
 
 describe("Dropdown", () => {
   const items = [
@@ -64,7 +65,7 @@ describe("Dropdown", () => {
       width: max-content;
       position: relative;
       overflow: visible;
-      z-index: 1000;
+      z-index: ${Z_INDEX.DROPDOWN};
       height: 34px;
     }
 

@@ -3,6 +3,7 @@ import { fireEvent } from "@testing-library/react";
 import { vitest, expect, it } from "vitest";
 import { renderWithProvider } from "../../testHelpers";
 import Modal from "../../components/Modal/Modal";
+import { Z_INDEX } from "../../constants";
 
 const value = true;
 const onClose = vitest.fn();
@@ -44,7 +45,7 @@ it("should render the menu with correct content and call onClose", () => {
      width: 100%;
      height: 100vh;
      background: rgba(0,0,0,0.8);
-     z-index: 1040;
+     z-index: ${Z_INDEX.MODAL};
      -webkit-animation: cJoqxJ 0.2s forwards;
      animation: cJoqxJ 0.2s forwards;
    }

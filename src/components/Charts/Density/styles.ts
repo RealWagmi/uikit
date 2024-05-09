@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Z_INDEX } from "../../../constants";
 
 export const Wrapper = styled.div`
     position: relative;
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
     // Fix tooltip "border"
     .recharts-tooltip-wrapper {
         outline: none;
-        z-index: 15;
+        z-index: ${Z_INDEX.TOOLTIP};
     }
 `;
 
