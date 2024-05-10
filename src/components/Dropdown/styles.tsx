@@ -7,7 +7,7 @@ export const DropdownWrap = styled(Box)<{ height: string }>`
   width: max-content;
   position: relative;
   overflow: visible;
-  z-index: ${Z_INDEX.DROPDOWN};
+  z-index: ${Z_INDEX.dropdown};
   height: ${({ height }) => height};
 `;
 

@@ -65,7 +65,7 @@ describe("Dropdown", () => {
       width: max-content;
       position: relative;
       overflow: visible;
-      z-index: ${Z_INDEX.DROPDOWN};
+      z-index: ${Z_INDEX.dropdown};
       height: 34px;
     }
 

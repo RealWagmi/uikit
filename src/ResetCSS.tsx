@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { rgba } from "polished";
+import { Z_INDEX } from "./constants";
 
 const ResetCSS = createGlobalStyle`
   html {
@@ -20,7 +21,7 @@ const ResetCSS = createGlobalStyle`
 
   #root {
     position: relative;
-    z-index: 1;
+    z-index: ${Z_INDEX.content};
   }
  
   /* Scrollbar */
