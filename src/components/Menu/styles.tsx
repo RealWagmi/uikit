@@ -36,7 +36,7 @@ export const MenuList = styled(Grid)<{ offsetX: number; offsetY: number }>`
   border: 2px solid ${({ theme: A }) => rgba(A.colors.strokeGray, 0.4)};
   border-radius: 12px;
   box-sizing: border-box;
-  z-index: ${Z_INDEX.DROPDOWN};
+  z-index: ${Z_INDEX.dropdown};
   overflow-x: hidden;
   overflow-y: auto;
 `;

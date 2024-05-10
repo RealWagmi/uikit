@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
     // Fix tooltip "border"
     .recharts-tooltip-wrapper {
         outline: none;
-        z-index: ${Z_INDEX.TOOLTIP};
+        z-index: ${Z_INDEX.tooltip};
     }
 `;
 

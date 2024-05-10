@@ -50,5 +50,5 @@ export const TooltipContainer = styled.div<{ show: boolean }>`
   background: ${({ theme }) => theme.colors.darkBg};
   border-radius: 8px;
   
-  z-index: ${Z_INDEX.TOOLTIP};
+  z-index: ${Z_INDEX.tooltip};
 `;

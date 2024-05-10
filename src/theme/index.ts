@@ -8,7 +8,7 @@ export interface UIKitTheme {
   background: string;
   primaryGradient: string;
   primaryDarkGradient: string;
-  zIndexes: typeof Z_INDEX
+  zIndexes: typeof Z_INDEX;
 }
 
 export { default as dark } from "./dark";
