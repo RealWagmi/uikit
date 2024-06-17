@@ -1,3 +1,3 @@
-import { IRowProps } from "../Row/types";
+import { IRowProps } from '../Row/types';
 
-export interface IAutoRowProps extends IRowProps { }
+export interface IAutoRowProps extends IRowProps {}

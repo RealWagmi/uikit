@@ -1,4 +1,4 @@
 export interface IBreadcrumbsProps {
-  label: string;
-  to: string;
+    label: string;
+    to: string;
 }

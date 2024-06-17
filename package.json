@@ -21,7 +21,8 @@
     "build": "vite build",
     "prepare": "yarn build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prettier": "prettier --loglevel silent --write \"*/**/*.{js,ts}\""
   },
   "author": "Wagmi",
   "license": "MIT",

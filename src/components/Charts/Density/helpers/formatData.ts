@@ -1,9 +1,9 @@
-import { FeeAmount, Pool, TICK_SPACINGS, TickMath } from "@real-wagmi/v3-sdk";
-import { ChartEntry, PoolTickData, TickProcessed } from "../types";
-import { CurrencyAmount } from "@real-wagmi/sdk";
-import { maxUint128 } from "../constants";
+import { FeeAmount, Pool, TICK_SPACINGS, TickMath } from '@real-wagmi/v3-sdk';
+import { ChartEntry, PoolTickData, TickProcessed } from '../types';
+import { CurrencyAmount } from '@real-wagmi/sdk';
+import { maxUint128 } from '../constants';
 
-async function parseTick(poolTickData: PoolTickData, t: TickProcessed, i: number){
+async function parseTick(poolTickData: PoolTickData, t: TickProcessed, i: number) {
     const active = t.tickIdx === poolTickData.activeTickIdx;
     const sqrtPriceX96 = TickMath.getSqrtRatioAtTick(t.tickIdx);
     const feeAmount: FeeAmount = Number(poolTickData.feeTier);
@@ -44,9 +44,7 @@ async function parseTick(poolTickData: PoolTickData, t: TickProcessed, i: number
 
 export const formatData = async (poolTickData?: PoolTickData): Promise<ChartEntry[]> => {
     if (poolTickData) {
-        const newData = await Promise.all(
-            poolTickData.ticksProcessed.map(async (t: TickProcessed, i) => parseTick(poolTickData, t, i)),
-        );
+        const newData = await Promise.all(poolTickData.ticksProcessed.map(async (t: TickProcessed, i) => parseTick(poolTickData, t, i)));
         // offset the values to line off bars with TVL used to swap across bar
         newData.map((entry, i) => {
             if (i > 0) {
@@ -58,4 +56,4 @@ export const formatData = async (poolTickData?: PoolTickData): Promise<ChartEntr
     } else {
         return [];
     }
-}
+};

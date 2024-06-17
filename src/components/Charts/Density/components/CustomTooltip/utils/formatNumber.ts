@@ -12,7 +12,7 @@ export const formatNumber = (num?: number, decimals = 4): FormatReturnType => {
         if (!!num && num < minAmount) {
             value = `<${minAmount}`;
         } else {
-            value = new Intl.NumberFormat("en-US", {
+            value = new Intl.NumberFormat('en-US', {
                 style: 'decimal',
                 maximumFractionDigits: decimals,
                 minimumFractionDigits: 0,

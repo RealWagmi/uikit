@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Z_INDEX } from "../../../constants";
+import styled from 'styled-components';
+import { Z_INDEX } from '../../../constants';
 
 export const Wrapper = styled.div`
     position: relative;
@@ -42,7 +42,7 @@ export const ActionButton = styled.div<{ disabled?: boolean }>`
     height: 32px;
     padding: 4px;
     border: 1px solid rgba(97, 105, 113, 0.2);
-    background: ${(({ theme }) => theme.colors.darkBg)};
+    background: ${({ theme }) => theme.colors.darkBg};
 
     &:hover {
         cursor: pointer;

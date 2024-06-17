@@ -1,4 +1,4 @@
-import { Token } from "@real-wagmi/sdk";
+import { Token } from '@real-wagmi/sdk';
 
 export interface CustomToolTipProps {
     chartProps: any;

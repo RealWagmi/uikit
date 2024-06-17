@@ -1,3 +1,3 @@
-import { IRowProps } from "../Row/types";
+import { IRowProps } from '../Row/types';
 
-export interface IRowFixedProps extends Omit<IRowProps, 'width'> { }
+export interface IRowFixedProps extends Omit<IRowProps, 'width'> {}

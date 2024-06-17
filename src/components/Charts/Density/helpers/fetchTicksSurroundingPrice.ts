@@ -7,11 +7,7 @@ import { fetchInitializedTicks } from './fetchInitializedTicks';
 import { keyBy } from 'lodash';
 import { ChainId, Token } from '@real-wagmi/sdk';
 
-export const fetchTicksSurroundingPrice = async (
-    poolAddress: string,
-    client: GraphQLClient,
-    numSurroundingTicks = DEFAULT_SURROUNDING_TICKS,
-): Promise<PoolTickData> => {
+export const fetchTicksSurroundingPrice = async (poolAddress: string, client: GraphQLClient, numSurroundingTicks = DEFAULT_SURROUNDING_TICKS): Promise<PoolTickData> => {
     const poolResult = await client.request<PoolResult>(poolQuery, {
         poolAddress: poolAddress.toLowerCase(),
     });
@@ -21,10 +17,10 @@ export const fetchTicksSurroundingPrice = async (
             tick: poolCurrentTick,
             feeTier,
             liquidity,
-            token0: { id: token0Address, decimals: token0Decimals, name: token0Name , symbol: token0Symbol },
-            token1: { id: token1Address, decimals: token1Decimals, name: token1Name , symbol: token1Symbol },
+            token0: { id: token0Address, decimals: token0Decimals, name: token0Name, symbol: token0Symbol },
+            token1: { id: token1Address, decimals: token1Decimals, name: token1Name, symbol: token1Symbol },
             token1Price,
-            token0Price
+            token0Price,
         },
     } = poolResult;
 
@@ -44,7 +40,7 @@ export const fetchTicksSurroundingPrice = async (
 
     const tickIdxToInitializedTick = keyBy(initializedTicks, 'tickIdx');
 
-    const token0 = new Token(ChainId.ETHEREUM, token0Address as `0x${string}`, parseInt(token0Decimals), token0Symbol, token0Name  );
+    const token0 = new Token(ChainId.ETHEREUM, token0Address as `0x${string}`, parseInt(token0Decimals), token0Symbol, token0Name);
     const token1 = new Token(ChainId.ETHEREUM, token1Address as `0x${string}`, parseInt(token1Decimals), token1Symbol, token1Name);
 
     // If the pool's tick is MIN_TICK (-887272), then when we find the closest
@@ -151,6 +147,6 @@ export const fetchTicksSurroundingPrice = async (
         token0,
         token1,
         token1Price: parseFloat(token1Price),
-        token0Price: parseFloat(token0Price)
+        token0Price: parseFloat(token0Price),
     };
 };
