@@ -8,6 +8,7 @@ import {
     BscCircleChain,
     AvalancheCircleChain,
     MetisCircleChain,
+    IotaCircleChain
 } from "../components/Svg/NetworksCircle";
 
 export default function getNativeCurrencyLogo(chainId = ChainId.ETHEREUM){
@@ -17,5 +18,6 @@ export default function getNativeCurrencyLogo(chainId = ChainId.ETHEREUM){
     if(chainId === ChainId.BSC) return BscCircleChain;
     if(chainId === ChainId.AVALANCHE) return AvalancheCircleChain;
     if(chainId === ChainId.METIS || chainId === ChainId.METIS_SEPOLIA) return MetisCircleChain;
+    if(chainId === ChainId.IOTA) return IotaCircleChain;
     return EthereumCircleChain;
 }
