@@ -9,6 +9,7 @@ import {
   MaticToken,
   ArbToken,
   MetisToken,
+  IotaToken,
 } from "../components/Svg/Tokens";
 import { SvgProps } from "../components/Svg/types";
 
@@ -37,6 +38,9 @@ export default function useNativeTokenSvgLogo(chainId: ChainId = ChainId.ZKSYNC)
       break;
     case ChainId.METIS:
       layout = MetisToken;
+      break;
+    case ChainId.IOTA:
+      layout = IotaToken;
       break;
     default:
       layout = EthToken;

@@ -59,6 +59,7 @@ test('exports', () => {
       "WagmiToken",
       "ArbToken",
       "MetisToken",
+      "IotaToken",
       "ArbitrumChain",
       "AvalancheChain",
       "BscChain",
