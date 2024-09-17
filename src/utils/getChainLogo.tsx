@@ -14,7 +14,8 @@ import {
     BaseChain,
     MetisTestnetChain,
     ZkLinkNovaChain,
-    IotaChain
+    IotaChain,
+    SonicTestnetChain
 } from "../components/Svg/Networks";
 
 import {
@@ -32,7 +33,8 @@ import {
     BaseCircleChain,
     MetisTestnetCircleChain,
     ZkLinkNovaCircleChain,
-    IotaCircleChain
+    IotaCircleChain,
+    SonicTestnetCircleChain
 } from "../components/Svg/NetworksCircle";
 
 export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false){
@@ -50,5 +52,6 @@ export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false)
     if(chainId === ChainId.BASE) return circle ? BaseCircleChain : BaseChain;
     if(chainId === ChainId.ZKLINK) return circle ? ZkLinkNovaCircleChain : ZkLinkNovaChain;
     if(chainId === ChainId.IOTA) return circle ? IotaCircleChain : IotaChain;
+    if(chainId === ChainId.SONIC_TESTNET) return circle ? SonicTestnetCircleChain : SonicTestnetChain;
     return circle ? EthereumCircleChain : EthereumChain;
 }

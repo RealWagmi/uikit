@@ -13,3 +13,4 @@ export { default as BaseChain } from "./components/Base";
 export { default as MetisTestnetChain } from "./components/MetisTestnet";
 export { default as ZkLinkNovaChain } from "./components/ZkLinkNova";
 export { default as IotaChain } from "./components/Iota";
+export { default as SonicTestnetChain } from "./components/SonicTestnet";
