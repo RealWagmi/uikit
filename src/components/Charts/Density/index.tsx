@@ -1,81 +1,143 @@
-import { ReactElement, memo, useCallback, useMemo, useState } from "react";
-import { Wrapper, LoaderWrapper, ControlsWrapper, ActionButton } from "./styles";
-import { IProps } from "./types";
-import { fetchTicksSurroundingPrice } from "./helpers/fetchTicksSurroundingPrice";
-import { INITIAL_TICKS_TO_FETCH, ZOOM_INTERVAL } from "./constants";
-import useSwr from 'swr';
+import { memo, useMemo } from 'react';
+import { Wrapper, LoaderWrapper } from './styles';
+import { IProps } from './types';
+import { fetchTicksSurroundingPrice } from './helpers/fetchTicksSurroundingPrice';
+import { INITIAL_TICKS_TO_FETCH } from './constants';
 import { formatData } from './helpers/formatData';
+import ReactEcharts from 'echarts-for-react';
+import { useTheme } from 'styled-components';
+import { useChartResize } from './hooks/useChartResize';
+import { getRenderTooltip } from './utils';
+import { useQuery } from '@tanstack/react-query';
 import { LoadingSpinner } from '../../Loaders';
-import { ZoomIn, ZoomOut } from 'react-feather';
-import { Bar, BarChart, Cell, ResponsiveContainer, Tooltip, XAxis } from 'recharts';
-import CustomBar from './components/CustomBar';
-import CustomToolTip from "./components/CustomTooltip";
-import { useTheme } from "styled-components";
-
-interface ZoomStateProps {
-  left: number;
-  right: number;
-  refAreaLeft: string | number;
-  refAreaRight: string | number;
-}
-
-const initialState = {
-  left: 0,
-  right: INITIAL_TICKS_TO_FETCH * 2 + 1,
-  refAreaLeft: '',
-  refAreaRight: '',
-};
 
 function DensityChart({ address, client }: IProps) {
     const theme = useTheme();
     const { colors } = theme;
-    const [ticksToFetch, setTicksToFetch] = useState(INITIAL_TICKS_TO_FETCH);
-    const amountTicks = ticksToFetch * 2 + 1;
-    const [zoomState, setZoomState] = useState<ZoomStateProps>(initialState);
+    const { chartRef } = useChartResize();
 
-    const { data, isLoading } = useSwr(["densityChart", address, client, ticksToFetch], async () => {
-        const data = await fetchTicksSurroundingPrice(address, client, ticksToFetch);
-        return {
-            row: data,
-            formatData: await formatData(data)
-        };
+    const { data, isLoading } = useQuery({
+        queryKey: ['densityChart', address, client],
+        queryFn: async () => {
+            const data = await fetchTicksSurroundingPrice(address, client, INITIAL_TICKS_TO_FETCH);
+            return {
+                row: data,
+                formatData: await formatData(data),
+            };
+        },
     });
 
-    const atZoomMax = zoomState.left + ZOOM_INTERVAL >= zoomState.right - ZOOM_INTERVAL - 1;
-    const atZoomMin = zoomState.left - ZOOM_INTERVAL < 0;
-
-    const handleZoomIn = useCallback(() => {
-        !atZoomMax &&
-            setZoomState({
-                ...zoomState,
-                left: zoomState.left + ZOOM_INTERVAL,
-                right: zoomState.right - ZOOM_INTERVAL,
-            });
-    }, [zoomState, atZoomMax]);
-
-    const handleZoomOut = useCallback(() => {
-        if (atZoomMin) {
-            setTicksToFetch(ticksToFetch + ZOOM_INTERVAL);
-            setZoomState({
-                ...zoomState,
-                left: 0,
-                right: amountTicks,
-            });
-        } else {
-            setZoomState({
-                ...zoomState,
-                left: zoomState.left - ZOOM_INTERVAL,
-                right: zoomState.right + ZOOM_INTERVAL,
-            });
-        }
-    }, [amountTicks, atZoomMin, ticksToFetch, zoomState]);
-
-    const zoomedData = useMemo(() => {
-        if (data) {
-            return data.formatData.slice(zoomState.left, zoomState.right);
-        }
-        return undefined;
-    }, [data, zoomState.left, zoomState.right]);
+    const option = useMemo(() => {
+        return {
+            dataZoom: [
+                {
+                    type: 'inside',
+                },
+                {
+                    type: 'slider',
+                    left: 5,
+                    right: 4,
+                    bottom: 8,
+                },
+            ],
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'line',
+                    lineStyle: {
+                        color: '#FFFFFF',
+                        opacity: 0.4,
+                    },
+                },
+                backgroundColor: '#1D2128',
+                borderColor: '#1D2128',
+                borderRadius: 8,
+                textStyle: {
+                    color: '#FDFEFE',
+                },
+                formatter: getRenderTooltip({
+                    chartData: data?.formatData,
+                    poolData: data?.row,
+                }),
+            },
+            title: {
+                show: false,
+            },
+            grid: {
+                top: 0,
+                bottom: 32,
+                left: 1,
+                right: 1,
+                containLabel: true,
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: true,
+                data: data?.formatData?.map(({ index }) => index).toReversed(),
+                splitLine: {
+                    show: false,
+                },
+                axisTick: {
+                    show: false,
+                },
+                axisLine: {
+                    show: false,
+                },
+                axisLabel: {
+                    formatter() {
+                        return '';
+                    },
+                },
+            },
+            yAxis: {
+                scale: true,
+                type: 'value',
+                splitLine: {
+                    show: false,
+                },
+                axisLine: {
+                    show: false,
+                },
+                axisLabel: {
+                    formatter() {
+                        return '';
+                    },
+                },
+            },
+            series: [
+                {
+                    name: 'Liquidity',
+                    type: 'bar',
+                    stack: 'total',
+                    symbol: 'none',
+                    emphasis: {
+                        disabled: false,
+                    },
+                    itemStyle: {
+                        color: colors.primaryDefault,
+                        borderColor: null,
+                        borderWidth: 2,
+                    },
+                    data: data?.formatData.map(({ isCurrent, activeLiquidity }) => (isCurrent ? 0 : activeLiquidity)).toReversed(),
+                },
+                {
+                    name: 'Active Tick',
+                    type: 'bar',
+                    stack: 'total',
+                    symbol: 'none',
+                    emphasis: {
+                        disabled: false,
+                    },
+                    itemStyle: {
+                        color: colors.red,
+                        borderColor: null,
+                        borderWidth: 2,
+                    },
+                    data: data?.formatData.map(({ isCurrent, activeLiquidity }) => (isCurrent ? activeLiquidity : 0)).toReversed(),
+                },
+            ],
+        };
+    }, [data]);
 
     if (!data || isLoading) {
         return (
@@ -87,45 +149,9 @@ function DensityChart({ address, client }: IProps) {
 
     return (
         <Wrapper>
-            <ResponsiveContainer width="99%" height={400} debounce={1}>
-                <BarChart
-                    width={500}
-                    height={300}
-                    data={zoomedData}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 60,
-                        }}
-                    >
-                        <Tooltip content={(props) => <CustomToolTip chartProps={props} token0={data.row.token0} token1={data.row.token1} currentPrice={data.row.token0Price} />} />
-                        <XAxis reversed={true} tick={false} />
-                        <Bar
-                            dataKey="activeLiquidity"
-                            fill={colors.primaryDefault}
-                            isAnimationActive={false}
-                            //@ts-ignore
-                            shape={(props: { [key: string]: any; x: number; y: number; width: number; height: number; fill: string; isCurrent: boolean }): ReactElement => {
-                                return <CustomBar height={props.height} width={props.width} x={props.x} y={props.y} fill={props.fill} />;
-                            }}
-                        >
-                            {zoomedData?.map((entry, index) => {
-                                return <Cell key={`cell-${index}`} fill={entry.isCurrent ? colors.red : colors.primaryDefault} />;
-                            })}
-                        </Bar>
-                    </BarChart>
-                </ResponsiveContainer>
-                <ControlsWrapper>
-                    <ActionButton onClick={handleZoomIn} disabled={false}>
-                        <ZoomIn size={16} color={colors.darkGray} />
-                    </ActionButton>
-                    <ActionButton onClick={handleZoomOut} disabled={false}>
-                        <ZoomOut size={16} color={colors.darkGray} />
-                    </ActionButton>
-                </ControlsWrapper>
+            <ReactEcharts lazyUpdate option={option} notMerge style={{ width: '100%', height: '100%' }} ref={chartRef} />
         </Wrapper>
     );
 }
 
-export default memo(DensityChart)
+export default memo(DensityChart);
