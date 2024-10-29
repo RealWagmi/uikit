@@ -2,6 +2,8 @@ import React from "react";
 import { TerminalChart, DensityChart } from "./index";
 import { ChainId } from "@real-wagmi/sdk";
 import { GraphQLClient } from "graphql-request";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Flex } from "../Box";
 
 export default {
   title: "Components/Charts",
@@ -14,7 +16,14 @@ export const Terminal: React.FC<React.PropsWithChildren> = () => {
 };
 
 const client = new GraphQLClient('https://metis.graph.wagmi.com/subgraphs/name/v3');
+const queryClient = new QueryClient();
 
 export const Density: React.FC<React.PropsWithChildren> = () => {
-  return <DensityChart address="0x28D5576057A27F95d5dB75776BA50e6e84FAf477" client={client} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Flex minHeight={400}>
+        <DensityChart address="0xfc0AE5EB117a4Ae1b9348956EbBd308b30DA1Bd4" client={client} />
+      </Flex>
+    </QueryClientProvider> 
+  )
 };
