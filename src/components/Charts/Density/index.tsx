@@ -118,7 +118,7 @@ function DensityChart({ address, client }: IProps) {
                         borderColor: null,
                         borderWidth: 2,
                     },
-                    data: data?.formatData.map(({ isCurrent, activeLiquidity }) => (isCurrent ? 0 : activeLiquidity)).toReversed(),
+                    data: data?.formatData.map(({ isCurrent, activeLiquidity }) => (isCurrent ? 0 : Math.max(activeLiquidity, 0))).toReversed(),
                 },
                 {
                     name: 'Active Tick',
@@ -133,7 +133,7 @@ function DensityChart({ address, client }: IProps) {
                         borderColor: null,
                         borderWidth: 2,
                     },
-                    data: data?.formatData.map(({ isCurrent, activeLiquidity }) => (isCurrent ? activeLiquidity : 0)).toReversed(),
+                    data: data?.formatData.map(({ isCurrent, activeLiquidity }) => (isCurrent ? Math.max(activeLiquidity, 0) : 0)).toReversed(),
                 },
             ],
         };
