@@ -49,8 +49,8 @@ export const getRenderTooltip =
         const token1 = poolData?.token1;
         const price0 = tick?.price0;
         const price1 = tick?.price1;
-        const tvlToken0 = tick?.tvlToken0;
-        const tvlToken1 = tick?.tvlToken1;
+        const tvlToken0 = Math.max(tick?.tvlToken0 || 0, 0);
+        const tvlToken1 = Math.max(tick?.tvlToken1 || 0, 0);
 
         if (!tvlToken0 && !tvlToken1) {
             return '';
