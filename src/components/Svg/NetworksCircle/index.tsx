@@ -11,4 +11,4 @@ export { default as MetisCircleChain } from "./components/MetisCircle";
 export { default as BaseCircleChain } from "./components/BaseCircle";
 export { default as MetisTestnetCircleChain } from "./components/MetisTestnetCircle";
 export { default as IotaCircleChain } from "./components/IotaCircle";
-export { default as SonicTestnetCircleChain } from "./components/SonicTestnetCircle";
+export { default as SonicCircleChain } from "./components/SonicCircle";

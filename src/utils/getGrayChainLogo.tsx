@@ -11,7 +11,8 @@ import {
   OptimismChainGray,
   PolygonChainGray,
   ZkSyncEraChainGray,
-  IotaChainGray
+  IotaChainGray,
+  SonicChainGray
 } from "../components/Svg/NetworksGray";
 
 export default function getGrayChainLogo(chainId = ChainId.ETHEREUM) {
@@ -27,5 +28,6 @@ export default function getGrayChainLogo(chainId = ChainId.ETHEREUM) {
   if (chainId === ChainId.POLYGON) return PolygonChainGray;
   if (chainId === ChainId.ZKSYNC) return ZkSyncEraChainGray;
   if (chainId === ChainId.IOTA) return IotaChainGray;
+  if (chainId === ChainId.SONIC) return SonicChainGray;
   return EthereumChainGray;
 }

@@ -10,3 +10,4 @@ export { default as PolygonChainGray } from "./components/PolygonGray";
 export { default as BaseChainGray } from "./components/BaseGray";
 export { default as ZkSyncEraChainGray } from "./components/ZkSyncEraGray";
 export { default as IotaChainGray } from "./components/IotaGray";
+export { default as SonicChainGray } from "./components/SonicGray";
