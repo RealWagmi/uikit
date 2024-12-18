@@ -10,3 +10,4 @@ export { default as WagmiToken } from './components/Wagmi';
 export { default as ArbToken } from './components/Arb';
 export { default as MetisToken } from './components/Metis';
 export { default as IotaToken } from './components/Iota';
+export { default as SonicToken } from './components/Sonic';
