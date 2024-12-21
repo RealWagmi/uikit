@@ -9,6 +9,5 @@ export { default as PolygonChain } from "./components/Polygon";
 export { default as ZkSyncEraChain } from "./components/ZkSync-era";
 export { default as MetisChain } from "./components/Metis";
 export { default as BaseChain } from "./components/Base";
-export { default as MetisTestnetChain } from "./components/MetisTestnet";
 export { default as IotaChain } from "./components/Iota";
 export { default as SonicChain } from "./components/Sonic";

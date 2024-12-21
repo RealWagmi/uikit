@@ -11,7 +11,6 @@ import {
     AvalancheChain,
     MetisChain,
     BaseChain,
-    MetisTestnetChain,
     IotaChain,
     SonicChain
 } from "../components/Svg/Networks";
@@ -28,7 +27,6 @@ import {
     AvalancheCircleChain,
     MetisCircleChain,
     BaseCircleChain,
-    MetisTestnetCircleChain,
     IotaCircleChain,
     SonicCircleChain
 } from "../components/Svg/NetworksCircle";
@@ -43,7 +41,6 @@ export default function getChainLogo(chainId = ChainId.ETHEREUM, circle = false)
     if(chainId === ChainId.BSC) return circle ? BscCircleChain : BscChain;
     if(chainId === ChainId.AVALANCHE) return circle ? AvalancheCircleChain : AvalancheChain;
     if(chainId === ChainId.METIS) return circle ? MetisCircleChain : MetisChain;
-    if(chainId === ChainId.METIS_SEPOLIA) return circle ? MetisTestnetCircleChain : MetisTestnetChain;
     if(chainId === ChainId.BASE) return circle ? BaseCircleChain : BaseChain;
     if(chainId === ChainId.IOTA) return circle ? IotaCircleChain : IotaChain;
     if(chainId === ChainId.SONIC) return circle ? SonicCircleChain : SonicChain;
