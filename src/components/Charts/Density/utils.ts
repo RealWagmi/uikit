@@ -35,7 +35,6 @@ interface TooltipParams {
     data: number;
 }
 
-
 export const getRenderTooltip =
     ({ chartData, poolData }: IGetRenderTooltipParams) =>
     (params: TooltipParams[]) => {
